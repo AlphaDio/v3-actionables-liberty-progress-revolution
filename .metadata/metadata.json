@@ -1,0 +1,12 @@
+{
+  "name" : "Actionables - Liberty, Progress, and Revolution",
+  "id" : "",
+  "version" : "0.0.1",
+  "supported_game_version" : "1.7.*",
+  "short_description" : "",
+  "tags" : [],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}
