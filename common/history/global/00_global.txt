@@ -1,0 +1,19 @@
+﻿# This is executed last among all history
+GLOBAL = {
+	#Add LPR variables
+	
+	set_global_variable = {
+		name = actionables_lpr_liberty
+		value = 100
+	}
+
+	set_global_variable = {
+		name = actionables_lpr_progress
+		value = 100
+	}
+	
+	set_global_variable = {
+		name = actionables_lpr_revolution
+		value = 100
+	}
+}

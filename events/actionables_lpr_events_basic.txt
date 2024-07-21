@@ -1,0 +1,120 @@
+namespace = lpr_events
+
+lpr_events.1 = {
+    type = country_event
+    placement = root
+
+    title = lpr_events.1.t
+    desc = lpr_events.1.d
+    flavor = lpr_events.1.f
+
+    event_image = {
+        video = "unspecific_world_fair"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    duration = 3
+
+    trigger = {
+        OR = {
+            has_global_variable = actionables_lpr_liberty
+            has_global_variable = actionables_lpr_progress
+            has_global_variable = actionables_lpr_revolution
+        }
+    }
+
+    immediate = {}
+
+    option = {
+        name = lpr_events.1.a
+        default_option = yes
+        trigger = {
+            has_global_variable = actionables_lpr_liberty
+        }
+        change_global_variable = {
+            name = actionables_lpr_liberty
+            add = 1
+        }
+        add_gold = 1000 # Adjust gold amount as needed
+        ai_chance = {
+            base = 30
+            modifier = {
+                factor = 2.0
+                condition = { gold < 10000 } # Example condition: AI is more likely to choose this if gold is less than 10000
+            }
+            modifier = {
+                factor = 0.5
+                condition = { gold > 20000 } # Example condition: AI is less likely to choose this if gold is more than 20000
+            }
+        }
+    }
+
+    option = {
+        name = lpr_events.1.b
+        trigger = {
+            has_global_variable = actionables_lpr_progress
+        }
+        change_global_variable = {
+            name = actionables_lpr_progress
+            add = 1
+        }
+        random_scope_state = {
+            limit = {
+                is_incorporated = yes
+            }
+            random_scope_building = {
+                limit = {
+                    OR = {
+                        is_building_type = building_coal_mine
+                        is_building_type = building_iron_mine
+                        is_building_type = building_gold_mine
+                        is_building_type = building_sulfur_mine
+                    }
+                    level >= 1
+                }
+                add_building_level = 1
+            }
+        }
+        ai_chance = {
+            base = 30
+            modifier = {
+                factor = 2.0
+                condition = { has_technology_researched = tech_mechanical_tools } # Example condition: AI is more likely to choose this if mechanical tools technology is researched
+            }
+            modifier = {
+                factor = 0.5
+                condition = { has_modifier = recent_investment } # Example condition: AI is less likely to choose this if a recent investment modifier is active
+            }
+        }
+    }
+
+    option = {
+        name = lpr_events.1.c
+        trigger = {
+            has_global_variable = actionables_lpr_revolution
+        }
+        change_global_variable = {
+            name = actionables_lpr_revolution
+            add = 1
+        }
+        add_loyalists = {
+            pop_type = any_pop
+            value = 0.05 # Adjust loyalist percentage as needed
+        }
+        ai_chance = {
+            base = 40
+            modifier = {
+                factor = 1.5
+                condition = { turmoil > 0.1 } # Example condition: AI is more likely to choose this if turmoil is greater than 10%
+            }
+            modifier = {
+                factor = 0.5
+                condition = { loyalty > 0.8 } # Example condition: AI is less likely to choose this if loyalty is greater than 80%
+            }
+        }
+    }
+
+    cooldown = { months = 1 }
+}

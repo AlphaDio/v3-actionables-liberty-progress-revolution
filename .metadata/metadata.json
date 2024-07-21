@@ -3,7 +3,7 @@
   "id" : "",
   "version" : "0.0.1",
   "supported_game_version" : "1.7.*",
-  "short_description" : "",
+  "short_description" : "Drive the current of the current era between Liberty, Progress, or Revolution.",
   "tags" : [],
   "relationships" : [],
   "game_custom_data" : {

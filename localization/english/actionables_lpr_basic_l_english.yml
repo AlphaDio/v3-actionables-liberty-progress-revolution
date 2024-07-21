@@ -8,3 +8,11 @@ l_english:
   actionables_lpr_event.101.b: "Embrace the Future"
   actionables_lpr_event.101.c: "Embrace the Future"
   actionables_lpr_event.101.d: "Embrace the Future"
+
+  lpr_events.1.t: "Monthly Decision: Liberty, Progress, or Revolution"
+  lpr_events.1.d: "Every month, you can choose to gain gold by increasing Liberty, gain a random mine building by increasing Progress, or gain loyalists by increasing Revolution."
+  lpr_events.1.f: "Choose your path to shape the future of your country."
+
+  lpr_events.1.a: "Increase Liberty"
+  lpr_events.1.b: "Increase Progress"
+  lpr_events.1.c: "Increase Revolution"
