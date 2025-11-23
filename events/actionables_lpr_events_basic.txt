@@ -19,6 +19,10 @@ lpr_events.1 = {
             name = actionables_lpr_liberty
             add = 3
         }
+        change_global_variable = {
+            name = actionables_lpr_independence
+            add = 1
+        }
     }
 
     option = {
@@ -29,6 +33,10 @@ lpr_events.1 = {
         change_variable = {
             name = actionables_lpr_progress
             add = 3
+        }
+        change_global_variable = {
+            name = actionables_lpr_innovation
+            add = 1
         }
     }
 
@@ -44,6 +52,10 @@ lpr_events.1 = {
         change_variable = {
             name = actionables_lpr_revolution
             add = 3
+        }
+        change_global_variable = {
+            name = actionables_lpr_turmoil
+            add = 1
         }
     }
 }
