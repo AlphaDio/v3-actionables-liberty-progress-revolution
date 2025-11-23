@@ -3,6 +3,14 @@
   lpr_events.1.d: "Choose which path to pursue this month."
   lpr_events.1.f: "Make your monthly decision."
 
-  lpr_events.1.a: "Independence"
-  lpr_events.1.b: "Innovation"
-  lpr_events.1.c: "Turmoil"
+  lpr_events.1.a: "Liberty"
+  lpr_events.1.b: "Progress"
+  lpr_events.1.c: "Revolution"
+
+  lpr_events.finisher.1.t: "Quarterly Assessment"
+  lpr_events.finisher.1.d: "The time has come to assess the progress made and make a significant decision that will shape the future of our nation."
+  lpr_events.finisher.1.f: "Your choices have accumulated, and now you must decide how to proceed."
+
+  lpr_events.finisher.1.a: "Secure Financial Stability"
+  lpr_events.finisher.1.b: "Strengthen National Unity"
+  lpr_events.finisher.1.c: "Expand the Population"

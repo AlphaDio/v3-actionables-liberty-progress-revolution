@@ -1,30 +1,12 @@
-# Finisher event system - triggers after 12 builder events AND if LPR variables meet conditions
+# Finisher event system - triggers every 3 months if LPR variables meet conditions
 lpr_check_finisher_events = {
 	if = {
 		limit = {
-			NOT = { has_variable = lpr_builder_event_counter }
-		}
-		set_variable = {
-			name = lpr_builder_event_counter
-			value = 0
-		}
-	}
-	change_variable = {
-		name = lpr_builder_event_counter
-		add = 1
-	}
-	if = {
-		limit = {
-			var:lpr_builder_event_counter >= 12
 			OR = {
-				var:actionables_lpr_liberty >= 10
-				var:actionables_lpr_progress >= 10
-				var:actionables_lpr_revolution >= 10
+				var:actionables_lpr_liberty >= 2
+				var:actionables_lpr_progress >= 2
+				var:actionables_lpr_revolution >= 2
 			}
-		}
-		set_variable = {
-			name = lpr_builder_event_counter
-			value = 0
 		}
 		lpr_general_finisher_events = yes
 	}
