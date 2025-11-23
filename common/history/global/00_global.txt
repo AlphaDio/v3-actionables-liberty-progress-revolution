@@ -29,4 +29,14 @@ GLOBAL = {
 			value = 100
 		}
 	}
+	
+	# Add journal entry for player to track LPR points
+	every_country = {
+		limit = {
+			is_player = yes
+		}
+		add_journal_entry = {
+			type = je_lpr_points
+		}
+	}
 }

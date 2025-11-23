@@ -1,0 +1,23 @@
+# LPR Points Journal Entry
+je_lpr_points = {
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+	group = je_group_internal_affairs
+	
+	is_shown_when_inactive = {
+		is_player = yes
+	}
+	
+	possible = {
+		is_player = yes
+	}
+	
+	complete = {
+		always = no
+	}
+	
+	status_desc = {
+		desc = je_lpr_points_status
+	}
+}
+

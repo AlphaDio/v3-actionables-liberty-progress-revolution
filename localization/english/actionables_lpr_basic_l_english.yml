@@ -14,3 +14,6 @@
   lpr_events.finisher.1.a: "Secure Financial Stability"
   lpr_events.finisher.1.b: "Strengthen National Unity"
   lpr_events.finisher.1.c: "Expand the Population"
+
+  je_lpr_points: "Liberty, Progress, and Revolution"
+  je_lpr_points_status: "Liberty: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_liberty_value')|v]\nProgress: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_progress_value')|v]\nRevolution: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_revolution_value')|v]"
