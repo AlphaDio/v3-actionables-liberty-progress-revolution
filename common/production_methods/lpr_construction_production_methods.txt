@@ -42,4 +42,3 @@ pm_arc_welded_buildings = {
 		}
 	}
 }
-
