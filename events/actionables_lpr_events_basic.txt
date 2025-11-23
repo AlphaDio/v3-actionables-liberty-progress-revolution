@@ -14,25 +14,36 @@ lpr_events.1 = {
 
     option = {
         name = lpr_events.1.a
-        change_global_variable = {
-            name = actionables_lpr_independence
-            add = 1
+        add_treasury = 5000
+        change_variable = {
+            name = actionables_lpr_liberty
+            add = 3
         }
     }
 
     option = {
         name = lpr_events.1.b
-        change_global_variable = {
-            name = actionables_lpr_innovation
-            add = 1
+        country_modifiers = {
+            country_tech_spread_add = 1000
+        }
+        change_variable = {
+            name = actionables_lpr_progress
+            add = 3
         }
     }
 
     option = {
         name = lpr_events.1.c
-        change_global_variable = {
-            name = actionables_lpr_turmoil
-            add = 1
+        random_scope_state = {
+            create_pop = {
+                culture = root.capital.state_region.cultures:0
+                religion = root.capital.state_region.religions:0
+                size = 10000
+            }
+        }
+        change_variable = {
+            name = actionables_lpr_revolution
+            add = 3
         }
     }
 }

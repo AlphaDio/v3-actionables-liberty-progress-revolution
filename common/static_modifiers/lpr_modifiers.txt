@@ -1,0 +1,6 @@
+# LPR Modifiers
+
+lpr_research_boost = {
+	country_tech_research_speed_mult = 2.0
+}
+
