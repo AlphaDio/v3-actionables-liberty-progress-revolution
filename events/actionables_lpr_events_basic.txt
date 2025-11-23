@@ -10,7 +10,11 @@ lpr_events.1 = {
 
     icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-    duration = 10
+    duration = 3
+
+    immediate = {
+        lpr_check_finisher_events = yes
+    }
 
     option = {
         name = lpr_events.1.a
@@ -42,12 +46,8 @@ lpr_events.1 = {
 
     option = {
         name = lpr_events.1.c
-        random_scope_state = {
-            create_pop = {
-                culture = root.capital.state_region.cultures:0
-                religion = root.capital.state_region.religions:0
-                size = 10000
-            }
+        country_modifiers = {
+            country_society_tech_spread_mult = 0.1
         }
         change_variable = {
             name = actionables_lpr_revolution
@@ -56,6 +56,67 @@ lpr_events.1 = {
         change_global_variable = {
             name = actionables_lpr_turmoil
             add = 1
+        }
+    }
+}
+
+# Finisher events - trigger after 12 builder events
+lpr_events.finisher.1 = {
+    type = country_event
+    placement = root
+
+    title = lpr_events.finisher.1.t
+    desc = lpr_events.finisher.1.d
+    flavor = lpr_events.finisher.1.f
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    duration = 3
+
+    option = {
+        name = lpr_events.finisher.1.a
+        add_treasury = 50000
+        change_variable = {
+            name = actionables_lpr_liberty
+            add = -10
+        }
+        change_global_variable = {
+            name = actionables_lpr_independence
+            add = -10
+        }
+    }
+
+    option = {
+        name = lpr_events.finisher.1.b
+        add_loyalists = {
+            value = large_radicals
+        }
+        change_variable = {
+            name = actionables_lpr_progress
+            add = -10
+        }
+        change_global_variable = {
+            name = actionables_lpr_innovation
+            add = -10
+        }
+    }
+
+    option = {
+        name = lpr_events.finisher.1.c
+        random_scope_state = {
+            create_pop = {
+                culture = root.capital.state_region.cultures:0
+                religion = root.capital.state_region.religions:0
+                size = 50000
+            }
+        }
+        change_variable = {
+            name = actionables_lpr_revolution
+            add = -10
+        }
+        change_global_variable = {
+            name = actionables_lpr_turmoil
+            add = -10
         }
     }
 }

@@ -28,5 +28,9 @@ GLOBAL = {
 			name = actionables_lpr_revolution
 			value = 100
 		}
+		set_variable = {
+			name = lpr_builder_event_counter
+			value = 0
+		}
 	}
 }
