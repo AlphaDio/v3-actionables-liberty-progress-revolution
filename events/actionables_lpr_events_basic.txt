@@ -8,6 +8,11 @@ lpr_events.1 = {
     desc = lpr_events.1.d
     flavor = lpr_events.1.f
 
+    event_image = {
+        video = "unspecific_world_fair"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
     duration = 3
@@ -27,8 +32,9 @@ lpr_events.1 = {
 
     option = {
         name = lpr_events.1.b
-        country_modifiers = {
-            country_tech_spread_add = 1000
+        add_modifier = {
+            name = lpr_tech_spread_boost
+            days = 30
         }
         change_variable = {
             name = actionables_lpr_progress
@@ -42,8 +48,9 @@ lpr_events.1 = {
 
     option = {
         name = lpr_events.1.c
-        country_modifiers = {
-            country_society_tech_spread_mult = 0.1
+        add_modifier = {
+            name = lpr_society_tech_spread_boost
+            days = 30
         }
         change_variable = {
             name = actionables_lpr_revolution
@@ -65,7 +72,12 @@ lpr_events.finisher.1 = {
     desc = lpr_events.finisher.1.d
     flavor = lpr_events.finisher.1.f
 
-    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+    event_image = {
+        video = "unspecific_politicians_arguing"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
     duration = 3
 
