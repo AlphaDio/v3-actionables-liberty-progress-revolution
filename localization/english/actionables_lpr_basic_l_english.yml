@@ -1,18 +1,8 @@
-l_english:
-  actionables_lpr_event.100.t: "A New Beginning"
-  actionables_lpr_event.100.d: "The dawn of a new era is upon us!"
-  
-  actionables_lpr_event.101.t: "A New Beginning"
-  actionables_lpr_event.101.d: "The dawn of a new era is upon us!"
-  actionables_lpr_event.101.a: "Embrace the Future"
-  actionables_lpr_event.101.b: "Embrace the Future"
-  actionables_lpr_event.101.c: "Embrace the Future"
-  actionables_lpr_event.101.d: "Embrace the Future"
+﻿l_english:
+  lpr_events.1.t: "Monthly Choice"
+  lpr_events.1.d: "Choose which path to pursue this month."
+  lpr_events.1.f: "Make your monthly decision."
 
-  lpr_events.1.t: "Monthly Decision: Liberty, Progress, or Revolution"
-  lpr_events.1.d: "Every month, you can choose to gain gold by increasing Liberty, gain a random mine building by increasing Progress, or gain loyalists by increasing Revolution."
-  lpr_events.1.f: "Choose your path to shape the future of your country."
-
-  lpr_events.1.a: "Increase Liberty"
-  lpr_events.1.b: "Increase Progress"
-  lpr_events.1.c: "Increase Revolution"
+  lpr_events.1.a: "Independence"
+  lpr_events.1.b: "Innovation"
+  lpr_events.1.c: "Turmoil"

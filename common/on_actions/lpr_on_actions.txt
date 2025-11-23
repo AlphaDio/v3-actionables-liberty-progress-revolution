@@ -1,0 +1,11 @@
+on_monthly_pulse_country = {
+	on_actions = {
+		lpr_on_monthly_pulse_country
+	}
+}
+
+lpr_on_monthly_pulse_country = {
+	events = {
+		lpr_events.1
+	}
+}

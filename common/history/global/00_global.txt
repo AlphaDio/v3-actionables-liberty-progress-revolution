@@ -1,19 +1,32 @@
 ﻿# This is executed last among all history
 GLOBAL = {
-	#Add LPR variables
-	
+	#Add IIT variables as global variables
 	set_global_variable = {
-		name = actionables_lpr_liberty
+		name = actionables_lpr_independence
 		value = 100
 	}
-
 	set_global_variable = {
-		name = actionables_lpr_progress
+		name = actionables_lpr_innovation
+		value = 100
+	}
+	set_global_variable = {
+		name = actionables_lpr_turmoil
 		value = 100
 	}
 	
-	set_global_variable = {
-		name = actionables_lpr_revolution
-		value = 100
+	#Add LPR variables for each country
+	every_country = {
+		set_variable = {
+			name = actionables_lpr_liberty
+			value = 100
+		}
+		set_variable = {
+			name = actionables_lpr_progress
+			value = 100
+		}
+		set_variable = {
+			name = actionables_lpr_revolution
+			value = 100
+		}
 	}
 }
