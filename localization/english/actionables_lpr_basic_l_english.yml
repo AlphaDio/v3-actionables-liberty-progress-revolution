@@ -15,5 +15,26 @@
   lpr_events.finisher.1.b: "Strengthen National Unity"
   lpr_events.finisher.1.c: "Expand the Population"
 
+  lpr_events.binary.1.t: "Liberty Crossroads"
+  lpr_events.binary.1.d: "Our commitment to liberty has reached a critical juncture. We must decide whether to continue on this path or cash in our progress for immediate gains."
+  lpr_events.binary.1.f: "The path of liberty presents a choice."
+
+  lpr_events.binary.1.a: "Continue the Liberty Path (Small reward + 3 Liberty)"
+  lpr_events.binary.1.b: "Cash Out Liberty (Big reward - 5 Liberty)"
+
+  lpr_events.binary.2.t: "Progress Crossroads"
+  lpr_events.binary.2.d: "Our pursuit of progress has reached a critical juncture. We must decide whether to continue advancing or consolidate our gains with immediate benefits."
+  lpr_events.binary.2.f: "The path of progress presents a choice."
+
+  lpr_events.binary.2.a: "Continue the Progress Path (Small reward + 3 Progress)"
+  lpr_events.binary.2.b: "Cash Out Progress (Big reward - 5 Progress)"
+
+  lpr_events.binary.3.t: "Revolution Crossroads"
+  lpr_events.binary.3.d: "Our revolutionary momentum has reached a critical juncture. We must decide whether to continue the revolutionary path or secure immediate gains by moderating our approach."
+  lpr_events.binary.3.f: "The path of revolution presents a choice."
+
+  lpr_events.binary.3.a: "Continue the Revolution Path (Small reward + 3 Revolution)"
+  lpr_events.binary.3.b: "Cash Out Revolution (Big reward - 5 Revolution)"
+
   je_lpr_points: "Liberty, Progress, and Revolution"
   je_lpr_points_status: "Liberty: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_liberty_value')|v]\nProgress: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_progress_value')|v]\nRevolution: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_revolution_value')|v]"
