@@ -32,14 +32,16 @@ lpr_society_tech_spread_boost = {
 
 # Triples construction speed (used in Progress path builder events)
 # This significantly accelerates all construction projects for 30 days
+# Note: building_construction_throughput_mult = 2.0 means 3x speed (100% + 200% = 3x)
 lpr_construction_boost = {
-	state_construction_mult = 3.0
+	building_construction_throughput_mult = 2.0
 }
 
 # Massive construction speed boost (used in big finisher events)
 # This provides 5x construction speed for major rewards
+# Note: building_construction_throughput_mult = 4.0 means 5x speed (100% + 400% = 5x)
 lpr_massive_construction_boost = {
-	state_construction_mult = 5.0
+	building_construction_throughput_mult = 4.0
 }
 
 # Radical increase modifiers (temporary effects for 3 months)
