@@ -29,7 +29,7 @@ lpr_events.binary.1 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-    duration = 3
+    duration = 5
 
     # Option A: Commit to Liberty Path
     # Rewards: Small bonus (10,000 gold) + 3 Liberty points
@@ -79,7 +79,7 @@ lpr_events.binary.2 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-    duration = 3
+    duration = 5
 
     # Option A: Commit to Progress Path
     # Rewards: Small bonus (construction speed boost) + 3 Progress points
@@ -133,7 +133,7 @@ lpr_events.binary.3 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-    duration = 3
+    duration = 5
 
     # Option A: Commit to Revolution Path
     # Rewards: Small bonus (tech spread boost) + 3 Revolution points
