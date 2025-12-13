@@ -1,14 +1,17 @@
-# Finisher event system - triggers every 3 months if LPR variables meet conditions
+# Finisher event system - triggers if LPR variables meet conditions
+# Threshold of 12 means 4 builder events (12 points) above starting 0
 lpr_check_finisher_events = {
 	if = {
 		limit = {
 			OR = {
-				var:actionables_lpr_liberty >= 2
-				var:actionables_lpr_progress >= 2
-				var:actionables_lpr_revolution >= 2
+				var:actionables_lpr_liberty >= 12
+				var:actionables_lpr_progress >= 12
+				var:actionables_lpr_revolution >= 12
 			}
 		}
-		lpr_general_finisher_events = yes
+		trigger_event = {
+			id = lpr_events.finisher.1
+		}
 	}
 }
 
