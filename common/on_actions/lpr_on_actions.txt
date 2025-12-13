@@ -86,4 +86,92 @@ on_monthly_pulse_country = {
 	effect = {
 		lpr_check_finisher_events = yes
 	}
+	
+	# Spent Threshold Events - trigger when cumulative spent variables reach milestones
+	# These events fire once per threshold (100, 200, 300) for each LPR path
+	# Flags prevent events from firing multiple times
+	
+	# Liberty spent threshold events
+	random_events = {
+		chance_to_happen = 100
+		trigger = {
+			var:actionables_lpr_liberty_spent >= 100
+			NOT = { has_country_flag = lpr_liberty_spent_100_triggered }
+		}
+		1 = lpr_events.spent_liberty.100
+	}
+	
+	random_events = {
+		chance_to_happen = 100
+		trigger = {
+			var:actionables_lpr_liberty_spent >= 200
+			NOT = { has_country_flag = lpr_liberty_spent_200_triggered }
+		}
+		1 = lpr_events.spent_liberty.200
+	}
+	
+	random_events = {
+		chance_to_happen = 100
+		trigger = {
+			var:actionables_lpr_liberty_spent >= 300
+			NOT = { has_country_flag = lpr_liberty_spent_300_triggered }
+		}
+		1 = lpr_events.spent_liberty.300
+	}
+	
+	# Progress spent threshold events
+	random_events = {
+		chance_to_happen = 100
+		trigger = {
+			var:actionables_lpr_progress_spent >= 100
+			NOT = { has_country_flag = lpr_progress_spent_100_triggered }
+		}
+		1 = lpr_events.spent_progress.100
+	}
+	
+	random_events = {
+		chance_to_happen = 100
+		trigger = {
+			var:actionables_lpr_progress_spent >= 200
+			NOT = { has_country_flag = lpr_progress_spent_200_triggered }
+		}
+		1 = lpr_events.spent_progress.200
+	}
+	
+	random_events = {
+		chance_to_happen = 100
+		trigger = {
+			var:actionables_lpr_progress_spent >= 300
+			NOT = { has_country_flag = lpr_progress_spent_300_triggered }
+		}
+		1 = lpr_events.spent_progress.300
+	}
+	
+	# Revolution spent threshold events
+	random_events = {
+		chance_to_happen = 100
+		trigger = {
+			var:actionables_lpr_revolution_spent >= 100
+			NOT = { has_country_flag = lpr_revolution_spent_100_triggered }
+		}
+		1 = lpr_events.spent_revolution.100
+	}
+	
+	random_events = {
+		chance_to_happen = 100
+		trigger = {
+			var:actionables_lpr_revolution_spent >= 200
+			NOT = { has_country_flag = lpr_revolution_spent_200_triggered }
+		}
+		1 = lpr_events.spent_revolution.200
+	}
+	
+	random_events = {
+		chance_to_happen = 100
+		trigger = {
+			var:actionables_lpr_revolution_spent >= 300
+			NOT = { has_country_flag = lpr_revolution_spent_300_triggered }
+		}
+		1 = lpr_events.spent_revolution.300
+	}
 }

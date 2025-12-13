@@ -1,0 +1,482 @@
+namespace = lpr_events
+
+# ============================================================================
+# SPENT THRESHOLD EVENTS
+# ============================================================================
+# These events trigger when cumulative spent LPR variables reach major milestones:
+# - 100 points: First major milestone
+# - 200 points: Second major milestone  
+# - 300 points: Third major milestone
+#
+# Each event provides significant rewards based on the path that has been
+# consistently pursued, rewarding long-term commitment to a particular strategy.
+# ============================================================================
+
+# ============================================================================
+# LIBERTY SPENT THRESHOLD EVENTS
+# ============================================================================
+
+# Liberty spent 100 threshold event
+lpr_events.spent_liberty.100 = {
+    type = country_event
+    placement = root
+
+    trigger = {
+        var:actionables_lpr_liberty_spent >= 100
+        NOT = { has_country_flag = lpr_liberty_spent_100_triggered }
+    }
+
+    title = lpr_events.spent_liberty.100.t
+    desc = lpr_events.spent_liberty.100.d
+    flavor = lpr_events.spent_liberty.100.f
+
+    event_image = {
+        video = "unspecific_politicians_arguing"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+    duration = 3
+
+    # Option A: Economic Freedom Reward
+    # Rewards: Large treasury boost + stability improvement
+    option = {
+        name = lpr_events.spent_liberty.100.a
+        set_country_flag = lpr_liberty_spent_100_triggered
+        add_treasury = 100000
+        add_loyalists = {
+            value = small_radicals
+        }
+    }
+
+    # Option B: National Independence Reward
+    # Rewards: Moderate treasury + construction boost
+    option = {
+        name = lpr_events.spent_liberty.100.b
+        set_country_flag = lpr_liberty_spent_100_triggered
+        add_treasury = 50000
+        add_modifier = {
+            name = lpr_construction_boost
+            days = 60
+        }
+    }
+}
+
+# Liberty spent 200 threshold event
+lpr_events.spent_liberty.200 = {
+    type = country_event
+    placement = root
+
+    trigger = {
+        var:actionables_lpr_liberty_spent >= 200
+        NOT = { has_country_flag = lpr_liberty_spent_200_triggered }
+    }
+
+    title = lpr_events.spent_liberty.200.t
+    desc = lpr_events.spent_liberty.200.d
+    flavor = lpr_events.spent_liberty.200.f
+
+    event_image = {
+        video = "unspecific_politicians_arguing"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+    duration = 3
+
+    # Option A: Major Economic Freedom Reward
+    # Rewards: Very large treasury boost + significant stability improvement
+    option = {
+        name = lpr_events.spent_liberty.200.a
+        set_country_flag = lpr_liberty_spent_200_triggered
+        add_treasury = 200000
+        add_loyalists = {
+            value = medium_radicals
+        }
+    }
+
+    # Option B: Enhanced National Independence Reward
+    # Rewards: Large treasury + extended construction boost
+    option = {
+        name = lpr_events.spent_liberty.200.b
+        set_country_flag = lpr_liberty_spent_200_triggered
+        add_treasury = 100000
+        add_modifier = {
+            name = lpr_construction_boost
+            days = 90
+        }
+    }
+}
+
+# Liberty spent 300 threshold event
+lpr_events.spent_liberty.300 = {
+    type = country_event
+    placement = root
+
+    trigger = {
+        var:actionables_lpr_liberty_spent >= 300
+        NOT = { has_country_flag = lpr_liberty_spent_300_triggered }
+    }
+
+    title = lpr_events.spent_liberty.300.t
+    desc = lpr_events.spent_liberty.300.d
+    flavor = lpr_events.spent_liberty.300.f
+
+    event_image = {
+        video = "unspecific_politicians_arguing"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+    duration = 3
+
+    # Option A: Ultimate Economic Freedom Reward
+    # Rewards: Massive treasury boost + major stability improvement
+    option = {
+        name = lpr_events.spent_liberty.300.a
+        set_country_flag = lpr_liberty_spent_300_triggered
+        add_treasury = 300000
+        add_loyalists = {
+            value = large_radicals
+        }
+    }
+
+    # Option B: Supreme National Independence Reward
+    # Rewards: Very large treasury + long-term construction boost
+    option = {
+        name = lpr_events.spent_liberty.300.b
+        set_country_flag = lpr_liberty_spent_300_triggered
+        add_treasury = 150000
+        add_modifier = {
+            name = lpr_construction_boost
+            days = 120
+        }
+    }
+}
+
+# ============================================================================
+# PROGRESS SPENT THRESHOLD EVENTS
+# ============================================================================
+
+# Progress spent 100 threshold event
+lpr_events.spent_progress.100 = {
+    type = country_event
+    placement = root
+
+    trigger = {
+        var:actionables_lpr_progress_spent >= 100
+        NOT = { has_country_flag = lpr_progress_spent_100_triggered }
+    }
+
+    title = lpr_events.spent_progress.100.t
+    desc = lpr_events.spent_progress.100.d
+    flavor = lpr_events.spent_progress.100.f
+
+    event_image = {
+        video = "unspecific_world_fair"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    duration = 3
+
+    # Option A: Innovation Boost Reward
+    # Rewards: Construction boost + treasury bonus
+    option = {
+        name = lpr_events.spent_progress.100.a
+        set_country_flag = lpr_progress_spent_100_triggered
+        add_treasury = 75000
+        add_modifier = {
+            name = lpr_construction_boost
+            days = 60
+        }
+    }
+
+    # Option B: Technological Advancement Reward
+    # Rewards: Tech spread boost + moderate treasury
+    option = {
+        name = lpr_events.spent_progress.100.b
+        set_country_flag = lpr_progress_spent_100_triggered
+        add_treasury = 50000
+        add_modifier = {
+            name = lpr_society_tech_spread_boost
+            days = 60
+        }
+    }
+}
+
+# Progress spent 200 threshold event
+lpr_events.spent_progress.200 = {
+    type = country_event
+    placement = root
+
+    trigger = {
+        var:actionables_lpr_progress_spent >= 200
+        NOT = { has_country_flag = lpr_progress_spent_200_triggered }
+    }
+
+    title = lpr_events.spent_progress.200.t
+    desc = lpr_events.spent_progress.200.d
+    flavor = lpr_events.spent_progress.200.f
+
+    event_image = {
+        video = "unspecific_world_fair"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    duration = 3
+
+    # Option A: Major Innovation Boost Reward
+    # Rewards: Extended construction boost + large treasury bonus
+    option = {
+        name = lpr_events.spent_progress.200.a
+        set_country_flag = lpr_progress_spent_200_triggered
+        add_treasury = 150000
+        add_modifier = {
+            name = lpr_construction_boost
+            days = 90
+        }
+    }
+
+    # Option B: Enhanced Technological Advancement Reward
+    # Rewards: Extended tech spread boost + moderate treasury
+    option = {
+        name = lpr_events.spent_progress.200.b
+        set_country_flag = lpr_progress_spent_200_triggered
+        add_treasury = 100000
+        add_modifier = {
+            name = lpr_society_tech_spread_boost
+            days = 90
+        }
+    }
+}
+
+# Progress spent 300 threshold event
+lpr_events.spent_progress.300 = {
+    type = country_event
+    placement = root
+
+    trigger = {
+        var:actionables_lpr_progress_spent >= 300
+        NOT = { has_country_flag = lpr_progress_spent_300_triggered }
+    }
+
+    title = lpr_events.spent_progress.300.t
+    desc = lpr_events.spent_progress.300.d
+    flavor = lpr_events.spent_progress.300.f
+
+    event_image = {
+        video = "unspecific_world_fair"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    duration = 3
+
+    # Option A: Ultimate Innovation Boost Reward
+    # Rewards: Long-term construction boost + very large treasury bonus
+    option = {
+        name = lpr_events.spent_progress.300.a
+        set_country_flag = lpr_progress_spent_300_triggered
+        add_treasury = 225000
+        add_modifier = {
+            name = lpr_construction_boost
+            days = 120
+        }
+    }
+
+    # Option B: Supreme Technological Advancement Reward
+    # Rewards: Long-term tech spread boost + large treasury
+    option = {
+        name = lpr_events.spent_progress.300.b
+        set_country_flag = lpr_progress_spent_300_triggered
+        add_treasury = 150000
+        add_modifier = {
+            name = lpr_society_tech_spread_boost
+            days = 120
+        }
+    }
+}
+
+# ============================================================================
+# REVOLUTION SPENT THRESHOLD EVENTS
+# ============================================================================
+
+# Revolution spent 100 threshold event
+lpr_events.spent_revolution.100 = {
+    type = country_event
+    placement = root
+
+    trigger = {
+        var:actionables_lpr_revolution_spent >= 100
+        NOT = { has_country_flag = lpr_revolution_spent_100_triggered }
+    }
+
+    title = lpr_events.spent_revolution.100.t
+    desc = lpr_events.spent_revolution.100.d
+    flavor = lpr_events.spent_revolution.100.f
+
+    event_image = {
+        video = "unspecific_politicians_arguing"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+    duration = 3
+
+    # Option A: Revolutionary Change Reward
+    # Rewards: Population growth + tech spread boost
+    option = {
+        name = lpr_events.spent_revolution.100.a
+        set_country_flag = lpr_revolution_spent_100_triggered
+        random_scope_state = {
+            create_pop = {
+                culture = root.capital.state_region.cultures:0
+                religion = root.capital.state_region.religions:0
+                size = 75000
+            }
+        }
+        add_modifier = {
+            name = lpr_society_tech_spread_boost
+            days = 60
+        }
+    }
+
+    # Option B: Social Transformation Reward
+    # Rewards: Large population growth + moderate treasury
+    option = {
+        name = lpr_events.spent_revolution.100.b
+        set_country_flag = lpr_revolution_spent_100_triggered
+        random_scope_state = {
+            create_pop = {
+                culture = root.capital.state_region.cultures:0
+                religion = root.capital.state_region.religions:0
+                size = 100000
+            }
+        }
+        add_treasury = 50000
+    }
+}
+
+# Revolution spent 200 threshold event
+lpr_events.spent_revolution.200 = {
+    type = country_event
+    placement = root
+
+    trigger = {
+        var:actionables_lpr_revolution_spent >= 200
+        NOT = { has_country_flag = lpr_revolution_spent_200_triggered }
+    }
+
+    title = lpr_events.spent_revolution.200.t
+    desc = lpr_events.spent_revolution.200.d
+    flavor = lpr_events.spent_revolution.200.f
+
+    event_image = {
+        video = "unspecific_politicians_arguing"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+    duration = 3
+
+    # Option A: Major Revolutionary Change Reward
+    # Rewards: Large population growth + extended tech spread boost
+    option = {
+        name = lpr_events.spent_revolution.200.a
+        set_country_flag = lpr_revolution_spent_200_triggered
+        random_scope_state = {
+            create_pop = {
+                culture = root.capital.state_region.cultures:0
+                religion = root.capital.state_region.religions:0
+                size = 150000
+            }
+        }
+        add_modifier = {
+            name = lpr_society_tech_spread_boost
+            days = 90
+        }
+    }
+
+    # Option B: Enhanced Social Transformation Reward
+    # Rewards: Very large population growth + moderate treasury
+    option = {
+        name = lpr_events.spent_revolution.200.b
+        set_country_flag = lpr_revolution_spent_200_triggered
+        random_scope_state = {
+            create_pop = {
+                culture = root.capital.state_region.cultures:0
+                religion = root.capital.state_region.religions:0
+                size = 200000
+            }
+        }
+        add_treasury = 100000
+    }
+}
+
+# Revolution spent 300 threshold event
+lpr_events.spent_revolution.300 = {
+    type = country_event
+    placement = root
+
+    trigger = {
+        var:actionables_lpr_revolution_spent >= 300
+        NOT = { has_country_flag = lpr_revolution_spent_300_triggered }
+    }
+
+    title = lpr_events.spent_revolution.300.t
+    desc = lpr_events.spent_revolution.300.d
+    flavor = lpr_events.spent_revolution.300.f
+
+    event_image = {
+        video = "unspecific_politicians_arguing"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+    duration = 3
+
+    # Option A: Ultimate Revolutionary Change Reward
+    # Rewards: Massive population growth + long-term tech spread boost
+    option = {
+        name = lpr_events.spent_revolution.300.a
+        set_country_flag = lpr_revolution_spent_300_triggered
+        random_scope_state = {
+            create_pop = {
+                culture = root.capital.state_region.cultures:0
+                religion = root.capital.state_region.religions:0
+                size = 225000
+            }
+        }
+        add_modifier = {
+            name = lpr_society_tech_spread_boost
+            days = 120
+        }
+    }
+
+    # Option B: Supreme Social Transformation Reward
+    # Rewards: Massive population growth + large treasury
+    option = {
+        name = lpr_events.spent_revolution.300.b
+        set_country_flag = lpr_revolution_spent_300_triggered
+        random_scope_state = {
+            create_pop = {
+                culture = root.capital.state_region.cultures:0
+                religion = root.capital.state_region.religions:0
+                size = 300000
+            }
+        }
+        add_treasury = 150000
+    }
+}
+
