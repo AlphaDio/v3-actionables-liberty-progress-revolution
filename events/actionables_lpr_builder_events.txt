@@ -37,10 +37,14 @@ lpr_events.1 = {
 
     # Option A: Liberty Path
     # Rewards: 5,000 gold + 3 Liberty points (local) + 1 Independence point (global)
+    # Drawbacks: Adds radicals (economic freedom causes social unrest)
     # Focus: Economic freedom and national independence
     option = {
         name = lpr_events.1.a
         add_treasury = 5000
+        add_radicals = {
+            value = small_radicals
+        }
         change_variable = {
             name = actionables_lpr_liberty
             add = 3
@@ -53,9 +57,14 @@ lpr_events.1 = {
 
     # Option B: Progress Path
     # Rewards: 30-day construction speed boost (3x multiplier) + 3 Progress points (local) + 1 Innovation point (global)
+    # Drawbacks: Treasury cost for infrastructure investment + small radical increase from rapid change
     # Focus: Technological advancement and innovation through rapid construction
     option = {
         name = lpr_events.1.b
+        add_treasury = -3000
+        add_radicals = {
+            value = very_small_radicals
+        }
         add_modifier = {
             name = lpr_construction_boost
             days = 30
@@ -72,9 +81,26 @@ lpr_events.1 = {
 
     # Option C: Revolution Path
     # Rewards: 30-day society tech spread boost modifier + 3 Revolution points (local) + 1 Turmoil point (global)
+    # Drawbacks: Significant radical increase (revolutionary ideas cause major unrest) + population loss from turmoil
     # Focus: Social change and revolutionary ideas
     option = {
         name = lpr_events.1.c
+        add_radicals = {
+            value = medium_radicals
+        }
+        random_scope_state = {
+            limit = {
+                any_scope_pop = {
+                    size > 15000
+                }
+            }
+            random_scope_pop = {
+                limit = {
+                    size > 15000
+                }
+                change_pop_size = -5000
+            }
+        }
         add_modifier = {
             name = lpr_society_tech_spread_boost
             days = 30
