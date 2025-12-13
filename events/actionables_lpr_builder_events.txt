@@ -80,8 +80,8 @@ lpr_events.1 = {
     }
 
     # Option C: Revolution Path
-    # Rewards: 30-day society tech spread boost modifier + 3 Revolution points (local) + 1 Turmoil point (global)
-    # Drawbacks: Significant radical increase (revolutionary ideas cause major unrest) + population loss from turmoil
+    # Rewards: 30-day society tech spread boost modifier + 3 Revolution points (local) + 1 Uprising point (global)
+    # Drawbacks: Significant radical increase (revolutionary ideas cause major unrest) + population loss from uprising
     # Focus: Social change and revolutionary ideas
     option = {
         name = lpr_events.1.c
@@ -110,7 +110,7 @@ lpr_events.1 = {
             add = 3
         }
         change_global_variable = {
-            name = actionables_lpr_turmoil
+            name = actionables_lpr_uprising
             add = 1
         }
     }

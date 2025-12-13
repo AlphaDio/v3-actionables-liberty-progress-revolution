@@ -45,7 +45,7 @@ actionables_lpr_innovation_value = {
 	value = global_var:actionables_lpr_innovation
 }
 
-actionables_lpr_turmoil_value = {
-	value = global_var:actionables_lpr_turmoil
+actionables_lpr_uprising_value = {
+	value = global_var:actionables_lpr_uprising
 }
 
