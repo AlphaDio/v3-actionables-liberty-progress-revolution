@@ -8,7 +8,7 @@
 # - Global Variables (IIT): Track worldwide trends, shared across all countries
 #   * actionables_lpr_independence: Global measure of independence movements
 #   * actionables_lpr_innovation: Global measure of technological progress
-#   * actionables_lpr_turmoil: Global measure of revolutionary sentiment
+#   * actionables_lpr_uprising: Global measure of revolutionary sentiment
 #
 # - Local Variables (LPR): Track individual country progress
 #   * actionables_lpr_liberty: Country's liberty/independence focus
@@ -21,7 +21,7 @@
 
 # This is executed last among all history files
 GLOBAL = {
-	# Initialize global variables (IIT - Independence, Innovation, Turmoil)
+	# Initialize global variables (IIU - Independence, Innovation, Uprising)
 	# These track worldwide trends and are shared across all countries
 	set_global_variable = {
 		name = actionables_lpr_independence
@@ -32,7 +32,7 @@ GLOBAL = {
 		value = 0
 	}
 	set_global_variable = {
-		name = actionables_lpr_turmoil
+		name = actionables_lpr_uprising
 		value = 0
 	}
 	
@@ -49,6 +49,21 @@ GLOBAL = {
 		}
 		set_variable = {
 			name = actionables_lpr_revolution
+			value = 0
+		}
+		
+		# Initialize cumulative LPR spent variables
+		# These track total amount of each LPR type spent over the entire game
+		set_variable = {
+			name = actionables_lpr_liberty_spent
+			value = 0
+		}
+		set_variable = {
+			name = actionables_lpr_progress_spent
+			value = 0
+		}
+		set_variable = {
+			name = actionables_lpr_revolution_spent
 			value = 0
 		}
 	}

@@ -56,6 +56,10 @@ lpr_events.binary.1 = {
             name = actionables_lpr_liberty
             add = -5
         }
+        change_variable = {
+            name = actionables_lpr_liberty_spent
+            add = 5
+        }
     }
 }
 
@@ -105,6 +109,10 @@ lpr_events.binary.2 = {
         change_variable = {
             name = actionables_lpr_progress
             add = -5
+        }
+        change_variable = {
+            name = actionables_lpr_progress_spent
+            add = 5
         }
     }
 }
@@ -161,6 +169,10 @@ lpr_events.binary.3 = {
         change_variable = {
             name = actionables_lpr_revolution
             add = -5
+        }
+        change_variable = {
+            name = actionables_lpr_revolution_spent
+            add = 5
         }
     }
 }

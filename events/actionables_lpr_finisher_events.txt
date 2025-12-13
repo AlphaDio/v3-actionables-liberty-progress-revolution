@@ -41,6 +41,10 @@ lpr_events.finisher.1 = {
             name = actionables_lpr_liberty
             add = -10
         }
+        change_variable = {
+            name = actionables_lpr_liberty_spent
+            add = 10
+        }
         change_global_variable = {
             name = actionables_lpr_independence
             add = -10
@@ -60,6 +64,10 @@ lpr_events.finisher.1 = {
             name = actionables_lpr_progress
             add = -10
         }
+        change_variable = {
+            name = actionables_lpr_progress_spent
+            add = 10
+        }
         change_global_variable = {
             name = actionables_lpr_innovation
             add = -10
@@ -68,7 +76,7 @@ lpr_events.finisher.1 = {
 
     # Option C: Population Expansion Path
     # Rewards: Creates 50,000 new pops in a random state (matching capital culture/religion)
-    # Costs: Reduces Revolution points (local) and Turmoil (global) by 10
+    # Costs: Reduces Revolution points (local) and Uprising (global) by 10
     # This path increases population, which can boost economic output
     option = {
         name = lpr_events.finisher.1.c
@@ -83,8 +91,12 @@ lpr_events.finisher.1 = {
             name = actionables_lpr_revolution
             add = -10
         }
+        change_variable = {
+            name = actionables_lpr_revolution_spent
+            add = 10
+        }
         change_global_variable = {
-            name = actionables_lpr_turmoil
+            name = actionables_lpr_uprising
             add = -10
         }
     }
