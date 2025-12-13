@@ -1,12 +1,12 @@
 # Finisher event system - triggers if LPR variables meet conditions
-# Threshold of 112 means 4 builder events (12 points) above starting 100
+# Threshold of 12 means 4 builder events (12 points) above starting 0
 lpr_check_finisher_events = {
 	if = {
 		limit = {
 			OR = {
-				var:actionables_lpr_liberty >= 112
-				var:actionables_lpr_progress >= 112
-				var:actionables_lpr_revolution >= 112
+				var:actionables_lpr_liberty >= 12
+				var:actionables_lpr_progress >= 12
+				var:actionables_lpr_revolution >= 12
 			}
 		}
 		trigger_event = {
