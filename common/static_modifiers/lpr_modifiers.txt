@@ -33,12 +33,35 @@ lpr_society_tech_spread_boost = {
 # Triples construction speed (used in Progress path builder events)
 # This significantly accelerates all construction projects for 30 days
 lpr_construction_boost = {
-	country_construction_speed_mult = 3.0
+	state_construction_mult = 3.0
 }
 
 # Massive construction speed boost (used in big finisher events)
 # This provides 5x construction speed for major rewards
 lpr_massive_construction_boost = {
-	country_construction_speed_mult = 5.0
+	state_construction_mult = 5.0
+}
+
+# Radical increase modifiers (temporary effects for 3 months)
+# These increase radicalism instead of adding radicals directly
+
+# Very small radical increase - minimal social unrest
+lpr_very_small_radical_increase = {
+	political_movement_radicalism_mult = 0.1
+}
+
+# Small radical increase - minor social unrest
+lpr_small_radical_increase = {
+	political_movement_radicalism_mult = 0.25
+}
+
+# Medium radical increase - moderate social unrest
+lpr_medium_radical_increase = {
+	political_movement_radicalism_mult = 0.5
+}
+
+# Large radical increase - significant social unrest
+lpr_large_radical_increase = {
+	political_movement_radicalism_mult = 1.0
 }
 
