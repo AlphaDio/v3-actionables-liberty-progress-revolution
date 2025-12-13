@@ -40,22 +40,22 @@ lpr_events.21 = {
     duration = 3
 
     # Option A: Economic Freedom Reward
-    # Rewards: Large treasury boost + stability improvement
+    # Rewards: Treasury boost + stability improvement
     option = {
         name = lpr_events.21.a
         set_country_flag = lpr_liberty_spent_100_triggered
-        add_treasury = 100000
+        add_treasury = 30000
         add_loyalists = {
             value = small_radicals
         }
     }
 
     # Option B: National Independence Reward
-    # Rewards: Moderate treasury + construction boost
+    # Rewards: Small treasury + construction boost
     option = {
         name = lpr_events.21.b
         set_country_flag = lpr_liberty_spent_100_triggered
-        add_treasury = 50000
+        add_treasury = 15000
         add_modifier = {
             name = lpr_construction_boost
             days = 60
@@ -87,22 +87,22 @@ lpr_events.22 = {
     duration = 3
 
     # Option A: Major Economic Freedom Reward
-    # Rewards: Very large treasury boost + significant stability improvement
+    # Rewards: Large treasury boost + significant stability improvement
     option = {
         name = lpr_events.22.a
         set_country_flag = lpr_liberty_spent_200_triggered
-        add_treasury = 200000
+        add_treasury = 60000
         add_loyalists = {
             value = medium_radicals
         }
     }
 
     # Option B: Enhanced National Independence Reward
-    # Rewards: Large treasury + extended construction boost
+    # Rewards: Moderate treasury + extended construction boost
     option = {
         name = lpr_events.22.b
         set_country_flag = lpr_liberty_spent_200_triggered
-        add_treasury = 100000
+        add_treasury = 30000
         add_modifier = {
             name = lpr_construction_boost
             days = 90
@@ -134,22 +134,22 @@ lpr_events.23 = {
     duration = 3
 
     # Option A: Ultimate Economic Freedom Reward
-    # Rewards: Massive treasury boost + major stability improvement
+    # Rewards: Very large treasury boost + major stability improvement
     option = {
         name = lpr_events.23.a
         set_country_flag = lpr_liberty_spent_300_triggered
-        add_treasury = 300000
+        add_treasury = 90000
         add_loyalists = {
             value = large_radicals
         }
     }
 
     # Option B: Supreme National Independence Reward
-    # Rewards: Very large treasury + long-term construction boost
+    # Rewards: Large treasury + long-term construction boost
     option = {
         name = lpr_events.23.b
         set_country_flag = lpr_liberty_spent_300_triggered
-        add_treasury = 150000
+        add_treasury = 45000
         add_modifier = {
             name = lpr_construction_boost
             days = 120
@@ -185,11 +185,11 @@ lpr_events.24 = {
     duration = 3
 
     # Option A: Innovation Boost Reward
-    # Rewards: Construction boost + treasury bonus
+    # Rewards: Construction boost + small treasury bonus
     option = {
         name = lpr_events.24.a
         set_country_flag = lpr_progress_spent_100_triggered
-        add_treasury = 75000
+        add_treasury = 22000
         add_modifier = {
             name = lpr_construction_boost
             days = 60
@@ -197,11 +197,11 @@ lpr_events.24 = {
     }
 
     # Option B: Technological Advancement Reward
-    # Rewards: Tech spread boost + moderate treasury
+    # Rewards: Tech spread boost + small treasury
     option = {
         name = lpr_events.24.b
         set_country_flag = lpr_progress_spent_100_triggered
-        add_treasury = 50000
+        add_treasury = 15000
         add_modifier = {
             name = lpr_society_tech_spread_boost
             days = 60
@@ -233,11 +233,11 @@ lpr_events.25 = {
     duration = 3
 
     # Option A: Major Innovation Boost Reward
-    # Rewards: Extended construction boost + large treasury bonus
+    # Rewards: Extended construction boost + treasury bonus
     option = {
         name = lpr_events.25.a
         set_country_flag = lpr_progress_spent_200_triggered
-        add_treasury = 150000
+        add_treasury = 45000
         add_modifier = {
             name = lpr_construction_boost
             days = 90
@@ -245,11 +245,11 @@ lpr_events.25 = {
     }
 
     # Option B: Enhanced Technological Advancement Reward
-    # Rewards: Extended tech spread boost + moderate treasury
+    # Rewards: Extended tech spread boost + treasury
     option = {
         name = lpr_events.25.b
         set_country_flag = lpr_progress_spent_200_triggered
-        add_treasury = 100000
+        add_treasury = 30000
         add_modifier = {
             name = lpr_society_tech_spread_boost
             days = 90
@@ -281,11 +281,11 @@ lpr_events.26 = {
     duration = 3
 
     # Option A: Ultimate Innovation Boost Reward
-    # Rewards: Long-term construction boost + very large treasury bonus
+    # Rewards: Long-term construction boost + large treasury bonus
     option = {
         name = lpr_events.26.a
         set_country_flag = lpr_progress_spent_300_triggered
-        add_treasury = 225000
+        add_treasury = 67000
         add_modifier = {
             name = lpr_construction_boost
             days = 120
@@ -293,11 +293,11 @@ lpr_events.26 = {
     }
 
     # Option B: Supreme Technological Advancement Reward
-    # Rewards: Long-term tech spread boost + large treasury
+    # Rewards: Long-term tech spread boost + treasury
     option = {
         name = lpr_events.26.b
         set_country_flag = lpr_progress_spent_300_triggered
-        add_treasury = 150000
+        add_treasury = 45000
         add_modifier = {
             name = lpr_society_tech_spread_boost
             days = 120
@@ -351,7 +351,7 @@ lpr_events.27 = {
     }
 
     # Option B: Social Transformation Reward
-    # Rewards: Large population growth + moderate treasury
+    # Rewards: Large population growth + small treasury
     option = {
         name = lpr_events.27.b
         set_country_flag = lpr_revolution_spent_100_triggered
@@ -362,7 +362,7 @@ lpr_events.27 = {
                 size = 100000
             }
         }
-        add_treasury = 50000
+        add_treasury = 15000
     }
 }
 
@@ -408,7 +408,7 @@ lpr_events.28 = {
     }
 
     # Option B: Enhanced Social Transformation Reward
-    # Rewards: Very large population growth + moderate treasury
+    # Rewards: Very large population growth + treasury
     option = {
         name = lpr_events.28.b
         set_country_flag = lpr_revolution_spent_200_triggered
@@ -419,7 +419,7 @@ lpr_events.28 = {
                 size = 200000
             }
         }
-        add_treasury = 100000
+        add_treasury = 30000
     }
 }
 
@@ -465,7 +465,7 @@ lpr_events.29 = {
     }
 
     # Option B: Supreme Social Transformation Reward
-    # Rewards: Massive population growth + large treasury
+    # Rewards: Massive population growth + treasury
     option = {
         name = lpr_events.29.b
         set_country_flag = lpr_revolution_spent_300_triggered
@@ -476,7 +476,7 @@ lpr_events.29 = {
                 size = 300000
             }
         }
-        add_treasury = 150000
+        add_treasury = 45000
     }
 }
 
