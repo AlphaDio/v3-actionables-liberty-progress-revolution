@@ -36,3 +36,9 @@ lpr_construction_boost = {
 	country_construction_speed_mult = 3.0
 }
 
+# Massive construction speed boost (used in big finisher events)
+# This provides 5x construction speed for major rewards
+lpr_massive_construction_boost = {
+	country_construction_speed_mult = 5.0
+}
+
