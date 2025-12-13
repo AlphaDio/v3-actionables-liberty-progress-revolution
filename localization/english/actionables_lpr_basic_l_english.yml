@@ -36,5 +36,26 @@
   lpr_events.binary.3.a: "Continue the Revolution Path (Small reward + 3 Revolution)"
   lpr_events.binary.3.b: "Cash Out Revolution (Big reward - 5 Revolution)"
 
+  lpr_events.big_finisher.1.t: "Liberty's Ultimate Triumph"
+  lpr_events.big_finisher.1.d: "Our dedication to liberty has reached unprecedented heights. We now face a momentous decision: cash out all our accumulated liberty for massive gains, or redirect this energy toward progress."
+  lpr_events.big_finisher.1.f: "Twenty units of liberty demand resolution."
+
+  lpr_events.big_finisher.1.a: "Consume Liberty for Ultimate Reward (150,000 gold + huge stability)"
+  lpr_events.big_finisher.1.b: "Redirect to Progress (Construction boost + 5 Progress, costs 10,000 gold)"
+
+  lpr_events.big_finisher.2.t: "Progress's Pinnacle"
+  lpr_events.big_finisher.2.d: "Our commitment to progress has reached its zenith. We must choose: convert all our progress into unparalleled development, or channel this momentum toward revolutionary change."
+  lpr_events.big_finisher.2.f: "Twenty units of progress await our decision."
+
+  lpr_events.big_finisher.2.a: "Consume Progress for Ultimate Reward (100,000 gold + massive construction boost)"
+  lpr_events.big_finisher.2.b: "Redirect to Revolution (Tech spread + 5 Revolution, some unrest)"
+
+  lpr_events.big_finisher.3.t: "Revolution's Apex"
+  lpr_events.big_finisher.3.d: "Our revolutionary fervor has reached its absolute peak. The choice is ours: unleash all accumulated revolutionary energy for transformative change, or channel it into the cause of liberty."
+  lpr_events.big_finisher.3.f: "Twenty units of revolution demand action."
+
+  lpr_events.big_finisher.3.a: "Consume Revolution for Ultimate Reward (100,000 new pops + long tech boost)"
+  lpr_events.big_finisher.3.b: "Redirect to Liberty (30,000 gold + 5 Liberty, small population loss)"
+
   je_lpr_points: "Liberty, Progress, and Revolution"
   je_lpr_points_status: "Liberty: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_liberty_value')|v]\nProgress: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_progress_value')|v]\nRevolution: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_revolution_value')|v]"
