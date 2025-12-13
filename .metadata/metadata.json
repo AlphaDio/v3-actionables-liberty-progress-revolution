@@ -2,7 +2,7 @@
   "name" : "Actionables - Liberty, Progress, and Revolution",
   "id" : "",
   "version" : "0.0.1",
-  "supported_game_version" : "1.11.*",
+  "supported_game_version" : "1.12.*",
   "short_description" : "Drive the current of the era between Liberty, Progress, or Revolution.",
   "tags" : [],
   "relationships" : [],

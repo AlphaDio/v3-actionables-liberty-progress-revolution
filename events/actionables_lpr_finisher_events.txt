@@ -1,6 +1,18 @@
 namespace = lpr_events
 
-# Finisher events - trigger after 12 builder events
+# ============================================================================
+# FINISHER EVENTS
+# ============================================================================
+# These events trigger when a country accumulates 12 points in any LPR category
+# (Liberty, Progress, or Revolution). This typically happens after 4 monthly
+# builder events where the player consistently chooses the same path.
+# 
+# The finisher events provide significant rewards but also reduce the accumulated
+# points, creating a cycle of building up and cashing out.
+# ============================================================================
+
+# Finisher event - triggers when any LPR variable reaches 12 points
+# This represents a quarterly assessment where accumulated choices manifest
 lpr_events.finisher.1 = {
     type = country_event
     placement = root
@@ -18,6 +30,10 @@ lpr_events.finisher.1 = {
 
     duration = 3
 
+    # Option A: Financial Stability Path
+    # Rewards: Large treasury boost (50,000 gold)
+    # Costs: Reduces Liberty points (local) and Independence (global) by 10
+    # This path favors economic stability over political change
     option = {
         name = lpr_events.finisher.1.a
         add_treasury = 50000
@@ -31,6 +47,10 @@ lpr_events.finisher.1 = {
         }
     }
 
+    # Option B: National Unity Path
+    # Rewards: Converts large radicals to loyalists (improves stability)
+    # Costs: Reduces Progress points (local) and Innovation (global) by 10
+    # This path focuses on social cohesion and reducing radicalism
     option = {
         name = lpr_events.finisher.1.b
         add_loyalists = {
@@ -46,6 +66,10 @@ lpr_events.finisher.1 = {
         }
     }
 
+    # Option C: Population Expansion Path
+    # Rewards: Creates 50,000 new pops in a random state (matching capital culture/religion)
+    # Costs: Reduces Revolution points (local) and Turmoil (global) by 10
+    # This path increases population, which can boost economic output
     option = {
         name = lpr_events.finisher.1.c
         random_scope_state = {

@@ -1,12 +1,22 @@
-# Scripted values for displaying LPR variables
+# ============================================================================
+# SCRIPTED VALUES FOR UI DISPLAY
+# ============================================================================
+# These scripted values allow the journal entry to display LPR point values
+# in the game UI. They simply reference the country variables so players
+# can see their current progress toward finisher events (threshold: 12 points).
+# ============================================================================
+
+# Scripted value for displaying Liberty points in the journal entry
 actionables_lpr_liberty_value = {
 	value = var:actionables_lpr_liberty
 }
 
+# Scripted value for displaying Progress points in the journal entry
 actionables_lpr_progress_value = {
 	value = var:actionables_lpr_progress
 }
 
+# Scripted value for displaying Revolution points in the journal entry
 actionables_lpr_revolution_value = {
 	value = var:actionables_lpr_revolution
 }

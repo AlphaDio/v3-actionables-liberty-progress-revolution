@@ -1,5 +1,23 @@
 namespace = lpr_events
 
+# ============================================================================
+# BUILDER EVENTS (Monthly Events)
+# ============================================================================
+# These are the core monthly events that allow players to accumulate LPR points.
+# Each event fires every month (100% chance) and offers three choices:
+# - Liberty: Focuses on independence and freedom
+# - Progress: Focuses on technological and social advancement
+# - Revolution: Focuses on radical change and upheaval
+#
+# Each choice grants:
+# - 3 points in the corresponding local LPR variable
+# - 1 point in the corresponding global variable
+# - Additional immediate rewards (money, modifiers, etc.)
+#
+# After accumulating 12 points in any category, a finisher event triggers.
+# ============================================================================
+
+# Monthly builder event - fires every month for all countries
 lpr_events.1 = {
     type = country_event
     placement = root
@@ -17,6 +35,9 @@ lpr_events.1 = {
 
     duration = 3
 
+    # Option A: Liberty Path
+    # Rewards: 5,000 gold + 3 Liberty points (local) + 1 Independence point (global)
+    # Focus: Economic freedom and national independence
     option = {
         name = lpr_events.1.a
         add_treasury = 5000
@@ -30,10 +51,13 @@ lpr_events.1 = {
         }
     }
 
+    # Option B: Progress Path
+    # Rewards: 30-day construction speed boost (3x multiplier) + 3 Progress points (local) + 1 Innovation point (global)
+    # Focus: Technological advancement and innovation through rapid construction
     option = {
         name = lpr_events.1.b
         add_modifier = {
-            name = lpr_tech_spread_boost
+            name = lpr_construction_boost
             days = 30
         }
         change_variable = {
@@ -46,6 +70,9 @@ lpr_events.1 = {
         }
     }
 
+    # Option C: Revolution Path
+    # Rewards: 30-day society tech spread boost modifier + 3 Revolution points (local) + 1 Turmoil point (global)
+    # Focus: Social change and revolutionary ideas
     option = {
         name = lpr_events.1.c
         add_modifier = {

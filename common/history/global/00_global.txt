@@ -1,6 +1,28 @@
-﻿# This is executed last among all history
+﻿# ============================================================================
+# GLOBAL HISTORY INITIALIZATION
+# ============================================================================
+# This file initializes all LPR (Liberty, Progress, Revolution) variables
+# at game start. It runs last among all history files to ensure proper setup.
+#
+# Variable System:
+# - Global Variables (IIT): Track worldwide trends, shared across all countries
+#   * actionables_lpr_independence: Global measure of independence movements
+#   * actionables_lpr_innovation: Global measure of technological progress
+#   * actionables_lpr_turmoil: Global measure of revolutionary sentiment
+#
+# - Local Variables (LPR): Track individual country progress
+#   * actionables_lpr_liberty: Country's liberty/independence focus
+#   * actionables_lpr_progress: Country's technological progress focus
+#   * actionables_lpr_revolution: Country's revolutionary focus
+#
+# These variables are modified by monthly builder events and consumed by
+# finisher events when thresholds (12 points) are reached.
+# ============================================================================
+
+# This is executed last among all history files
 GLOBAL = {
-	#Add IIT variables as global variables
+	# Initialize global variables (IIT - Independence, Innovation, Turmoil)
+	# These track worldwide trends and are shared across all countries
 	set_global_variable = {
 		name = actionables_lpr_independence
 		value = 0
@@ -14,7 +36,8 @@ GLOBAL = {
 		value = 0
 	}
 	
-	#Add LPR variables for each country
+	# Initialize local LPR variables for each country
+	# These track individual country progress toward different paths
 	every_country = {
 		set_variable = {
 			name = actionables_lpr_liberty
@@ -30,7 +53,8 @@ GLOBAL = {
 		}
 	}
 	
-	# Add journal entry for player to track LPR points
+	# Add journal entry for player countries to track LPR points
+	# This provides an in-game UI element showing current point values
 	every_country = {
 		limit = {
 			is_player = yes

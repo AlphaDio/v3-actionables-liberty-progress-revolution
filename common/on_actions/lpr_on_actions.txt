@@ -1,11 +1,27 @@
+# ============================================================================
+# ON ACTIONS - MONTHLY EVENT SYSTEM
+# ============================================================================
+# This file hooks into the monthly country pulse to trigger LPR events.
+# Every month, each country:
+# 1. Receives a builder event (100% chance) to accumulate LPR points
+# 2. Checks if any LPR variable has reached 12 points (finisher threshold)
+#
+# The 100% chance is intentional for testing/guaranteed gameplay, but can
+# be adjusted to a lower percentage for more random event timing.
+# ============================================================================
+
+# Fires every month for each country
 on_monthly_pulse_country = {
-	# General builder events - 100% chance per month (guaranteed for testing)
+	# Builder events - 100% chance per month (guaranteed for consistent gameplay)
+	# Players always get a monthly choice to accumulate LPR points
 	random_events = {
 		chance_to_happen = 100
 		1 = lpr_events.1
 	}
 	
 	# Check for finisher events every month (triggers if conditions met)
+	# This evaluates if any LPR variable (Liberty, Progress, or Revolution)
+	# has reached the threshold of 12 points, triggering a finisher event
 	effect = {
 		lpr_check_finisher_events = yes
 	}

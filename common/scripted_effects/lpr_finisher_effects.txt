@@ -1,14 +1,34 @@
-# Finisher event system - triggers if LPR variables meet conditions
-# Threshold of 12 means 4 builder events (12 points) above starting 0
+# ============================================================================
+# FINISHER EVENT CHECK SCRIPTED EFFECT
+# ============================================================================
+# This effect is called monthly to check if any LPR variable has reached
+# the threshold of 12 points, which triggers a finisher event.
+#
+# Threshold Logic:
+# - Each builder event grants 3 points in a chosen category
+# - 12 points = 4 consistent monthly choices in the same path
+# - Once any category reaches 12, the finisher event fires
+# - Finisher events reduce points by 10, allowing the cycle to continue
+#
+# The OR condition means any path can trigger the finisher - players can
+# mix and match, but consistent choices will trigger faster.
+# ============================================================================
+
+# Checks if any LPR variable has reached the finisher threshold (12 points)
+# If so, triggers the finisher event which provides major rewards
 lpr_check_finisher_events = {
 	if = {
 		limit = {
+			# Check if any of the three LPR paths has reached 12 points
+			# This represents approximately 4 months of consistent choices
 			OR = {
 				var:actionables_lpr_liberty >= 12
 				var:actionables_lpr_progress >= 12
 				var:actionables_lpr_revolution >= 12
 			}
 		}
+		# Trigger the finisher event which provides significant rewards
+		# and reduces the accumulated points by 10
 		trigger_event = {
 			id = lpr_events.finisher.1
 		}

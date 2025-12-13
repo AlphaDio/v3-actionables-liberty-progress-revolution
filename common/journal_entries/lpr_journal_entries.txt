@@ -1,21 +1,39 @@
-# LPR Points Journal Entry
+# ============================================================================
+# LPR POINTS JOURNAL ENTRY
+# ============================================================================
+# This journal entry provides an in-game UI element that displays the current
+# LPR point values to the player. It's always visible (never completes) and
+# shows Liberty, Progress, and Revolution point totals.
+#
+# The status description uses scripted values to display the actual point
+# values, allowing players to track their progress toward finisher events
+# (which trigger at 12 points in any category).
+# ============================================================================
+
+# Journal entry that tracks and displays LPR points for player countries
 je_lpr_points = {
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 	
+	# Groups this entry under Internal Affairs in the journal UI
 	group = je_group_internal_affairs
 	
+	# Always show this entry for player countries, even when inactive
 	is_shown_when_inactive = {
 		is_player = yes
 	}
 	
+	# Only available to player-controlled countries
 	possible = {
 		is_player = yes
 	}
 	
+	# Never completes - this is a permanent tracking entry
 	complete = {
 		always = no
 	}
 	
+	# Display the current point values using scripted values
+	# Shows: Liberty, Progress, and Revolution point totals
 	status_desc = {
 		desc = je_lpr_points_status
 	}

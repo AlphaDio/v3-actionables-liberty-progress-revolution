@@ -1,1 +1,8 @@
- 
+# ============================================================================
+# DUPLICATE FILE - NOT USED
+# ============================================================================
+# This file appears to be a duplicate or legacy file. The actual scripted
+# values are defined in: common/script_values/lpr_scripted_values.txt
+#
+# This file is intentionally left empty as it's not used by the mod.
+# ============================================================================
