@@ -20,6 +20,9 @@ on_monthly_pulse_country = {
 	}
 	
 	# Binary choice events - 100% chance when variables >= 5
+	# Note: Multiple binary events can trigger in the same month if multiple
+	# variables are >= 5. This is intentional for testing purposes.
+	
 	# Liberty binary event (triggers when Liberty >= 5)
 	random_events = {
 		chance_to_happen = 100
