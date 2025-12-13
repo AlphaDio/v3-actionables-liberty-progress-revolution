@@ -17,7 +17,7 @@ namespace = lpr_events
 # ============================================================================
 
 # Liberty spent 100 threshold event
-lpr_events.spent_liberty.100 = {
+lpr_events.21 = {
     type = country_event
     placement = root
 
@@ -26,9 +26,9 @@ lpr_events.spent_liberty.100 = {
         NOT = { has_country_flag = lpr_liberty_spent_100_triggered }
     }
 
-    title = lpr_events.spent_liberty.100.t
-    desc = lpr_events.spent_liberty.100.d
-    flavor = lpr_events.spent_liberty.100.f
+    title = lpr_events.21.t
+    desc = lpr_events.21.d
+    flavor = lpr_events.21.f
 
     event_image = {
         video = "unspecific_politicians_arguing"
@@ -42,7 +42,7 @@ lpr_events.spent_liberty.100 = {
     # Option A: Economic Freedom Reward
     # Rewards: Large treasury boost + stability improvement
     option = {
-        name = lpr_events.spent_liberty.100.a
+        name = lpr_events.21.a
         set_country_flag = lpr_liberty_spent_100_triggered
         add_treasury = 100000
         add_loyalists = {
@@ -53,7 +53,7 @@ lpr_events.spent_liberty.100 = {
     # Option B: National Independence Reward
     # Rewards: Moderate treasury + construction boost
     option = {
-        name = lpr_events.spent_liberty.100.b
+        name = lpr_events.21.b
         set_country_flag = lpr_liberty_spent_100_triggered
         add_treasury = 50000
         add_modifier = {
@@ -64,7 +64,7 @@ lpr_events.spent_liberty.100 = {
 }
 
 # Liberty spent 200 threshold event
-lpr_events.spent_liberty.200 = {
+lpr_events.22 = {
     type = country_event
     placement = root
 
@@ -73,9 +73,9 @@ lpr_events.spent_liberty.200 = {
         NOT = { has_country_flag = lpr_liberty_spent_200_triggered }
     }
 
-    title = lpr_events.spent_liberty.200.t
-    desc = lpr_events.spent_liberty.200.d
-    flavor = lpr_events.spent_liberty.200.f
+    title = lpr_events.22.t
+    desc = lpr_events.22.d
+    flavor = lpr_events.22.f
 
     event_image = {
         video = "unspecific_politicians_arguing"
@@ -89,7 +89,7 @@ lpr_events.spent_liberty.200 = {
     # Option A: Major Economic Freedom Reward
     # Rewards: Very large treasury boost + significant stability improvement
     option = {
-        name = lpr_events.spent_liberty.200.a
+        name = lpr_events.22.a
         set_country_flag = lpr_liberty_spent_200_triggered
         add_treasury = 200000
         add_loyalists = {
@@ -100,7 +100,7 @@ lpr_events.spent_liberty.200 = {
     # Option B: Enhanced National Independence Reward
     # Rewards: Large treasury + extended construction boost
     option = {
-        name = lpr_events.spent_liberty.200.b
+        name = lpr_events.22.b
         set_country_flag = lpr_liberty_spent_200_triggered
         add_treasury = 100000
         add_modifier = {
@@ -111,7 +111,7 @@ lpr_events.spent_liberty.200 = {
 }
 
 # Liberty spent 300 threshold event
-lpr_events.spent_liberty.300 = {
+lpr_events.23 = {
     type = country_event
     placement = root
 
@@ -120,9 +120,9 @@ lpr_events.spent_liberty.300 = {
         NOT = { has_country_flag = lpr_liberty_spent_300_triggered }
     }
 
-    title = lpr_events.spent_liberty.300.t
-    desc = lpr_events.spent_liberty.300.d
-    flavor = lpr_events.spent_liberty.300.f
+    title = lpr_events.23.t
+    desc = lpr_events.23.d
+    flavor = lpr_events.23.f
 
     event_image = {
         video = "unspecific_politicians_arguing"
@@ -136,7 +136,7 @@ lpr_events.spent_liberty.300 = {
     # Option A: Ultimate Economic Freedom Reward
     # Rewards: Massive treasury boost + major stability improvement
     option = {
-        name = lpr_events.spent_liberty.300.a
+        name = lpr_events.23.a
         set_country_flag = lpr_liberty_spent_300_triggered
         add_treasury = 300000
         add_loyalists = {
@@ -147,7 +147,7 @@ lpr_events.spent_liberty.300 = {
     # Option B: Supreme National Independence Reward
     # Rewards: Very large treasury + long-term construction boost
     option = {
-        name = lpr_events.spent_liberty.300.b
+        name = lpr_events.23.b
         set_country_flag = lpr_liberty_spent_300_triggered
         add_treasury = 150000
         add_modifier = {
@@ -162,7 +162,7 @@ lpr_events.spent_liberty.300 = {
 # ============================================================================
 
 # Progress spent 100 threshold event
-lpr_events.spent_progress.100 = {
+lpr_events.24 = {
     type = country_event
     placement = root
 
@@ -171,9 +171,9 @@ lpr_events.spent_progress.100 = {
         NOT = { has_country_flag = lpr_progress_spent_100_triggered }
     }
 
-    title = lpr_events.spent_progress.100.t
-    desc = lpr_events.spent_progress.100.d
-    flavor = lpr_events.spent_progress.100.f
+    title = lpr_events.24.t
+    desc = lpr_events.24.d
+    flavor = lpr_events.24.f
 
     event_image = {
         video = "unspecific_world_fair"
@@ -187,7 +187,7 @@ lpr_events.spent_progress.100 = {
     # Option A: Innovation Boost Reward
     # Rewards: Construction boost + treasury bonus
     option = {
-        name = lpr_events.spent_progress.100.a
+        name = lpr_events.24.a
         set_country_flag = lpr_progress_spent_100_triggered
         add_treasury = 75000
         add_modifier = {
@@ -199,7 +199,7 @@ lpr_events.spent_progress.100 = {
     # Option B: Technological Advancement Reward
     # Rewards: Tech spread boost + moderate treasury
     option = {
-        name = lpr_events.spent_progress.100.b
+        name = lpr_events.24.b
         set_country_flag = lpr_progress_spent_100_triggered
         add_treasury = 50000
         add_modifier = {
@@ -210,7 +210,7 @@ lpr_events.spent_progress.100 = {
 }
 
 # Progress spent 200 threshold event
-lpr_events.spent_progress.200 = {
+lpr_events.25 = {
     type = country_event
     placement = root
 
@@ -219,9 +219,9 @@ lpr_events.spent_progress.200 = {
         NOT = { has_country_flag = lpr_progress_spent_200_triggered }
     }
 
-    title = lpr_events.spent_progress.200.t
-    desc = lpr_events.spent_progress.200.d
-    flavor = lpr_events.spent_progress.200.f
+    title = lpr_events.25.t
+    desc = lpr_events.25.d
+    flavor = lpr_events.25.f
 
     event_image = {
         video = "unspecific_world_fair"
@@ -235,7 +235,7 @@ lpr_events.spent_progress.200 = {
     # Option A: Major Innovation Boost Reward
     # Rewards: Extended construction boost + large treasury bonus
     option = {
-        name = lpr_events.spent_progress.200.a
+        name = lpr_events.25.a
         set_country_flag = lpr_progress_spent_200_triggered
         add_treasury = 150000
         add_modifier = {
@@ -247,7 +247,7 @@ lpr_events.spent_progress.200 = {
     # Option B: Enhanced Technological Advancement Reward
     # Rewards: Extended tech spread boost + moderate treasury
     option = {
-        name = lpr_events.spent_progress.200.b
+        name = lpr_events.25.b
         set_country_flag = lpr_progress_spent_200_triggered
         add_treasury = 100000
         add_modifier = {
@@ -258,7 +258,7 @@ lpr_events.spent_progress.200 = {
 }
 
 # Progress spent 300 threshold event
-lpr_events.spent_progress.300 = {
+lpr_events.26 = {
     type = country_event
     placement = root
 
@@ -267,9 +267,9 @@ lpr_events.spent_progress.300 = {
         NOT = { has_country_flag = lpr_progress_spent_300_triggered }
     }
 
-    title = lpr_events.spent_progress.300.t
-    desc = lpr_events.spent_progress.300.d
-    flavor = lpr_events.spent_progress.300.f
+    title = lpr_events.26.t
+    desc = lpr_events.26.d
+    flavor = lpr_events.26.f
 
     event_image = {
         video = "unspecific_world_fair"
@@ -283,7 +283,7 @@ lpr_events.spent_progress.300 = {
     # Option A: Ultimate Innovation Boost Reward
     # Rewards: Long-term construction boost + very large treasury bonus
     option = {
-        name = lpr_events.spent_progress.300.a
+        name = lpr_events.26.a
         set_country_flag = lpr_progress_spent_300_triggered
         add_treasury = 225000
         add_modifier = {
@@ -295,7 +295,7 @@ lpr_events.spent_progress.300 = {
     # Option B: Supreme Technological Advancement Reward
     # Rewards: Long-term tech spread boost + large treasury
     option = {
-        name = lpr_events.spent_progress.300.b
+        name = lpr_events.26.b
         set_country_flag = lpr_progress_spent_300_triggered
         add_treasury = 150000
         add_modifier = {
@@ -310,7 +310,7 @@ lpr_events.spent_progress.300 = {
 # ============================================================================
 
 # Revolution spent 100 threshold event
-lpr_events.spent_revolution.100 = {
+lpr_events.27 = {
     type = country_event
     placement = root
 
@@ -319,9 +319,9 @@ lpr_events.spent_revolution.100 = {
         NOT = { has_country_flag = lpr_revolution_spent_100_triggered }
     }
 
-    title = lpr_events.spent_revolution.100.t
-    desc = lpr_events.spent_revolution.100.d
-    flavor = lpr_events.spent_revolution.100.f
+    title = lpr_events.27.t
+    desc = lpr_events.27.d
+    flavor = lpr_events.27.f
 
     event_image = {
         video = "unspecific_politicians_arguing"
@@ -335,7 +335,7 @@ lpr_events.spent_revolution.100 = {
     # Option A: Revolutionary Change Reward
     # Rewards: Population growth + tech spread boost
     option = {
-        name = lpr_events.spent_revolution.100.a
+        name = lpr_events.27.a
         set_country_flag = lpr_revolution_spent_100_triggered
         random_scope_state = {
             create_pop = {
@@ -353,7 +353,7 @@ lpr_events.spent_revolution.100 = {
     # Option B: Social Transformation Reward
     # Rewards: Large population growth + moderate treasury
     option = {
-        name = lpr_events.spent_revolution.100.b
+        name = lpr_events.27.b
         set_country_flag = lpr_revolution_spent_100_triggered
         random_scope_state = {
             create_pop = {
@@ -367,7 +367,7 @@ lpr_events.spent_revolution.100 = {
 }
 
 # Revolution spent 200 threshold event
-lpr_events.spent_revolution.200 = {
+lpr_events.28 = {
     type = country_event
     placement = root
 
@@ -376,9 +376,9 @@ lpr_events.spent_revolution.200 = {
         NOT = { has_country_flag = lpr_revolution_spent_200_triggered }
     }
 
-    title = lpr_events.spent_revolution.200.t
-    desc = lpr_events.spent_revolution.200.d
-    flavor = lpr_events.spent_revolution.200.f
+    title = lpr_events.28.t
+    desc = lpr_events.28.d
+    flavor = lpr_events.28.f
 
     event_image = {
         video = "unspecific_politicians_arguing"
@@ -392,7 +392,7 @@ lpr_events.spent_revolution.200 = {
     # Option A: Major Revolutionary Change Reward
     # Rewards: Large population growth + extended tech spread boost
     option = {
-        name = lpr_events.spent_revolution.200.a
+        name = lpr_events.28.a
         set_country_flag = lpr_revolution_spent_200_triggered
         random_scope_state = {
             create_pop = {
@@ -410,7 +410,7 @@ lpr_events.spent_revolution.200 = {
     # Option B: Enhanced Social Transformation Reward
     # Rewards: Very large population growth + moderate treasury
     option = {
-        name = lpr_events.spent_revolution.200.b
+        name = lpr_events.28.b
         set_country_flag = lpr_revolution_spent_200_triggered
         random_scope_state = {
             create_pop = {
@@ -424,7 +424,7 @@ lpr_events.spent_revolution.200 = {
 }
 
 # Revolution spent 300 threshold event
-lpr_events.spent_revolution.300 = {
+lpr_events.29 = {
     type = country_event
     placement = root
 
@@ -433,9 +433,9 @@ lpr_events.spent_revolution.300 = {
         NOT = { has_country_flag = lpr_revolution_spent_300_triggered }
     }
 
-    title = lpr_events.spent_revolution.300.t
-    desc = lpr_events.spent_revolution.300.d
-    flavor = lpr_events.spent_revolution.300.f
+    title = lpr_events.29.t
+    desc = lpr_events.29.d
+    flavor = lpr_events.29.f
 
     event_image = {
         video = "unspecific_politicians_arguing"
@@ -449,7 +449,7 @@ lpr_events.spent_revolution.300 = {
     # Option A: Ultimate Revolutionary Change Reward
     # Rewards: Massive population growth + long-term tech spread boost
     option = {
-        name = lpr_events.spent_revolution.300.a
+        name = lpr_events.29.a
         set_country_flag = lpr_revolution_spent_300_triggered
         random_scope_state = {
             create_pop = {
@@ -467,7 +467,7 @@ lpr_events.spent_revolution.300 = {
     # Option B: Supreme Social Transformation Reward
     # Rewards: Massive population growth + large treasury
     option = {
-        name = lpr_events.spent_revolution.300.b
+        name = lpr_events.29.b
         set_country_flag = lpr_revolution_spent_300_triggered
         random_scope_state = {
             create_pop = {

@@ -30,7 +30,7 @@ lpr_check_finisher_events = {
 		# Trigger the finisher event which provides significant rewards
 		# and reduces the accumulated points by 10
 		trigger_event = {
-			id = lpr_events.finisher.1
+			id = lpr_events.5
 		}
 	}
 }

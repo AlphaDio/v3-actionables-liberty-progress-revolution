@@ -13,13 +13,13 @@ namespace = lpr_events
 
 # Finisher event - triggers when any LPR variable reaches 12 points
 # This represents a quarterly assessment where accumulated choices manifest
-lpr_events.finisher.1 = {
+lpr_events.5 = {
     type = country_event
     placement = root
 
-    title = lpr_events.finisher.1.t
-    desc = lpr_events.finisher.1.d
-    flavor = lpr_events.finisher.1.f
+    title = lpr_events.5.t
+    desc = lpr_events.5.d
+    flavor = lpr_events.5.f
 
     event_image = {
         video = "unspecific_politicians_arguing"
@@ -35,7 +35,7 @@ lpr_events.finisher.1 = {
     # Costs: Reduces Liberty points (local) and Independence (global) by 10
     # This path favors economic stability over political change
     option = {
-        name = lpr_events.finisher.1.a
+        name = lpr_events.5.a
         add_treasury = 50000
         change_variable = {
             name = actionables_lpr_liberty
@@ -56,7 +56,7 @@ lpr_events.finisher.1 = {
     # Costs: Reduces Progress points (local) and Innovation (global) by 10
     # This path focuses on social cohesion and reducing radicalism
     option = {
-        name = lpr_events.finisher.1.b
+        name = lpr_events.5.b
         add_loyalists = {
             value = large_radicals
         }
@@ -79,7 +79,7 @@ lpr_events.finisher.1 = {
     # Costs: Reduces Revolution points (local) and Uprising (global) by 10
     # This path increases population, which can boost economic output
     option = {
-        name = lpr_events.finisher.1.c
+        name = lpr_events.5.c
         random_scope_state = {
             create_pop = {
                 culture = root.capital.state_region.cultures:0

@@ -14,13 +14,13 @@ namespace = lpr_events
 # ============================================================================
 
 # Binary event for Liberty - triggers when Liberty >= 5
-lpr_events.binary.1 = {
+lpr_events.2 = {
     type = country_event
     placement = root
 
-    title = lpr_events.binary.1.t
-    desc = lpr_events.binary.1.d
-    flavor = lpr_events.binary.1.f
+    title = lpr_events.2.t
+    desc = lpr_events.2.d
+    flavor = lpr_events.2.f
 
     event_image = {
         video = "unspecific_world_fair"
@@ -35,7 +35,7 @@ lpr_events.binary.1 = {
     # Rewards: Small bonus (10,000 gold) + 3 Liberty points
     # Trade-off: Continue accumulating points but get smaller immediate reward
     option = {
-        name = lpr_events.binary.1.a
+        name = lpr_events.2.a
         add_treasury = 10000
         change_variable = {
             name = actionables_lpr_liberty
@@ -47,7 +47,7 @@ lpr_events.binary.1 = {
     # Rewards: Big bonus (40,000 gold + reduces radicals)
     # Trade-off: Reduces Liberty by 5 points, giving up progress toward finisher
     option = {
-        name = lpr_events.binary.1.b
+        name = lpr_events.2.b
         add_treasury = 40000
         add_loyalists = {
             value = medium_radicals
@@ -64,13 +64,13 @@ lpr_events.binary.1 = {
 }
 
 # Binary event for Progress - triggers when Progress >= 5
-lpr_events.binary.2 = {
+lpr_events.3 = {
     type = country_event
     placement = root
 
-    title = lpr_events.binary.2.t
-    desc = lpr_events.binary.2.d
-    flavor = lpr_events.binary.2.f
+    title = lpr_events.3.t
+    desc = lpr_events.3.d
+    flavor = lpr_events.3.f
 
     event_image = {
         video = "unspecific_world_fair"
@@ -85,7 +85,7 @@ lpr_events.binary.2 = {
     # Rewards: Small bonus (construction speed boost) + 3 Progress points
     # Trade-off: Continue accumulating points but get smaller immediate reward
     option = {
-        name = lpr_events.binary.2.a
+        name = lpr_events.3.a
         add_modifier = {
             name = lpr_construction_boost
             days = 15
@@ -100,7 +100,7 @@ lpr_events.binary.2 = {
     # Rewards: Big bonus (50,000 gold + longer construction boost)
     # Trade-off: Reduces Progress by 5 points, giving up progress toward finisher
     option = {
-        name = lpr_events.binary.2.b
+        name = lpr_events.3.b
         add_treasury = 50000
         add_modifier = {
             name = lpr_construction_boost
@@ -118,13 +118,13 @@ lpr_events.binary.2 = {
 }
 
 # Binary event for Revolution - triggers when Revolution >= 5
-lpr_events.binary.3 = {
+lpr_events.4 = {
     type = country_event
     placement = root
 
-    title = lpr_events.binary.3.t
-    desc = lpr_events.binary.3.d
-    flavor = lpr_events.binary.3.f
+    title = lpr_events.4.t
+    desc = lpr_events.4.d
+    flavor = lpr_events.4.f
 
     event_image = {
         video = "unspecific_world_fair"
@@ -139,7 +139,7 @@ lpr_events.binary.3 = {
     # Rewards: Small bonus (tech spread boost) + 3 Revolution points
     # Trade-off: Continue accumulating points but get smaller immediate reward
     option = {
-        name = lpr_events.binary.3.a
+        name = lpr_events.4.a
         add_modifier = {
             name = lpr_society_tech_spread_boost
             days = 15
@@ -154,7 +154,7 @@ lpr_events.binary.3 = {
     # Rewards: Big bonus (creates 30,000 pops + longer tech spread boost)
     # Trade-off: Reduces Revolution by 5 points, giving up progress toward finisher
     option = {
-        name = lpr_events.binary.3.b
+        name = lpr_events.4.b
         random_scope_state = {
             create_pop = {
                 culture = root.capital.state_region.cultures:0

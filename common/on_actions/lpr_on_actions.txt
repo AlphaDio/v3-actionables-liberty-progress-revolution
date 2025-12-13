@@ -29,7 +29,7 @@ on_monthly_pulse_country = {
 		trigger = {
 			var:actionables_lpr_liberty >= 5
 		}
-		1 = lpr_events.binary.1
+		1 = lpr_events.2
 	}
 	
 	# Progress binary event (triggers when Progress >= 5)
@@ -38,7 +38,7 @@ on_monthly_pulse_country = {
 		trigger = {
 			var:actionables_lpr_progress >= 5
 		}
-		1 = lpr_events.binary.2
+		1 = lpr_events.3
 	}
 	
 	# Revolution binary event (triggers when Revolution >= 5)
@@ -47,7 +47,7 @@ on_monthly_pulse_country = {
 		trigger = {
 			var:actionables_lpr_revolution >= 5
 		}
-		1 = lpr_events.binary.3
+		1 = lpr_events.4
 	}
 	
 	# Big Finisher Binary Events - trigger when variables >= 20
@@ -59,7 +59,7 @@ on_monthly_pulse_country = {
 		trigger = {
 			var:actionables_lpr_liberty >= 20
 		}
-		1 = lpr_events.big_finisher.1
+		1 = lpr_events.11
 	}
 	
 	# Progress big finisher binary event (triggers when Progress >= 20)
@@ -68,7 +68,7 @@ on_monthly_pulse_country = {
 		trigger = {
 			var:actionables_lpr_progress >= 20
 		}
-		1 = lpr_events.big_finisher.2
+		1 = lpr_events.12
 	}
 	
 	# Revolution big finisher binary event (triggers when Revolution >= 20)
@@ -77,7 +77,7 @@ on_monthly_pulse_country = {
 		trigger = {
 			var:actionables_lpr_revolution >= 20
 		}
-		1 = lpr_events.big_finisher.3
+		1 = lpr_events.13
 	}
 	
 	# Check for finisher events every month (triggers if conditions met)
@@ -98,7 +98,7 @@ on_monthly_pulse_country = {
 			var:actionables_lpr_liberty_spent >= 100
 			NOT = { has_country_flag = lpr_liberty_spent_100_triggered }
 		}
-		1 = lpr_events.spent_liberty.100
+		1 = lpr_events.21
 	}
 	
 	random_events = {
@@ -107,7 +107,7 @@ on_monthly_pulse_country = {
 			var:actionables_lpr_liberty_spent >= 200
 			NOT = { has_country_flag = lpr_liberty_spent_200_triggered }
 		}
-		1 = lpr_events.spent_liberty.200
+		1 = lpr_events.22
 	}
 	
 	random_events = {
@@ -116,7 +116,7 @@ on_monthly_pulse_country = {
 			var:actionables_lpr_liberty_spent >= 300
 			NOT = { has_country_flag = lpr_liberty_spent_300_triggered }
 		}
-		1 = lpr_events.spent_liberty.300
+		1 = lpr_events.23
 	}
 	
 	# Progress spent threshold events
@@ -126,7 +126,7 @@ on_monthly_pulse_country = {
 			var:actionables_lpr_progress_spent >= 100
 			NOT = { has_country_flag = lpr_progress_spent_100_triggered }
 		}
-		1 = lpr_events.spent_progress.100
+		1 = lpr_events.24
 	}
 	
 	random_events = {
@@ -135,7 +135,7 @@ on_monthly_pulse_country = {
 			var:actionables_lpr_progress_spent >= 200
 			NOT = { has_country_flag = lpr_progress_spent_200_triggered }
 		}
-		1 = lpr_events.spent_progress.200
+		1 = lpr_events.25
 	}
 	
 	random_events = {
@@ -144,7 +144,7 @@ on_monthly_pulse_country = {
 			var:actionables_lpr_progress_spent >= 300
 			NOT = { has_country_flag = lpr_progress_spent_300_triggered }
 		}
-		1 = lpr_events.spent_progress.300
+		1 = lpr_events.26
 	}
 	
 	# Revolution spent threshold events
@@ -154,7 +154,7 @@ on_monthly_pulse_country = {
 			var:actionables_lpr_revolution_spent >= 100
 			NOT = { has_country_flag = lpr_revolution_spent_100_triggered }
 		}
-		1 = lpr_events.spent_revolution.100
+		1 = lpr_events.27
 	}
 	
 	random_events = {
@@ -163,7 +163,7 @@ on_monthly_pulse_country = {
 			var:actionables_lpr_revolution_spent >= 200
 			NOT = { has_country_flag = lpr_revolution_spent_200_triggered }
 		}
-		1 = lpr_events.spent_revolution.200
+		1 = lpr_events.28
 	}
 	
 	random_events = {
@@ -172,6 +172,6 @@ on_monthly_pulse_country = {
 			var:actionables_lpr_revolution_spent >= 300
 			NOT = { has_country_flag = lpr_revolution_spent_300_triggered }
 		}
-		1 = lpr_events.spent_revolution.300
+		1 = lpr_events.29
 	}
 }
