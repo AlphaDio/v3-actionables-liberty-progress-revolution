@@ -91,12 +91,12 @@ lpr_events.1 = {
         random_scope_state = {
             limit = {
                 any_scope_pop = {
-                    size > 10000
+                    size > 15000
                 }
             }
             random_scope_pop = {
                 limit = {
-                    size > 10000
+                    size > 15000
                 }
                 change_pop_size = -5000
             }
