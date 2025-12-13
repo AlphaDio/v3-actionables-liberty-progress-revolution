@@ -39,6 +39,10 @@ lpr_events.big_finisher.1 = {
         add_loyalists = {
             value = large_radicals
         }
+        change_variable = {
+            name = actionables_lpr_liberty_spent
+            add = var:actionables_lpr_liberty
+        }
         set_variable = {
             name = actionables_lpr_liberty
             value = 0
@@ -89,6 +93,10 @@ lpr_events.big_finisher.2 = {
         add_modifier = {
             name = lpr_massive_construction_boost
             days = 90
+        }
+        change_variable = {
+            name = actionables_lpr_progress_spent
+            add = var:actionables_lpr_progress
         }
         set_variable = {
             name = actionables_lpr_progress
@@ -148,6 +156,10 @@ lpr_events.big_finisher.3 = {
         add_modifier = {
             name = lpr_society_tech_spread_boost
             days = 90
+        }
+        change_variable = {
+            name = actionables_lpr_revolution_spent
+            add = var:actionables_lpr_revolution
         }
         set_variable = {
             name = actionables_lpr_revolution

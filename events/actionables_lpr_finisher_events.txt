@@ -41,6 +41,10 @@ lpr_events.finisher.1 = {
             name = actionables_lpr_liberty
             add = -10
         }
+        change_variable = {
+            name = actionables_lpr_liberty_spent
+            add = 10
+        }
         change_global_variable = {
             name = actionables_lpr_independence
             add = -10
@@ -59,6 +63,10 @@ lpr_events.finisher.1 = {
         change_variable = {
             name = actionables_lpr_progress
             add = -10
+        }
+        change_variable = {
+            name = actionables_lpr_progress_spent
+            add = 10
         }
         change_global_variable = {
             name = actionables_lpr_innovation
@@ -82,6 +90,10 @@ lpr_events.finisher.1 = {
         change_variable = {
             name = actionables_lpr_revolution
             add = -10
+        }
+        change_variable = {
+            name = actionables_lpr_revolution_spent
+            add = 10
         }
         change_global_variable = {
             name = actionables_lpr_turmoil

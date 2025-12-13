@@ -21,3 +21,31 @@ actionables_lpr_revolution_value = {
 	value = var:actionables_lpr_revolution
 }
 
+# Scripted value for displaying cumulative Liberty spent
+actionables_lpr_liberty_spent_value = {
+	value = var:actionables_lpr_liberty_spent
+}
+
+# Scripted value for displaying cumulative Progress spent
+actionables_lpr_progress_spent_value = {
+	value = var:actionables_lpr_progress_spent
+}
+
+# Scripted value for displaying cumulative Revolution spent
+actionables_lpr_revolution_spent_value = {
+	value = var:actionables_lpr_revolution_spent
+}
+
+# Scripted values for displaying global IIT variables
+actionables_lpr_independence_value = {
+	value = global_var:actionables_lpr_independence
+}
+
+actionables_lpr_innovation_value = {
+	value = global_var:actionables_lpr_innovation
+}
+
+actionables_lpr_turmoil_value = {
+	value = global_var:actionables_lpr_turmoil
+}
+

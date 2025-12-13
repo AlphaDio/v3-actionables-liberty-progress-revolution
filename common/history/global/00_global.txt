@@ -51,6 +51,21 @@ GLOBAL = {
 			name = actionables_lpr_revolution
 			value = 0
 		}
+		
+		# Initialize cumulative LPR spent variables
+		# These track total amount of each LPR type spent over the entire game
+		set_variable = {
+			name = actionables_lpr_liberty_spent
+			value = 0
+		}
+		set_variable = {
+			name = actionables_lpr_progress_spent
+			value = 0
+		}
+		set_variable = {
+			name = actionables_lpr_revolution_spent
+			value = 0
+		}
 	}
 	
 	# Add journal entry for player countries to track LPR points
