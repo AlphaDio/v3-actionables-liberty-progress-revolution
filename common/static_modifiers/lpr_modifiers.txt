@@ -3,26 +3,7 @@
 # ============================================================================
 # These modifiers are applied temporarily (via events) to provide immediate
 # gameplay effects when players choose certain paths in builder events.
-#
-# Note: Some modifiers (lpr_research_boost, lpr_tech_multiplier) are defined
-# but may not be actively used in the current event system.
 # ============================================================================
-
-# Doubles technology research speed (currently unused in events)
-lpr_research_boost = {
-	country_tech_research_speed_mult = 2.0
-}
-
-# Halves technology research speed (currently unused in events)
-lpr_tech_multiplier = {
-	country_tech_research_speed_mult = 0.5
-}
-
-# Adds 1000 to tech spread (used in Progress path builder events)
-# This significantly accelerates technology spread from other countries
-lpr_tech_spread_boost = {
-	country_tech_spread_add = 1000
-}
 
 # Increases society tech spread by 10% (used in Revolution path builder events)
 # This helps spread social technologies faster

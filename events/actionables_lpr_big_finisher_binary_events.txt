@@ -110,7 +110,7 @@ lpr_events.12 = {
     option = {
         name = lpr_events.12.b
         add_radicals = {
-            value = small_radicals
+            value = lpr_small_radicals
         }
         add_modifier = {
             name = lpr_society_tech_spread_boost

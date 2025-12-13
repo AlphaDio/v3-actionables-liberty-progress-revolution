@@ -43,7 +43,7 @@ lpr_events.1 = {
         name = lpr_events.1.a
         add_treasury = 5000
         add_radicals = {
-            value = small_radicals
+            value = lpr_small_radicals
         }
         change_variable = {
             name = actionables_lpr_liberty
@@ -57,14 +57,11 @@ lpr_events.1 = {
 
     # Option B: Progress Path
     # Rewards: 30-day construction speed boost (3x multiplier) + 3 Progress points (local) + 1 Innovation point (global)
-    # Drawbacks: Treasury cost for infrastructure investment + small radical increase from rapid change
+    # Drawbacks: Treasury cost for infrastructure investment
     # Focus: Technological advancement and innovation through rapid construction
     option = {
         name = lpr_events.1.b
         add_treasury = -3000
-        add_radicals = {
-            value = very_small_radicals
-        }
         add_modifier = {
             name = lpr_construction_boost
             days = 30
@@ -86,7 +83,7 @@ lpr_events.1 = {
     option = {
         name = lpr_events.1.c
         add_radicals = {
-            value = medium_radicals
+            value = lpr_small_radicals
         }
         random_scope_state = {
             limit = {

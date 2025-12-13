@@ -49,3 +49,25 @@ actionables_lpr_uprising_value = {
 	value = global_var:actionables_lpr_uprising
 }
 
+# ============================================================================
+# REDUCED RADICAL VALUES (10% of base game values)
+# ============================================================================
+# These scripted values provide 10% of the base game's radical values
+# to reduce the impact of radical generation in LPR events.
+# ============================================================================
+
+lpr_very_small_radicals = {
+	value = very_small_radicals
+	mult = 0.1
+}
+
+lpr_small_radicals = {
+	value = small_radicals
+	mult = 0.1
+}
+
+lpr_medium_radicals = {
+	value = medium_radicals
+	mult = 0.1
+}
+
