@@ -1,0 +1,13 @@
+# Scripted values for displaying LPR variables
+actionables_lpr_liberty_value = {
+	value = var:actionables_lpr_liberty
+}
+
+actionables_lpr_progress_value = {
+	value = var:actionables_lpr_progress
+}
+
+actionables_lpr_revolution_value = {
+	value = var:actionables_lpr_revolution
+}
+
