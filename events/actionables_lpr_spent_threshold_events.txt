@@ -37,7 +37,7 @@ lpr_events.21 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-    duration = 3
+    duration = 7
 
     # Option A: Economic Freedom Reward
     # Rewards: Large treasury boost + stability improvement
@@ -84,7 +84,7 @@ lpr_events.22 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-    duration = 3
+    duration = 10
 
     # Option A: Major Economic Freedom Reward
     # Rewards: Very large treasury boost + significant stability improvement
@@ -131,7 +131,7 @@ lpr_events.23 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-    duration = 3
+    duration = 14
 
     # Option A: Ultimate Economic Freedom Reward
     # Rewards: Massive treasury boost + major stability improvement
@@ -182,7 +182,7 @@ lpr_events.24 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-    duration = 3
+    duration = 7
 
     # Option A: Innovation Boost Reward
     # Rewards: Construction boost + treasury bonus
@@ -230,7 +230,7 @@ lpr_events.25 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-    duration = 3
+    duration = 10
 
     # Option A: Major Innovation Boost Reward
     # Rewards: Extended construction boost + large treasury bonus
@@ -278,7 +278,7 @@ lpr_events.26 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-    duration = 3
+    duration = 14
 
     # Option A: Ultimate Innovation Boost Reward
     # Rewards: Long-term construction boost + very large treasury bonus
@@ -330,7 +330,7 @@ lpr_events.27 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-    duration = 3
+    duration = 7
 
     # Option A: Revolutionary Change Reward
     # Rewards: Population growth + tech spread boost
@@ -387,7 +387,7 @@ lpr_events.28 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-    duration = 3
+    duration = 10
 
     # Option A: Major Revolutionary Change Reward
     # Rewards: Large population growth + extended tech spread boost
@@ -444,7 +444,7 @@ lpr_events.29 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-    duration = 3
+    duration = 14
 
     # Option A: Ultimate Revolutionary Change Reward
     # Rewards: Massive population growth + long-term tech spread boost

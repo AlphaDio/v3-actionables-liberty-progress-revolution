@@ -33,7 +33,7 @@ lpr_events.1 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-    duration = 3
+    duration = 5
 
     # Option A: Liberty Path
     # Rewards: 5,000 gold + 3 Liberty points (local) + 1 Independence point (global)

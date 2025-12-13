@@ -28,7 +28,7 @@ lpr_events.11 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-    duration = 3
+    duration = 10
 
     # Option A: Consume Liberty Path for Big Boost
     # Rewards: Massive treasury boost (150,000 gold) + large loyalist increase
@@ -82,7 +82,7 @@ lpr_events.12 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-    duration = 3
+    duration = 10
 
     # Option A: Consume Progress Path for Big Boost
     # Rewards: Massive construction boost (5x speed for 90 days) + 100,000 gold
@@ -139,7 +139,7 @@ lpr_events.13 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-    duration = 3
+    duration = 10
 
     # Option A: Consume Revolution Path for Big Boost
     # Rewards: Massive population boost (100,000 pops) + tech spread boost (90 days)
