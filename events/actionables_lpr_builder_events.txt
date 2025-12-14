@@ -62,7 +62,7 @@ lpr_events.1 = {
     # Focus: Technological advancement and innovation through rapid construction
     option = {
         name = lpr_events.1.b
-        add_treasury = -5000
+        add_treasury = -8000
         add_modifier = {
             name = lpr_very_small_radical_increase
             months = 3
@@ -87,6 +87,7 @@ lpr_events.1 = {
     # Focus: Social change and revolutionary ideas
     option = {
         name = lpr_events.1.c
+        add_treasury = -5000
         add_modifier = {
             name = lpr_medium_radical_increase
             months = 3
