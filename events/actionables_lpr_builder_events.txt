@@ -37,14 +37,14 @@ lpr_events.1 = {
 
     # Option A: Liberty Path
     # Rewards: 3 Liberty points (local) + 1 Independence point (global)
-    # Drawbacks: Small treasury cost + 3-month radical increase (economic freedom causes social unrest)
+    # Drawbacks: 1-month radical increase (economic freedom causes social unrest)
     # Focus: Economic freedom and national independence
     option = {
         name = lpr_events.1.a
-        add_treasury = -2000
+        add_treasury = 2000
         add_modifier = {
             name = lpr_small_radical_increase
-            months = 3
+            months = 1
         }
         change_variable = {
             name = actionables_lpr_liberty
