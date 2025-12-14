@@ -37,7 +37,7 @@ lpr_events.2 = {
     option = {
         name = lpr_events.2.a
         add_loyalists = {
-            value = small_radicals
+            value = lpr_small_radicals
         }
         change_variable = {
             name = actionables_lpr_liberty
@@ -52,7 +52,7 @@ lpr_events.2 = {
         name = lpr_events.2.b
         add_treasury = 15000
         add_loyalists = {
-            value = medium_radicals
+            value = lpr_medium_radicals
         }
         change_variable = {
             name = actionables_lpr_liberty
@@ -165,7 +165,7 @@ lpr_events.4 = {
             }
         }
         add_loyalists = {
-            value = large_radicals
+            value = lpr_large_radicals
         }
         change_variable = {
             name = actionables_lpr_revolution

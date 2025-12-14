@@ -43,7 +43,7 @@ lpr_events.21 = {
         name = lpr_events.21.a
         set_country_flag = lpr_liberty_spent_100_triggered
         add_loyalists = {
-            value = large_radicals
+            value = lpr_large_radicals
         }
     }
 
@@ -103,7 +103,7 @@ lpr_events.24 = {
     option = {
         name = lpr_events.24.b
         set_country_flag = lpr_progress_spent_100_triggered
-        add_treasury = 150000
+        add_treasury = 50000
     }
 }
 
