@@ -4,15 +4,16 @@ namespace = lpr_events
 # FINISHER EVENTS
 # ============================================================================
 # These events trigger when a country accumulates 12 points in any LPR category
-# (Liberty, Progress, or Revolution). This typically happens after 4 monthly
-# builder events where the player consistently chooses the same path.
+# (Liberty, Progress, or Revolution). With quarterly builder events (3 points each),
+# this typically happens after 4 quarterly builder events where the player
+# consistently chooses the same path (taking about a year).
 # 
 # The finisher events provide significant rewards but also reduce the accumulated
 # points, creating a cycle of building up and cashing out.
 # ============================================================================
 
 # Finisher event - triggers when any LPR variable reaches 12 points
-# This represents a quarterly assessment where accumulated choices manifest
+# This represents a yearly assessment where accumulated choices manifest
 lpr_events.5 = {
     type = country_event
     placement = root

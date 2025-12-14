@@ -10,6 +10,9 @@ namespace = lpr_events
 #
 # These events represent major turning points where accumulated effort can
 # either be cashed out for maximum benefit or redirected toward another goal.
+#
+# With quarterly builder events, these trigger less frequently (12% chance)
+# to extend the time between major decision points.
 # ============================================================================
 
 # Big Finisher Binary event for Liberty - triggers when Liberty >= 20

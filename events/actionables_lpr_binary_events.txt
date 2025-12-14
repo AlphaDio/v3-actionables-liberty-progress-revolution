@@ -11,6 +11,9 @@ namespace = lpr_events
 # These events create meaningful trade-offs for players who have already
 # invested in a particular path, forcing them to decide whether to continue
 # or cash out with a larger immediate reward.
+#
+# With quarterly builder events, these trigger less frequently (10% chance)
+# to extend the time between opportunities.
 # ============================================================================
 
 # Binary event for Liberty - triggers when Liberty >= 5
