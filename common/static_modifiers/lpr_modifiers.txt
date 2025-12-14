@@ -59,3 +59,15 @@ lpr_revolutionary_fervor = {
 	building_training_rate_mult = 0.5
 }
 
+# Educational advancement - increases qualification growth across all social classes
+# This provides a 50% boost to qualification growth, helping pops gain skills faster
+lpr_educational_advancement = {
+	qualification_growth_mult = 0.5
+}
+
+# Liberty beacon - increases migration attraction, making the country more appealing to migrants
+# This provides a 50% boost to mass migration attraction, representing the appeal of liberty
+lpr_liberty_beacon = {
+	migration_attraction_mult = 0.5
+}
+
