@@ -46,3 +46,10 @@ lpr_large_radical_increase = {
 	political_movement_radicalism_mult = 1.0
 }
 
+# Military boost - increases army offense and defense (used in Revolution path binary events)
+# This provides a 25% boost to both offensive and defensive capabilities
+lpr_military_boost = {
+	army_offense_mult = 0.25
+	army_defense_mult = 0.25
+}
+

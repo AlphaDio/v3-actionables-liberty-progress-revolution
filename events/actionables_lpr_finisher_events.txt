@@ -57,8 +57,9 @@ lpr_events.5 = {
     # This path focuses on social cohesion and reducing radicalism
     option = {
         name = lpr_events.5.b
+        add_treasury = -20000
         add_loyalists = {
-            value = large_radicals
+            value = lpr_medium_radicals
         }
         change_variable = {
             name = actionables_lpr_progress
@@ -80,6 +81,7 @@ lpr_events.5 = {
     # This path increases population, which can boost economic output
     option = {
         name = lpr_events.5.c
+        add_treasury = -25000
         random_scope_state = {
             create_pop = {
                 culture = root.capital.state_region.cultures:0
