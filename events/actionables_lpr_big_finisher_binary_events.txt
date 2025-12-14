@@ -31,11 +31,11 @@ lpr_events.11 = {
     duration = 10
 
     # Option A: Consume Liberty Path for Big Boost
-    # Rewards: Massive treasury boost (150,000 gold) + large loyalist increase
+    # Rewards: Large treasury boost (50,000 gold) + large loyalist increase
     # Cost: Sets Liberty to 0, consuming all accumulated progress
     option = {
         name = lpr_events.11.a
-        add_treasury = 150000
+        add_treasury = 50000
         add_loyalists = {
             value = large_radicals
         }
@@ -85,11 +85,11 @@ lpr_events.12 = {
     duration = 10
 
     # Option A: Consume Progress Path for Big Boost
-    # Rewards: Massive construction boost (5x speed for 90 days) + 100,000 gold
+    # Rewards: Massive construction boost (5x speed for 90 days) + 35,000 gold
     # Cost: Sets Progress to 0, consuming all accumulated progress
     option = {
         name = lpr_events.12.a
-        add_treasury = 100000
+        add_treasury = 35000
         add_modifier = {
             name = lpr_massive_construction_boost
             days = 90
@@ -106,11 +106,12 @@ lpr_events.12 = {
 
     # Option B: Redirect Progress to Revolution
     # Rewards: Small bonus (tech spread boost for 60 days) + 5 Revolution points
-    # Drawback: Small radical increase + keeps Progress at current level
+    # Drawback: 3-month radical increase + keeps Progress at current level
     option = {
         name = lpr_events.12.b
-        add_radicals = {
-            value = lpr_small_radicals
+        add_modifier = {
+            name = lpr_small_radical_increase
+            months = 3
         }
         add_modifier = {
             name = lpr_society_tech_spread_boost
@@ -168,11 +169,11 @@ lpr_events.13 = {
     }
 
     # Option B: Redirect Revolution to Liberty
-    # Rewards: Small bonus (30,000 gold) + 5 Liberty points
+    # Rewards: Small bonus (10,000 gold) + 5 Liberty points
     # Drawback: Small population loss (10,000) + keeps Revolution at current level
     option = {
         name = lpr_events.13.b
-        add_treasury = 30000
+        add_treasury = 10000
         random_scope_state = {
             limit = {
                 any_scope_pop = {

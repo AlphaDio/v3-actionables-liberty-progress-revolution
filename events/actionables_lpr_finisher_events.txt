@@ -31,12 +31,12 @@ lpr_events.5 = {
     duration = 7
 
     # Option A: Financial Stability Path
-    # Rewards: Large treasury boost (50,000 gold)
+    # Rewards: Moderate treasury boost (15,000 gold)
     # Costs: Reduces Liberty points (local) and Independence (global) by 10
     # This path favors economic stability over political change
     option = {
         name = lpr_events.5.a
-        add_treasury = 50000
+        add_treasury = 15000
         change_variable = {
             name = actionables_lpr_liberty
             add = -10

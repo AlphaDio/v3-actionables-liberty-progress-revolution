@@ -36,14 +36,15 @@ lpr_events.1 = {
     duration = 5
 
     # Option A: Liberty Path
-    # Rewards: 5,000 gold + 3 Liberty points (local) + 1 Independence point (global)
-    # Drawbacks: Adds radicals (economic freedom causes social unrest)
+    # Rewards: 3 Liberty points (local) + 1 Independence point (global)
+    # Drawbacks: Small treasury cost + 3-month radical increase (economic freedom causes social unrest)
     # Focus: Economic freedom and national independence
     option = {
         name = lpr_events.1.a
-        add_treasury = 5000
-        add_radicals = {
-            value = lpr_small_radicals
+        add_treasury = -2000
+        add_modifier = {
+            name = lpr_small_radical_increase
+            months = 3
         }
         change_variable = {
             name = actionables_lpr_liberty
@@ -57,11 +58,15 @@ lpr_events.1 = {
 
     # Option B: Progress Path
     # Rewards: 30-day construction speed boost (3x multiplier) + 3 Progress points (local) + 1 Innovation point (global)
-    # Drawbacks: Treasury cost for infrastructure investment
+    # Drawbacks: Larger treasury cost for infrastructure investment + 3-month radical increase from rapid change
     # Focus: Technological advancement and innovation through rapid construction
     option = {
         name = lpr_events.1.b
-        add_treasury = -3000
+        add_treasury = -8000
+        add_modifier = {
+            name = lpr_very_small_radical_increase
+            months = 3
+        }
         add_modifier = {
             name = lpr_construction_boost
             days = 30
@@ -78,12 +83,14 @@ lpr_events.1 = {
 
     # Option C: Revolution Path
     # Rewards: 30-day society tech spread boost modifier + 3 Revolution points (local) + 1 Uprising point (global)
-    # Drawbacks: Significant radical increase (revolutionary ideas cause major unrest) + population loss from uprising
+    # Drawbacks: Treasury cost + 3-month radical increase (revolutionary ideas cause major unrest) + population loss from uprising
     # Focus: Social change and revolutionary ideas
     option = {
         name = lpr_events.1.c
-        add_radicals = {
-            value = lpr_small_radicals
+        add_treasury = -3000
+        add_modifier = {
+            name = lpr_medium_radical_increase
+            months = 3
         }
         random_scope_state = {
             limit = {
