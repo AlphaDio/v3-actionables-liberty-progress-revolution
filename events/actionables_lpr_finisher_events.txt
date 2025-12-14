@@ -36,6 +36,9 @@ lpr_events.5 = {
     # This path favors economic stability over political change
     option = {
         name = lpr_events.5.a
+        trigger = {
+            var:actionables_lpr_liberty >= 10
+        }
         add_treasury = 15000
         change_variable = {
             name = actionables_lpr_liberty
@@ -57,6 +60,9 @@ lpr_events.5 = {
     # This path focuses on social cohesion and reducing radicalism
     option = {
         name = lpr_events.5.b
+        trigger = {
+            var:actionables_lpr_progress >= 10
+        }
         add_treasury = -20000
         add_loyalists = {
             value = lpr_medium_radicals
@@ -81,6 +87,9 @@ lpr_events.5 = {
     # This path increases population, which can boost economic output
     option = {
         name = lpr_events.5.c
+        trigger = {
+            var:actionables_lpr_revolution >= 10
+        }
         add_treasury = -25000
         random_scope_state = {
             create_pop = {
