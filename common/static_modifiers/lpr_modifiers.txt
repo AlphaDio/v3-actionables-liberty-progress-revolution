@@ -53,3 +53,9 @@ lpr_military_boost = {
 	army_defense_mult = 0.25
 }
 
+# Revolutionary fervor - increases training rate at all military buildings
+# This provides a 50% boost to training rate, representing revolutionary enthusiasm
+lpr_revolutionary_fervor = {
+	building_training_rate_mult = 0.5
+}
+

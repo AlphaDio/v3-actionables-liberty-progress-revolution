@@ -158,19 +158,15 @@ lpr_events.27 = {
         }
     }
 
-    # Option B: Social Transformation Reward
-    # Rewards: Large population growth + small treasury
+    # Option B: Revolutionary Fervor Reward
+    # Rewards: Increased training rate at all military buildings
     option = {
         name = lpr_events.27.b
         set_country_flag = lpr_revolution_spent_100_triggered
-        random_scope_state = {
-            create_pop = {
-                culture = root.capital.state_region.cultures:0
-                religion = root.capital.state_region.religions:0
-                size = 100000
-            }
+        add_modifier = {
+            name = lpr_revolutionary_fervor
+            days = 60
         }
-        add_treasury = 15000
     }
 }
 
