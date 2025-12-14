@@ -32,11 +32,14 @@ lpr_events.2 = {
     duration = 3
 
     # Option A: Commit to Liberty Path
-    # Rewards: Small bonus (10,000 gold) + 3 Liberty points
+    # Rewards: Small bonus (construction boost) + 3 Liberty points
     # Trade-off: Continue accumulating points but get smaller immediate reward
     option = {
         name = lpr_events.2.a
-        add_treasury = 10000
+        add_modifier = {
+            name = lpr_construction_boost
+            days = 15
+        }
         change_variable = {
             name = actionables_lpr_liberty
             add = 3
@@ -44,11 +47,11 @@ lpr_events.2 = {
     }
 
     # Option B: Reject Liberty Path
-    # Rewards: Big bonus (40,000 gold + reduces radicals)
+    # Rewards: Big bonus (15,000 gold + reduces radicals)
     # Trade-off: Reduces Liberty by 5 points, giving up progress toward finisher
     option = {
         name = lpr_events.2.b
-        add_treasury = 40000
+        add_treasury = 15000
         add_loyalists = {
             value = medium_radicals
         }
@@ -97,11 +100,11 @@ lpr_events.3 = {
     }
 
     # Option B: Reject Progress Path
-    # Rewards: Big bonus (50,000 gold + longer construction boost)
+    # Rewards: Big bonus (20,000 gold + longer construction boost)
     # Trade-off: Reduces Progress by 5 points, giving up progress toward finisher
     option = {
         name = lpr_events.3.b
-        add_treasury = 50000
+        add_treasury = 20000
         add_modifier = {
             name = lpr_construction_boost
             days = 45
