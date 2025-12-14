@@ -40,14 +40,14 @@
   lpr_events.11.d: "Our dedication to liberty has reached unprecedented heights. We now face a momentous decision: cash out all our accumulated liberty for massive gains, or redirect this energy toward progress."
   lpr_events.11.f: "Twenty units of liberty demand resolution."
 
-  lpr_events.11.a: "Consume Liberty for Ultimate Reward (150,000 gold + huge stability)"
+  lpr_events.11.a: "Consume Liberty for Ultimate Reward (50,000 gold + huge stability)"
   lpr_events.11.b: "Redirect to Progress (Construction boost + 5 Progress, costs 10,000 gold)"
 
   lpr_events.12.t: "Progress's Pinnacle"
   lpr_events.12.d: "Our commitment to progress has reached its zenith. We must choose: convert all our progress into unparalleled development, or channel this momentum toward revolutionary change."
   lpr_events.12.f: "Twenty units of progress await our decision."
 
-  lpr_events.12.a: "Consume Progress for Ultimate Reward (100,000 gold + massive construction boost)"
+  lpr_events.12.a: "Consume Progress for Ultimate Reward (35,000 gold + massive construction boost)"
   lpr_events.12.b: "Redirect to Revolution (Tech spread + 5 Revolution, some unrest)"
 
   lpr_events.13.t: "Revolution's Apex"
@@ -55,7 +55,7 @@
   lpr_events.13.f: "Twenty units of revolution demand action."
 
   lpr_events.13.a: "Consume Revolution for Ultimate Reward (100,000 new pops + long tech boost)"
-  lpr_events.13.b: "Redirect to Liberty (30,000 gold + 5 Liberty, small population loss)"
+  lpr_events.13.b: "Redirect to Liberty (10,000 gold + 5 Liberty, small population loss)"
 
   je_lpr_points: "Liberty, Progress, and Revolution"
   je_lpr_points_status: "Liberty: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_liberty_value')|v] (Spent: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_liberty_spent_value')|v])\nProgress: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_progress_value')|v] (Spent: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_progress_spent_value')|v])\nRevolution: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_revolution_value')|v] (Spent: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_revolution_spent_value')|v])\n\nGlobal Variables:\nIndependence: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_independence_value')|v]\nInnovation: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_innovation_value')|v]\nUprising: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_uprising_value')|v]"
@@ -64,8 +64,8 @@
   lpr_events.21.t: "Liberty Milestone: 100 Points Spent"
   lpr_events.21.d: "Our nation has reached a significant milestone in the pursuit of liberty. One hundred points of liberty have been spent, marking a major commitment to economic freedom and national independence."
   lpr_events.21.f: "A century of liberty demands recognition."
-  lpr_events.21.a: "Economic Freedom (100,000 gold + stability)"
-  lpr_events.21.b: "National Independence (50,000 gold + construction boost)"
+  lpr_events.21.a: "Economic Freedom (Large stability boost)"
+  lpr_events.21.b: "Liberty Beacon (Migration attraction boost)"
 
   lpr_events.22.t: "Liberty Milestone: 200 Points Spent"
   lpr_events.22.d: "Two hundred points of liberty have been spent, demonstrating an extraordinary dedication to the principles of freedom and independence. This achievement deserves substantial recognition."
@@ -83,8 +83,8 @@
   lpr_events.24.t: "Progress Milestone: 100 Points Spent"
   lpr_events.24.d: "Our nation has reached a significant milestone in the pursuit of progress. One hundred points of progress have been spent, marking a major commitment to innovation and technological advancement."
   lpr_events.24.f: "A century of progress demands recognition."
-  lpr_events.24.a: "Innovation Boost (75,000 gold + construction boost)"
-  lpr_events.24.b: "Technological Advancement (50,000 gold + tech spread boost)"
+  lpr_events.24.a: "Educational Advancement (22,000 gold + qualification growth boost)"
+  lpr_events.24.b: "Technological Advancement (50,000 gold)"
 
   lpr_events.25.t: "Progress Milestone: 200 Points Spent"
   lpr_events.25.d: "Two hundred points of progress have been spent, demonstrating an extraordinary dedication to innovation and development. This achievement deserves substantial recognition."
@@ -102,8 +102,8 @@
   lpr_events.27.t: "Revolution Milestone: 100 Points Spent"
   lpr_events.27.d: "Our nation has reached a significant milestone in the pursuit of revolution. One hundred points of revolution have been spent, marking a major commitment to social transformation and radical change."
   lpr_events.27.f: "A century of revolution demands recognition."
-  lpr_events.27.a: "Revolutionary Change (75,000 new pops + tech spread boost)"
-  lpr_events.27.b: "Social Transformation (100,000 new pops + 50,000 gold)"
+  lpr_events.27.a: "Revolutionary Change (Tech spread boost for 90 days)"
+  lpr_events.27.b: "Revolutionary Fervor (55,000 new pops + training rate boost)"
 
   lpr_events.28.t: "Revolution Milestone: 200 Points Spent"
   lpr_events.28.d: "Two hundred points of revolution have been spent, demonstrating an extraordinary dedication to social change and revolutionary ideals. This achievement deserves substantial recognition."

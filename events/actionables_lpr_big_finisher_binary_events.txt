@@ -37,7 +37,7 @@ lpr_events.11 = {
         name = lpr_events.11.a
         add_treasury = 50000
         add_loyalists = {
-            value = large_radicals
+            value = lpr_large_radicals
         }
         change_variable = {
             name = actionables_lpr_liberty_spent

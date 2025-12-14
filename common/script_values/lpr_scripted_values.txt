@@ -71,3 +71,8 @@ lpr_medium_radicals = {
 	mult = 0.1
 }
 
+lpr_large_radicals = {
+	value = large_radicals
+	mult = 0.1
+}
+
