@@ -8,6 +8,9 @@ namespace = lpr_events
 #
 # Each event provides significant rewards based on the path that has been
 # consistently pursued, rewarding long-term commitment to a particular strategy.
+#
+# With quarterly builder events, these trigger less frequently (15% chance)
+# to extend the time between milestone rewards.
 # ============================================================================
 
 # ============================================================================
