@@ -19,10 +19,10 @@ on_monthly_pulse_country = {
 		chance_to_happen = 45
 		trigger = {
 			OR = {
-				month = 1
-				month = 4
-				month = 7
-				month = 10
+				this.current_month = 1
+				this.current_month = 4
+				this.current_month = 7
+				this.current_month = 10
 			}
 		}
 		1 = lpr_events.1
