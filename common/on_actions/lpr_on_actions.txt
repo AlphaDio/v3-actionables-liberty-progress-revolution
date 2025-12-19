@@ -7,7 +7,7 @@
 # - Each country has a quarterly countdown variable starting at 3
 # - Each month: decrement by 1, then check if <= 0, then reset if <= 0
 # - Execution: countdown-- → if countdown<=0 then event → if countdown<=0 then reset to 3
-# - Cycle: 3 → 2 → 1 → 0 (event fires) → 3 → 2 → ...
+# - Cycle: 3 → 2 → 1 → 0 or less (event fires) → reset to 3 → 2 → ...
 # - This provides opportunities to accumulate LPR points every 3 months
 #
 # THRESHOLD CHECKS:
