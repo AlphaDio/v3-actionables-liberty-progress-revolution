@@ -1,4 +1,4 @@
-namespace = lpr_events
+﻿namespace = lpr_events
 
 # ============================================================================
 # SPENT THRESHOLD EVENTS
@@ -45,7 +45,7 @@ lpr_events.21 = {
     # Rewards: Treasury boost + stability improvement
     option = {
         name = lpr_events.21.a
-        weight = 20  # Balanced choice variety
+
         set_country_flag = lpr_liberty_spent_100_triggered
         add_loyalists = {
             value = lpr_large_radicals
@@ -56,10 +56,9 @@ lpr_events.21 = {
     # Rewards: Increased migration attraction, making the country more appealing to migrants
     option = {
         name = lpr_events.21.b
-        weight = 20  # Balanced choice variety
+
         set_country_flag = lpr_liberty_spent_100_triggered
-        add_modifier = {
-            name = lpr_liberty_beacon
+        add_modifier = { modifier = lpr_liberty_beacon
             days = 90
         }
     }
@@ -100,11 +99,10 @@ lpr_events.24 = {
     # Rewards: Increased qualification growth + small treasury bonus
     option = {
         name = lpr_events.24.a
-        weight = 20  # Balanced choice variety
+
         set_country_flag = lpr_progress_spent_100_triggered
         add_treasury = 22000
-        add_modifier = {
-            name = lpr_educational_advancement
+        add_modifier = { modifier = lpr_educational_advancement
             days = 60
         }
     }
@@ -113,7 +111,7 @@ lpr_events.24 = {
     # Rewards: Tech spread boost + small treasury
     option = {
         name = lpr_events.24.b
-        weight = 20  # Balanced choice variety
+
         set_country_flag = lpr_progress_spent_100_triggered
         add_treasury = 50000
     }
@@ -154,10 +152,9 @@ lpr_events.27 = {
     # Rewards: Population growth + tech spread boost
     option = {
         name = lpr_events.27.a
-        weight = 20  # Balanced choice variety
+
         set_country_flag = lpr_revolution_spent_100_triggered
-        add_modifier = {
-            name = lpr_society_tech_spread_boost
+        add_modifier = { modifier = lpr_society_tech_spread_boost
             days = 90
         }
     }
@@ -166,19 +163,20 @@ lpr_events.27 = {
     # Rewards: Increased training rate at all military buildings
     option = {
         name = lpr_events.27.b
-        weight = 20  # Balanced choice variety
+
         set_country_flag = lpr_revolution_spent_100_triggered
         random_scope_state = {
             create_pop = {
-                culture = root.capital.state_region.cultures:0
-                religion = root.capital.state_region.religions:0
+                culture = root.culture
+                religion = root.religion
                 size = 55000
             }
         }
-        add_modifier = {
-            name = lpr_revolutionary_fervor
+        add_modifier = { modifier = lpr_revolutionary_fervor
             days = 90
         }
     }
 }
+
+
 

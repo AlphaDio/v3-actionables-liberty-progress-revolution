@@ -1,4 +1,4 @@
-namespace = lpr_events
+﻿namespace = lpr_events
 
 # ============================================================================
 # BINARY CHOICE BUILDER EVENTS (Monthly Events)
@@ -18,9 +18,9 @@ lpr_events.2 = {
     type = country_event
     placement = root
 
-    mtth = {
-        months = 10  # ~10% monthly chance for balanced gameplay
-    }
+mtth = {
+    months = 10  # ~10% monthly chance for balanced gameplay
+}
 
     trigger = {
         var:actionables_lpr_liberty >= 5
@@ -44,7 +44,6 @@ lpr_events.2 = {
     # Trade-off: Continue accumulating points but get smaller immediate reward
     option = {
         name = lpr_events.2.a
-        weight = 20  # Balanced choice variety
         add_loyalists = {
             value = lpr_small_radicals
         }
@@ -59,7 +58,7 @@ lpr_events.2 = {
     # Trade-off: Reduces Liberty by 5 points, giving up progress toward finisher
     option = {
         name = lpr_events.2.b
-        weight = 20  # Balanced choice variety
+
         add_treasury = 15000
         add_loyalists = {
             value = lpr_medium_radicals
@@ -106,9 +105,8 @@ lpr_events.3 = {
     # Trade-off: Continue accumulating points but get smaller immediate reward
     option = {
         name = lpr_events.3.a
-        weight = 20  # Balanced choice variety
-        add_modifier = {
-            name = lpr_construction_boost
+
+        add_modifier = { modifier = lpr_construction_boost
             days = 30
         }
         change_variable = {
@@ -122,10 +120,9 @@ lpr_events.3 = {
     # Trade-off: Reduces Progress by 5 points, giving up progress toward finisher
     option = {
         name = lpr_events.3.b
-        weight = 20  # Balanced choice variety
+
         add_treasury = 20000
-        add_modifier = {
-            name = lpr_construction_boost
+        add_modifier = { modifier = lpr_construction_boost
             days = 90
         }
         change_variable = {
@@ -170,9 +167,8 @@ lpr_events.4 = {
     # Trade-off: Continue accumulating points but get smaller immediate reward
     option = {
         name = lpr_events.4.a
-        weight = 20  # Balanced choice variety
-        add_modifier = {
-            name = lpr_military_boost
+
+        add_modifier = { modifier = lpr_military_boost
             days = 15
         }
         change_variable = {
@@ -186,11 +182,11 @@ lpr_events.4 = {
     # Trade-off: Reduces Revolution by 5 points, giving up progress toward finisher
     option = {
         name = lpr_events.4.b
-        weight = 20  # Balanced choice variety
+
         random_scope_state = {
             create_pop = {
-                culture = root.capital.state_region.cultures:0
-                religion = root.capital.state_region.religions:0
+                culture = root.culture
+                religion = root.religion
                 size = 30000
             }
         }
@@ -207,3 +203,5 @@ lpr_events.4 = {
         }
     }
 }
+
+

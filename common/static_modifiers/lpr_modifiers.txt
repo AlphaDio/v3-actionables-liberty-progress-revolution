@@ -1,4 +1,4 @@
-# ============================================================================
+﻿# ============================================================================
 # LPR STATIC MODIFIERS
 # ============================================================================
 # These modifiers are applied temporarily (via events) to provide immediate
@@ -14,13 +14,13 @@ lpr_society_tech_spread_boost = {
 # Triples construction speed (used in Progress path builder events)
 # This significantly accelerates all construction projects for 30 days
 lpr_construction_boost = {
-	building_construction_throughput_mult = 3.0
+	country_construction_efficiency_mult = 3.0
 }
 
 # Massive construction speed boost (used in big finisher events)
 # This provides 5x construction speed for major rewards
 lpr_massive_construction_boost = {
-	building_construction_throughput_mult = 5.0
+	country_construction_efficiency_mult = 5.0
 }
 
 # Radical increase modifiers (temporary effects for 3 months)
@@ -28,29 +28,29 @@ lpr_massive_construction_boost = {
 
 # Very small radical increase - minimal social unrest
 lpr_very_small_radical_increase = {
-	political_movement_radicalism_mult = 0.1
+	country_radicalism_mult = 0.1
 }
 
 # Small radical increase - minor social unrest
 lpr_small_radical_increase = {
-	political_movement_radicalism_mult = 0.25
+	country_radicalism_mult = 0.25
 }
 
 # Medium radical increase - moderate social unrest
 lpr_medium_radical_increase = {
-	political_movement_radicalism_mult = 0.5
+	country_radicalism_mult = 0.5
 }
 
 # Large radical increase - significant social unrest
 lpr_large_radical_increase = {
-	political_movement_radicalism_mult = 1.0
+	country_radicalism_mult = 1.0
 }
 
 # Military boost - increases army offense and defense (used in Revolution path binary events)
 # This provides a 25% boost to both offensive and defensive capabilities
 lpr_military_boost = {
-	army_offense_mult = 0.25
-	army_defense_mult = 0.25
+	country_army_offense_mult = 0.25
+	country_army_defense_mult = 0.25
 }
 
 # Revolutionary fervor - increases training rate at all military buildings
@@ -62,13 +62,13 @@ lpr_revolutionary_fervor = {
 # Educational advancement - increases qualification growth across all social classes
 # This provides a 50% boost to qualification growth, helping pops gain skills faster
 lpr_educational_advancement = {
-	qualification_growth_mult = 0.5
+	country_qualification_growth_mult = 0.5
 }
 
 # Liberty beacon - increases migration attraction, making the country more appealing to migrants
 # This provides a 50% boost to mass migration attraction, representing the appeal of liberty
 lpr_liberty_beacon = {
-	migration_attraction_mult = 0.5
+	country_mass_migration_attraction_mult = 0.5
 }
 
 # ============================================================================
@@ -81,19 +81,19 @@ lpr_liberty_beacon = {
 # Boosts enactment advance and debate chances (used in Liberty politics event)
 # This makes laws more likely to advance or enter debate phases
 lpr_enactment_advance_debate_boost = {
-	law_enactment_advance_chance_mult = 0.5
-	law_enactment_debate_chance_mult = 0.5
+	country_law_enactment_advance_chance_mult = 0.5
+	country_law_enactment_debate_chance_mult = 0.5
 }
 
 # Boosts enactment success chance (used in Progress politics event)
 # This makes laws more likely to succeed at checkpoints
 lpr_enactment_success_boost = {
-	law_enactment_success_chance_mult = 0.5
+	country_law_enactment_success_chance_mult = 0.5
 }
 
 # Reduces enactment time (used in Revolution politics event)
 # This makes laws pass faster by reducing time between checkpoints
 lpr_enactment_time_reduction = {
-	law_enactment_speed_mult = 0.5
+	country_law_enactment_time_mult = -0.5  # Negative to reduce time
 }
 

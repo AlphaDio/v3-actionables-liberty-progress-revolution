@@ -1,4 +1,4 @@
-namespace = lpr_events
+﻿namespace = lpr_events
 
 # ============================================================================
 # BUILDER EVENTS (Monthly Events)
@@ -46,8 +46,7 @@ lpr_events.1 = {
     option = {
         name = lpr_events.1.a
         add_treasury = 2000
-        add_modifier = {
-            name = lpr_small_radical_increase
+        add_modifier = { modifier = lpr_small_radical_increase
             months = 1
         }
         change_variable = {
@@ -67,12 +66,10 @@ lpr_events.1 = {
     option = {
         name = lpr_events.1.b
         add_treasury = -8000
-        add_modifier = {
-            name = lpr_very_small_radical_increase
+        add_modifier = { modifier = lpr_very_small_radical_increase
             months = 3
         }
-        add_modifier = {
-            name = lpr_construction_boost
+        add_modifier = { modifier = lpr_construction_boost
             days = 30
         }
         change_variable = {
@@ -92,8 +89,7 @@ lpr_events.1 = {
     option = {
         name = lpr_events.1.c
         add_treasury = -3000
-        add_modifier = {
-            name = lpr_medium_radical_increase
+        add_modifier = { modifier = lpr_medium_radical_increase
             months = 3
         }
         random_scope_state = {
@@ -104,13 +100,12 @@ lpr_events.1 = {
             }
             random_scope_pop = {
                 limit = {
-                    size > 15000
+                    population > 15000
                 }
                 change_pop_size = -5000
             }
         }
-        add_modifier = {
-            name = lpr_society_tech_spread_boost
+        add_modifier = { modifier = lpr_society_tech_spread_boost
             days = 30
         }
         change_variable = {
@@ -123,3 +118,5 @@ lpr_events.1 = {
         }
     }
 }
+
+

@@ -1,4 +1,4 @@
-# ============================================================================
+﻿# ============================================================================
 # ON ACTIONS - MONTHLY EVENT SYSTEM
 # ============================================================================
 # This file hooks into the monthly country pulse to trigger LPR events.
@@ -16,21 +16,21 @@
 # Fires every month for each country
 on_monthly_pulse_country = {
 	# Builder events now use MTTH system
-	
+
 	# Big Finisher Binary Events
 	# These provide major rewards for consuming accumulated points
-	
+
 	# Check for finisher events every month (triggers if conditions met)
 	# This evaluates if any LPR variable (Liberty, Progress, or Revolution)
 	# has reached the threshold of 12 points, triggering a finisher event
-	effect = {
-		lpr_check_finisher_events = yes
-	}
-	
+
 	# Spent Threshold Events
 	# These events fire once per threshold (100) for each LPR path
 	# Flags prevent events from firing multiple times
 
+	effect = {
+		lpr_check_finisher_events = yes
+	}
 }
 
 # ============================================================================

@@ -16,7 +16,6 @@ lpr_events.30 = {
     category = enactment
 
     trigger = {
-        has_law_being_enacted = yes
         var:actionables_lpr_liberty >= 5
     }
 
@@ -38,8 +37,7 @@ lpr_events.30 = {
     # Costs: Liberty points, gold, radicalizes Trade Unions
     option = {
         name = lpr_events.30.a
-        add_modifier = {
-            name = lpr_enactment_advance_debate_boost
+        add_modifier = { modifier = lpr_enactment_advance_debate_boost
             days = 30
         }
         change_variable = {
@@ -68,7 +66,6 @@ lpr_events.31 = {
     category = enactment
 
     trigger = {
-        has_law_being_enacted = yes
         var:actionables_lpr_progress >= 5
     }
 
@@ -90,8 +87,7 @@ lpr_events.31 = {
     # Costs: Progress points, radicalizes Rural Folks and Religious groups
     option = {
         name = lpr_events.31.a
-        add_modifier = {
-            name = lpr_enactment_success_boost
+        add_modifier = { modifier = lpr_enactment_success_boost
             days = 30
         }
         change_variable = {
@@ -123,7 +119,6 @@ lpr_events.32 = {
     category = enactment
 
     trigger = {
-        has_law_being_enacted = yes
         var:actionables_lpr_revolution >= 5
     }
 
@@ -145,8 +140,7 @@ lpr_events.32 = {
     # Costs: Revolution points
     option = {
         name = lpr_events.32.a
-        add_modifier = {
-            name = lpr_enactment_time_reduction
+        add_modifier = { modifier = lpr_enactment_time_reduction
             days = 730  # 2 years
         }
         change_variable = {
@@ -161,3 +155,5 @@ lpr_events.32 = {
         name = lpr_events.32.b
     }
 }
+
+

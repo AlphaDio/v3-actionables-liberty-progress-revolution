@@ -94,8 +94,8 @@ lpr_events.5 = {
         add_treasury = -25000
         random_scope_state = {
             create_pop = {
-                culture = root.capital.state_region.cultures:0
-                religion = root.capital.state_region.religions:0
+                culture = root.culture
+                religion = root.religion
                 size = 50000
             }
         }
@@ -113,3 +113,5 @@ lpr_events.5 = {
         }
     }
 }
+
+
