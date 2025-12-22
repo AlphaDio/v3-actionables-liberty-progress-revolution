@@ -1,58 +1,28 @@
 # ============================================================================
-# ON ACTIONS - QUARTERLY/MONTHLY EVENT SYSTEM
+# ON ACTIONS - MONTHLY EVENT SYSTEM
 # ============================================================================
 # This file hooks into the monthly country pulse to trigger LPR events.
 # 
-# QUARTERLY BUILDER EVENTS (using countdown system):
-# - Each country has a quarterly countdown variable starting at 3
-# - Each month: decrement by 1, then check if <= 0, then reset if <= 0
-# - Execution: countdown-- → if countdown<=0 then event → if countdown<=0 then reset to 3
-# - Cycle: 3 → 2 → 1 → 0 or less (event fires) → reset to 3 → 2 → ...
-# - This provides opportunities to accumulate LPR points every 3 months
+# MONTHLY BUILDER EVENTS:
+# - Builder events fire every month with 100% chance
+# - This provides opportunities to accumulate LPR points every month
 #
 # THRESHOLD CHECKS:
 # - Monthly check if any LPR variable has reached threshold for finisher events
 # - Other events (binary, big finisher, threshold) check monthly with adjusted
-#   probabilities to extend their frequencies accordingly
+#   probabilities
 # ============================================================================
 
 # Fires every month for each country
 on_monthly_pulse_country = {
-	# Decrement quarterly countdown for builder events
-	effect = {
-		change_variable = {
-			name = actionables_lpr_quarterly_countdown
-			add = -1
-		}
-	}
-	
-	# Builder events - 45% chance per quarter for balanced gameplay
-	# Fires when the quarterly countdown reaches 0 or less after decrement
-	random_events = {
-		chance_to_happen = 45
-		trigger = {
-			var:actionables_lpr_quarterly_countdown <= 0
-		}
-		1 = lpr_events.1
-	}
-	
-	# Reset countdown after event opportunity (if countdown reached 0 or less)
-	effect = {
-		if = {
-			limit = {
-				var:actionables_lpr_quarterly_countdown <= 0
-			}
-			set_variable = {
-				name = actionables_lpr_quarterly_countdown
-				value = 3
-			}
-		}
+	# Builder events - fires every month with 100% chance
+	events = {
+		lpr_events.1
 	}
 	
 	# Binary choice events - 10% chance when variables >= 5
 	# Note: Multiple binary events can trigger in the same month if multiple
 	# variables are >= 5, but with moderate probability for balanced gameplay.
-	# Reduced from 20% to 10% since quarterly builder events mean slower accumulation
 	
 	# Liberty binary event (triggers when Liberty >= 5)
 	random_events = {
@@ -83,7 +53,6 @@ on_monthly_pulse_country = {
 	
 	# Big Finisher Binary Events - 12% chance when variables >= 20
 	# These provide major rewards for consuming accumulated points
-	# Reduced from 25% to 12% since quarterly builder events mean slower accumulation
 	
 	# Liberty big finisher binary event (triggers when Liberty >= 20)
 	random_events = {
@@ -122,7 +91,6 @@ on_monthly_pulse_country = {
 	# Spent Threshold Events - 15% chance when cumulative spent variables reach milestones
 	# These events fire once per threshold (100) for each LPR path
 	# Flags prevent events from firing multiple times
-	# Reduced from 30% to 15% to extend frequency with quarterly builder events
 	
 	# Liberty spent threshold events
 	random_events = {

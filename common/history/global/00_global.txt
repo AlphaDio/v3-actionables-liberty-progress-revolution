@@ -66,14 +66,6 @@ GLOBAL = {
 			name = actionables_lpr_revolution_spent
 			value = 0
 		}
-		
-		# Initialize quarterly countdown (every 3 months between builder events)
-		# This countdown will be decremented monthly
-		# Cycle: 3 → 2 → 1 → 0 (event fires) → reset to 3
-		set_variable = {
-			name = actionables_lpr_quarterly_countdown
-			value = 3
-		}
 	}
 	
 	# Add journal entry for player countries to track LPR points
