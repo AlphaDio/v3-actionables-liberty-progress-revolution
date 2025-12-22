@@ -1,115 +1,67 @@
 # ============================================================================
-# ON ACTIONS - QUARTERLY/MONTHLY EVENT SYSTEM
+# ON ACTIONS - MONTHLY EVENT SYSTEM
 # ============================================================================
 # This file hooks into the monthly country pulse to trigger LPR events.
 # 
-# QUARTERLY BUILDER EVENTS (using countdown system):
-# - Each country has a quarterly countdown variable starting at 3
-# - Each month: decrement by 1, then check if <= 0, then reset if <= 0
-# - Execution: countdown-- → if countdown<=0 then event → if countdown<=0 then reset to 3
-# - Cycle: 3 → 2 → 1 → 0 or less (event fires) → reset to 3 → 2 → ...
-# - This provides opportunities to accumulate LPR points every 3 months
+# MONTHLY BUILDER EVENTS:
+# - Builder events fire every month with 100% chance
+# - This provides opportunities to accumulate LPR points every month
 #
 # THRESHOLD CHECKS:
 # - Monthly check if any LPR variable has reached threshold for finisher events
 # - Other events (binary, big finisher, threshold) check monthly with adjusted
-#   probabilities to extend their frequencies accordingly
+#   probabilities
 # ============================================================================
 
 # Fires every month for each country
 on_monthly_pulse_country = {
-	# Decrement quarterly countdown for builder events
-	effect = {
-		change_variable = {
-			name = actionables_lpr_quarterly_countdown
-			add = -1
-		}
-	}
-	
-	# Builder events - 45% chance per quarter for balanced gameplay
-	# Fires when the quarterly countdown reaches 0 or less after decrement
+	# Builder events - fires every month with 10% chance
 	random_events = {
-		chance_to_happen = 45
-		trigger = {
-			var:actionables_lpr_quarterly_countdown <= 0
-		}
-		1 = lpr_events.1
-	}
-	
-	# Reset countdown after event opportunity (if countdown reached 0 or less)
-	effect = {
-		if = {
-			limit = {
-				var:actionables_lpr_quarterly_countdown <= 0
-			}
-			set_variable = {
-				name = actionables_lpr_quarterly_countdown
-				value = 3
-			}
-		}
+		90 = 0  # 90% chance of no event
+		10 = lpr_events.1  # 10% chance of triggering event
 	}
 	
 	# Binary choice events - 10% chance when variables >= 5
 	# Note: Multiple binary events can trigger in the same month if multiple
 	# variables are >= 5, but with moderate probability for balanced gameplay.
-	# Reduced from 20% to 10% since quarterly builder events mean slower accumulation
-	
+
 	# Liberty binary event (triggers when Liberty >= 5)
 	random_events = {
-		chance_to_happen = 10
-		trigger = {
-			var:actionables_lpr_liberty >= 5
-		}
-		1 = lpr_events.2
+		90 = 0  # 90% chance of no event
+		10 = lpr_events.2  # 10% chance of triggering event
 	}
 	
 	# Progress binary event (triggers when Progress >= 5)
 	random_events = {
-		chance_to_happen = 10
-		trigger = {
-			var:actionables_lpr_progress >= 5
-		}
-		1 = lpr_events.3
+		90 = 0  # 90% chance of no event
+		10 = lpr_events.3  # 10% chance of triggering event
 	}
 	
 	# Revolution binary event (triggers when Revolution >= 5)
 	random_events = {
-		chance_to_happen = 10
-		trigger = {
-			var:actionables_lpr_revolution >= 5
-		}
-		1 = lpr_events.4
+		90 = 0  # 90% chance of no event
+		10 = lpr_events.4  # 10% chance of triggering event
 	}
 	
 	# Big Finisher Binary Events - 12% chance when variables >= 20
 	# These provide major rewards for consuming accumulated points
-	# Reduced from 25% to 12% since quarterly builder events mean slower accumulation
 	
 	# Liberty big finisher binary event (triggers when Liberty >= 20)
 	random_events = {
-		chance_to_happen = 12
-		trigger = {
-			var:actionables_lpr_liberty >= 20
-		}
-		1 = lpr_events.11
+		88 = 0  # 88% chance of no event
+		12 = lpr_events.11  # 12% chance of triggering event
 	}
 	
 	# Progress big finisher binary event (triggers when Progress >= 20)
 	random_events = {
-		chance_to_happen = 12
-		trigger = {
-			var:actionables_lpr_progress >= 20
-		}
-		1 = lpr_events.12
+		88 = 0  # 88% chance of no event
+		12 = lpr_events.12  # 12% chance of triggering event
 	}
 	
 	# Revolution big finisher binary event (triggers when Revolution >= 20)
 	random_events = {
-		chance_to_happen = 12
-		trigger = {
-			var:actionables_lpr_revolution >= 20
-		}
-		1 = lpr_events.13
+		88 = 0  # 88% chance of no event
+		12 = lpr_events.13  # 12% chance of triggering event
 	}
 	
 	# Check for finisher events every month (triggers if conditions met)
@@ -122,36 +74,23 @@ on_monthly_pulse_country = {
 	# Spent Threshold Events - 15% chance when cumulative spent variables reach milestones
 	# These events fire once per threshold (100) for each LPR path
 	# Flags prevent events from firing multiple times
-	# Reduced from 30% to 15% to extend frequency with quarterly builder events
 	
 	# Liberty spent threshold events
 	random_events = {
-		chance_to_happen = 15
-		trigger = {
-			var:actionables_lpr_liberty_spent >= 100
-			NOT = { has_country_flag = lpr_liberty_spent_100_triggered }
-		}
-		1 = lpr_events.21
+		85 = 0  # 85% chance of no event
+		15 = lpr_events.21  # 15% chance of triggering event
 	}
 	
 	# Progress spent threshold events
 	random_events = {
-		chance_to_happen = 15
-		trigger = {
-			var:actionables_lpr_progress_spent >= 100
-			NOT = { has_country_flag = lpr_progress_spent_100_triggered }
-		}
-		1 = lpr_events.24
+		85 = 0  # 85% chance of no event
+		15 = lpr_events.24  # 15% chance of triggering event
 	}
 	
 	# Revolution spent threshold events
 	random_events = {
-		chance_to_happen = 15
-		trigger = {
-			var:actionables_lpr_revolution_spent >= 100
-			NOT = { has_country_flag = lpr_revolution_spent_100_triggered }
-		}
-		1 = lpr_events.27
+		85 = 0  # 85% chance of no event
+		15 = lpr_events.27  # 15% chance of triggering event
 	}
 	
 }

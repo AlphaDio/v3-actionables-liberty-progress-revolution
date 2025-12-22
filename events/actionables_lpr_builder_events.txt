@@ -1,10 +1,10 @@
 namespace = lpr_events
 
 # ============================================================================
-# BUILDER EVENTS (Quarterly Events)
+# BUILDER EVENTS (Monthly Events)
 # ============================================================================
-# These are the core quarterly events that allow players to accumulate LPR points.
-# Each event fires every 3 months (using countdown system) with 45% chance and offers three choices:
+# These are the core monthly events that allow players to accumulate LPR points.
+# Each event fires every month with 100% chance and offers three choices:
 # - Liberty: Focuses on independence and freedom
 # - Progress: Focuses on technological and social advancement
 # - Revolution: Focuses on radical change and upheaval
@@ -17,7 +17,7 @@ namespace = lpr_events
 # After accumulating 12 points in any category, a finisher event triggers.
 # ============================================================================
 
-# Quarterly builder event - fires every 3 months (countdown-based) for all countries
+# Monthly builder event - fires every month with 100% chance for all countries
 lpr_events.1 = {
     type = country_event
     placement = root
