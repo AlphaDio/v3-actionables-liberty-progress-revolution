@@ -1,0 +1,163 @@
+namespace = lpr_events
+
+# ============================================================================
+# POLITICS LAW ENACTMENT EVENTS
+# ============================================================================
+# These events can be triggered during law enactment debates, allowing players
+# to spend LPR points for political advantages. Each event offers different
+# benefits but comes with costs and drawbacks.
+# ============================================================================
+
+# Politics event for Liberty - triggered during law enactment debates
+lpr_events.30 = {
+    type = country_event
+    placement = root
+
+    category = enactment
+
+    trigger = {
+        has_law_being_enacted = yes
+        var:actionables_lpr_liberty >= 5
+    }
+
+    title = lpr_events.30.t
+    desc = lpr_events.30.d
+    flavor = lpr_events.30.f
+
+    event_image = {
+        video = "unspecific_politicians_arguing"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    duration = 7
+
+    # Option A: Spend Liberty for Political Advantage
+    # Benefits: Increases enactment advance and debate chances
+    # Costs: Liberty points, gold, radicalizes Trade Unions
+    option = {
+        name = lpr_events.30.a
+        add_modifier = {
+            name = lpr_enactment_advance_debate_boost
+            days = 30
+        }
+        change_variable = {
+            name = actionables_lpr_liberty
+            add = -5
+        }
+        add_treasury = -5000
+        add_loyalists = {
+            name = ig:ig_trade_unions
+            value = lpr_small_radicals
+        }
+    }
+
+    # Option B: Decline the Political Maneuver
+    # No benefits or costs
+    option = {
+        name = lpr_events.30.b
+    }
+}
+
+# Politics event for Progress - triggered during law enactment debates
+lpr_events.31 = {
+    type = country_event
+    placement = root
+
+    category = enactment
+
+    trigger = {
+        has_law_being_enacted = yes
+        var:actionables_lpr_progress >= 5
+    }
+
+    title = lpr_events.31.t
+    desc = lpr_events.31.d
+    flavor = lpr_events.31.f
+
+    event_image = {
+        video = "unspecific_world_fair"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    duration = 7
+
+    # Option A: Spend Progress for Legislative Success
+    # Benefits: Increases enactment success chance
+    # Costs: Progress points, radicalizes Rural Folks and Religious groups
+    option = {
+        name = lpr_events.31.a
+        add_modifier = {
+            name = lpr_enactment_success_boost
+            days = 30
+        }
+        change_variable = {
+            name = actionables_lpr_progress
+            add = -5
+        }
+        add_loyalists = {
+            name = ig:ig_rural_folk
+            value = lpr_small_radicals
+        }
+        add_loyalists = {
+            name = ig:ig_devout
+            value = lpr_small_radicals
+        }
+    }
+
+    # Option B: Decline the Legislative Support
+    # No benefits or costs
+    option = {
+        name = lpr_events.31.b
+    }
+}
+
+# Politics event for Revolution - triggered during law enactment debates
+lpr_events.32 = {
+    type = country_event
+    placement = root
+
+    category = enactment
+
+    trigger = {
+        has_law_being_enacted = yes
+        var:actionables_lpr_revolution >= 5
+    }
+
+    title = lpr_events.32.t
+    desc = lpr_events.32.d
+    flavor = lpr_events.32.f
+
+    event_image = {
+        video = "unspecific_politicians_arguing"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+    duration = 7
+
+    # Option A: Spend Revolution for Radical Legislative Tactics
+    # Benefits: Reduces enactment time for 2 years
+    # Costs: Revolution points
+    option = {
+        name = lpr_events.32.a
+        add_modifier = {
+            name = lpr_enactment_time_reduction
+            days = 730  # 2 years
+        }
+        change_variable = {
+            name = actionables_lpr_revolution
+            add = -5
+        }
+    }
+
+    # Option B: Decline the Radical Approach
+    # No benefits or costs
+    option = {
+        name = lpr_events.32.b
+    }
+}

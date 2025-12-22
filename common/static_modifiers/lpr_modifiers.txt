@@ -71,3 +71,29 @@ lpr_liberty_beacon = {
 	migration_attraction_mult = 0.5
 }
 
+# ============================================================================
+# LAW ENACTMENT POLITICS MODIFIERS
+# ============================================================================
+# These modifiers are applied during law enactment politics events to influence
+# the success, advance, debate, and timing of legislative processes.
+# ============================================================================
+
+# Boosts enactment advance and debate chances (used in Liberty politics event)
+# This makes laws more likely to advance or enter debate phases
+lpr_enactment_advance_debate_boost = {
+	law_enactment_advance_chance_mult = 0.5
+	law_enactment_debate_chance_mult = 0.5
+}
+
+# Boosts enactment success chance (used in Progress politics event)
+# This makes laws more likely to succeed at checkpoints
+lpr_enactment_success_boost = {
+	law_enactment_success_chance_mult = 0.5
+}
+
+# Reduces enactment time (used in Revolution politics event)
+# This makes laws pass faster by reducing time between checkpoints
+lpr_enactment_time_reduction = {
+	law_enactment_speed_mult = 0.5
+}
+

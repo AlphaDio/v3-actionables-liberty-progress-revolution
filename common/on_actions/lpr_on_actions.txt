@@ -92,5 +92,28 @@ on_monthly_pulse_country = {
 		0 = 0  # 0% chance of no event
 		100 = lpr_events.27  # 100% chance of triggering event
 	}
-	
+
+}
+
+# ============================================================================
+# LAW ENACTMENT POLITICS EVENTS
+# ============================================================================
+# These events trigger during law enactment debates, offering players the
+# chance to spend LPR points for political advantages during legislation.
+# ============================================================================
+
+# Trigger politics events during law enactment debates
+on_law_checkpoint_debate = {
+	on_actions = {
+		lpr_on_law_checkpoint_debate
+	}
+}
+
+lpr_on_law_checkpoint_debate = {
+	random_events = {
+		95 = 0  # 95% chance of no politics event
+		5 = lpr_events.30  # 5% chance of Liberty politics event
+		5 = lpr_events.31  # 5% chance of Progress politics event
+		5 = lpr_events.32  # 5% chance of Revolution politics event
+	}
 }
