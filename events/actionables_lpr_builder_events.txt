@@ -4,7 +4,7 @@ namespace = lpr_events
 # BUILDER EVENTS (Monthly Events)
 # ============================================================================
 # These are the core monthly events that allow players to accumulate LPR points.
-# Each event fires every month with 100% chance and offers three choices:
+# Each event uses MTTH system for balanced timing and offers three choices:
 # - Liberty: Focuses on independence and freedom
 # - Progress: Focuses on technological and social advancement
 # - Revolution: Focuses on radical change and upheaval
@@ -17,10 +17,14 @@ namespace = lpr_events
 # After accumulating 12 points in any category, a finisher event triggers.
 # ============================================================================
 
-# Monthly builder event - fires every month with 100% chance for all countries
+# Monthly builder event - uses MTTH system for balanced timing
 lpr_events.1 = {
     type = country_event
     placement = root
+
+    mtth = {
+        months = 4  # ~25% monthly chance for balanced gameplay
+    }
 
     title = lpr_events.1.t
     desc = lpr_events.1.d

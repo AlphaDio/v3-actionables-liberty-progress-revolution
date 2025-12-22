@@ -4,8 +4,8 @@
 # This file hooks into the monthly country pulse to trigger LPR events.
 # 
 # MONTHLY BUILDER EVENTS:
-# - Builder events fire every month with 100% chance
-# - This provides opportunities to accumulate LPR points every month
+# - Builder events use MTTH system for balanced timing
+# - This provides opportunities to accumulate LPR points regularly
 #
 # THRESHOLD CHECKS:
 # - Monthly check if any LPR variable has reached threshold for finisher events
@@ -15,54 +15,10 @@
 
 # Fires every month for each country
 on_monthly_pulse_country = {
-	# Builder events - fires every month with 100% chance
-	random_events = {
-		0 = 0  # 0% chance of no event
-		100 = lpr_events.1  # 100% chance of triggering event
-	}
+	# Builder events now use MTTH system
 	
-	# Binary choice events - 10% chance when variables >= 5
-	# Note: Multiple binary events can trigger in the same month if multiple
-	# variables are >= 5, but with moderate probability for balanced gameplay.
-
-	# Liberty binary event (triggers when Liberty >= 5)
-	random_events = {
-		0 = 0  # 0% chance of no event
-		100 = lpr_events.2  # 100% chance of triggering event
-	}
-	
-	# Progress binary event (triggers when Progress >= 5)
-	random_events = {
-		0 = 0  # 0% chance of no event
-		100 = lpr_events.3  # 100% chance of triggering event
-	}
-	
-	# Revolution binary event (triggers when Revolution >= 5)
-	random_events = {
-		0 = 0  # 0% chance of no event
-		100 = lpr_events.4  # 100% chance of triggering event
-	}
-	
-	# Big Finisher Binary Events - 12% chance when variables >= 20
+	# Big Finisher Binary Events
 	# These provide major rewards for consuming accumulated points
-	
-	# Liberty big finisher binary event (triggers when Liberty >= 20)
-	random_events = {
-		0 = 0  # 0% chance of no event
-		100 = lpr_events.11  # 100% chance of triggering event
-	}
-	
-	# Progress big finisher binary event (triggers when Progress >= 20)
-	random_events = {
-		0 = 0  # 0% chance of no event
-		100 = lpr_events.12  # 100% chance of triggering event
-	}
-	
-	# Revolution big finisher binary event (triggers when Revolution >= 20)
-	random_events = {
-		0 = 0  # 0% chance of no event
-		100 = lpr_events.13  # 100% chance of triggering event
-	}
 	
 	# Check for finisher events every month (triggers if conditions met)
 	# This evaluates if any LPR variable (Liberty, Progress, or Revolution)
@@ -71,27 +27,9 @@ on_monthly_pulse_country = {
 		lpr_check_finisher_events = yes
 	}
 	
-	# Spent Threshold Events - 15% chance when cumulative spent variables reach milestones
+	# Spent Threshold Events
 	# These events fire once per threshold (100) for each LPR path
 	# Flags prevent events from firing multiple times
-	
-	# Liberty spent threshold events
-	random_events = {
-		0 = 0  # 0% chance of no event
-		100 = lpr_events.21  # 100% chance of triggering event
-	}
-	
-	# Progress spent threshold events
-	random_events = {
-		0 = 0  # 0% chance of no event
-		100 = lpr_events.24  # 100% chance of triggering event
-	}
-	
-	# Revolution spent threshold events
-	random_events = {
-		0 = 0  # 0% chance of no event
-		100 = lpr_events.27  # 100% chance of triggering event
-	}
 
 }
 
@@ -111,9 +49,9 @@ on_law_checkpoint_debate = {
 
 lpr_on_law_checkpoint_debate = {
 	random_events = {
-		95 = 0  # 95% chance of no politics event
-		5 = lpr_events.30  # 5% chance of Liberty politics event
-		5 = lpr_events.31  # 5% chance of Progress politics event
-		5 = lpr_events.32  # 5% chance of Revolution politics event
+		55 = 0
+		15 = lpr_events.30
+		15 = lpr_events.31
+		15 = lpr_events.32
 	}
 }

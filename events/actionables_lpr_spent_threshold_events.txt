@@ -19,6 +19,10 @@ lpr_events.21 = {
     type = country_event
     placement = root
 
+    mtth = {
+        months = 7  # ~15% monthly chance for balanced gameplay
+    }
+
     trigger = {
         var:actionables_lpr_liberty_spent >= 100
         NOT = { has_country_flag = lpr_liberty_spent_100_triggered }
@@ -41,6 +45,7 @@ lpr_events.21 = {
     # Rewards: Treasury boost + stability improvement
     option = {
         name = lpr_events.21.a
+        weight = 20  # Balanced choice variety
         set_country_flag = lpr_liberty_spent_100_triggered
         add_loyalists = {
             value = lpr_large_radicals
@@ -51,6 +56,7 @@ lpr_events.21 = {
     # Rewards: Increased migration attraction, making the country more appealing to migrants
     option = {
         name = lpr_events.21.b
+        weight = 20  # Balanced choice variety
         set_country_flag = lpr_liberty_spent_100_triggered
         add_modifier = {
             name = lpr_liberty_beacon
@@ -67,6 +73,10 @@ lpr_events.21 = {
 lpr_events.24 = {
     type = country_event
     placement = root
+
+    mtth = {
+        months = 7  # ~15% monthly chance for balanced gameplay
+    }
 
     trigger = {
         var:actionables_lpr_progress_spent >= 100
@@ -90,6 +100,7 @@ lpr_events.24 = {
     # Rewards: Increased qualification growth + small treasury bonus
     option = {
         name = lpr_events.24.a
+        weight = 20  # Balanced choice variety
         set_country_flag = lpr_progress_spent_100_triggered
         add_treasury = 22000
         add_modifier = {
@@ -102,6 +113,7 @@ lpr_events.24 = {
     # Rewards: Tech spread boost + small treasury
     option = {
         name = lpr_events.24.b
+        weight = 20  # Balanced choice variety
         set_country_flag = lpr_progress_spent_100_triggered
         add_treasury = 50000
     }
@@ -115,6 +127,10 @@ lpr_events.24 = {
 lpr_events.27 = {
     type = country_event
     placement = root
+
+    mtth = {
+        months = 7  # ~15% monthly chance for balanced gameplay
+    }
 
     trigger = {
         var:actionables_lpr_revolution_spent >= 100
@@ -138,6 +154,7 @@ lpr_events.27 = {
     # Rewards: Population growth + tech spread boost
     option = {
         name = lpr_events.27.a
+        weight = 20  # Balanced choice variety
         set_country_flag = lpr_revolution_spent_100_triggered
         add_modifier = {
             name = lpr_society_tech_spread_boost
@@ -149,6 +166,7 @@ lpr_events.27 = {
     # Rewards: Increased training rate at all military buildings
     option = {
         name = lpr_events.27.b
+        weight = 20  # Balanced choice variety
         set_country_flag = lpr_revolution_spent_100_triggered
         random_scope_state = {
             create_pop = {
