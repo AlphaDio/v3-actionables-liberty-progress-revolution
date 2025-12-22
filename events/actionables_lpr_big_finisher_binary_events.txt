@@ -17,6 +17,10 @@ lpr_events.11 = {
     type = country_event
     placement = root
 
+    trigger = {
+        var:actionables_lpr_liberty >= 20
+    }
+
     title = lpr_events.11.t
     desc = lpr_events.11.d
     flavor = lpr_events.11.f
@@ -70,6 +74,10 @@ lpr_events.11 = {
 lpr_events.12 = {
     type = country_event
     placement = root
+
+    trigger = {
+        var:actionables_lpr_progress >= 20
+    }
 
     title = lpr_events.12.t
     desc = lpr_events.12.d
@@ -128,6 +136,10 @@ lpr_events.12 = {
 lpr_events.13 = {
     type = country_event
     placement = root
+
+    trigger = {
+        var:actionables_lpr_revolution >= 20
+    }
 
     title = lpr_events.13.t
     desc = lpr_events.13.d

@@ -15,40 +15,32 @@
 
 # Fires every month for each country
 on_monthly_pulse_country = {
-	# Builder events - fires every month with 100% chance
-	events = {
-		lpr_events.1
+	# Builder events - fires every month with 10% chance
+	random_events = {
+		90 = 0  # 90% chance of no event
+		10 = lpr_events.1  # 10% chance of triggering event
 	}
 	
 	# Binary choice events - 10% chance when variables >= 5
 	# Note: Multiple binary events can trigger in the same month if multiple
 	# variables are >= 5, but with moderate probability for balanced gameplay.
-	
+
 	# Liberty binary event (triggers when Liberty >= 5)
 	random_events = {
-		chance_to_happen = 10
-		trigger = {
-			var:actionables_lpr_liberty >= 5
-		}
-		1 = lpr_events.2
+		90 = 0  # 90% chance of no event
+		10 = lpr_events.2  # 10% chance of triggering event
 	}
 	
 	# Progress binary event (triggers when Progress >= 5)
 	random_events = {
-		chance_to_happen = 10
-		trigger = {
-			var:actionables_lpr_progress >= 5
-		}
-		1 = lpr_events.3
+		90 = 0  # 90% chance of no event
+		10 = lpr_events.3  # 10% chance of triggering event
 	}
 	
 	# Revolution binary event (triggers when Revolution >= 5)
 	random_events = {
-		chance_to_happen = 10
-		trigger = {
-			var:actionables_lpr_revolution >= 5
-		}
-		1 = lpr_events.4
+		90 = 0  # 90% chance of no event
+		10 = lpr_events.4  # 10% chance of triggering event
 	}
 	
 	# Big Finisher Binary Events - 12% chance when variables >= 20
@@ -56,29 +48,20 @@ on_monthly_pulse_country = {
 	
 	# Liberty big finisher binary event (triggers when Liberty >= 20)
 	random_events = {
-		chance_to_happen = 12
-		trigger = {
-			var:actionables_lpr_liberty >= 20
-		}
-		1 = lpr_events.11
+		88 = 0  # 88% chance of no event
+		12 = lpr_events.11  # 12% chance of triggering event
 	}
 	
 	# Progress big finisher binary event (triggers when Progress >= 20)
 	random_events = {
-		chance_to_happen = 12
-		trigger = {
-			var:actionables_lpr_progress >= 20
-		}
-		1 = lpr_events.12
+		88 = 0  # 88% chance of no event
+		12 = lpr_events.12  # 12% chance of triggering event
 	}
 	
 	# Revolution big finisher binary event (triggers when Revolution >= 20)
 	random_events = {
-		chance_to_happen = 12
-		trigger = {
-			var:actionables_lpr_revolution >= 20
-		}
-		1 = lpr_events.13
+		88 = 0  # 88% chance of no event
+		12 = lpr_events.13  # 12% chance of triggering event
 	}
 	
 	# Check for finisher events every month (triggers if conditions met)
@@ -94,32 +77,20 @@ on_monthly_pulse_country = {
 	
 	# Liberty spent threshold events
 	random_events = {
-		chance_to_happen = 15
-		trigger = {
-			var:actionables_lpr_liberty_spent >= 100
-			NOT = { has_country_flag = lpr_liberty_spent_100_triggered }
-		}
-		1 = lpr_events.21
+		85 = 0  # 85% chance of no event
+		15 = lpr_events.21  # 15% chance of triggering event
 	}
 	
 	# Progress spent threshold events
 	random_events = {
-		chance_to_happen = 15
-		trigger = {
-			var:actionables_lpr_progress_spent >= 100
-			NOT = { has_country_flag = lpr_progress_spent_100_triggered }
-		}
-		1 = lpr_events.24
+		85 = 0  # 85% chance of no event
+		15 = lpr_events.24  # 15% chance of triggering event
 	}
 	
 	# Revolution spent threshold events
 	random_events = {
-		chance_to_happen = 15
-		trigger = {
-			var:actionables_lpr_revolution_spent >= 100
-			NOT = { has_country_flag = lpr_revolution_spent_100_triggered }
-		}
-		1 = lpr_events.27
+		85 = 0  # 85% chance of no event
+		15 = lpr_events.27  # 15% chance of triggering event
 	}
 	
 }
