@@ -37,6 +37,7 @@ lpr_events.30 = {
     # Costs: Liberty points, gold, radicalizes Trade Unions
     option = {
         name = lpr_events.30.a
+        is_default = yes
         add_modifier = { modifier = lpr_enactment_advance_debate_boost
             days = 30
         }
@@ -46,7 +47,6 @@ lpr_events.30 = {
         }
         add_treasury = -5000
         add_loyalists = {
-            name = ig:ig_trade_unions
             value = lpr_small_radicals
         }
     }
@@ -87,6 +87,7 @@ lpr_events.31 = {
     # Costs: Progress points, radicalizes Rural Folks and Religious groups
     option = {
         name = lpr_events.31.a
+        is_default = yes
         add_modifier = { modifier = lpr_enactment_success_boost
             days = 30
         }
@@ -95,11 +96,9 @@ lpr_events.31 = {
             add = -5
         }
         add_loyalists = {
-            name = ig:ig_rural_folk
             value = lpr_small_radicals
         }
         add_loyalists = {
-            name = ig:ig_devout
             value = lpr_small_radicals
         }
     }
@@ -140,6 +139,7 @@ lpr_events.32 = {
     # Costs: Revolution points
     option = {
         name = lpr_events.32.a
+        is_default = yes
         add_modifier = { modifier = lpr_enactment_time_reduction
             days = 730  # 2 years
         }

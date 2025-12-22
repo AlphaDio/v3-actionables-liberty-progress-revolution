@@ -17,14 +17,10 @@
 # After accumulating 12 points in any category, a finisher event triggers.
 # ============================================================================
 
-# Monthly builder event - uses MTTH system for balanced timing
+# Monthly builder event - triggered by on_actions
 lpr_events.1 = {
     type = country_event
     placement = root
-
-    mtth = {
-        months = 4  # ~25% monthly chance for balanced gameplay
-    }
 
     title = lpr_events.1.t
     desc = lpr_events.1.d
@@ -45,6 +41,7 @@ lpr_events.1 = {
     # Focus: Economic freedom and national independence
     option = {
         name = lpr_events.1.a
+        is_default = yes
         add_treasury = 2000
         add_modifier = { modifier = lpr_small_radical_increase
             months = 1
@@ -100,9 +97,9 @@ lpr_events.1 = {
             }
             random_scope_pop = {
                 limit = {
-                    population > 15000
+                    size > 15000
                 }
-                change_pop_size = -5000
+                # Pop size reduction effect removed due to compatibility issues
             }
         }
         add_modifier = { modifier = lpr_society_tech_spread_boost

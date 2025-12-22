@@ -17,10 +17,6 @@ lpr_events.11 = {
     type = country_event
     placement = root
 
-    mtth = {
-        months = 8  # ~12% monthly chance for balanced gameplay
-    }
-
     trigger = {
         var:actionables_lpr_liberty >= 20
     }
@@ -43,6 +39,7 @@ lpr_events.11 = {
     # Cost: Sets Liberty to 0, consuming all accumulated progress
     option = {
         name = lpr_events.11.a
+        is_default = yes
 
         add_treasury = 50000
         add_loyalists = {
@@ -80,10 +77,6 @@ lpr_events.12 = {
     type = country_event
     placement = root
 
-    mtth = {
-        months = 8  # ~12% monthly chance for balanced gameplay
-    }
-
     trigger = {
         var:actionables_lpr_progress >= 20
     }
@@ -106,6 +99,7 @@ lpr_events.12 = {
     # Cost: Sets Progress to 0, consuming all accumulated progress
     option = {
         name = lpr_events.12.a
+        is_default = yes
 
         add_treasury = 35000
         add_modifier = { modifier = lpr_massive_construction_boost
@@ -145,10 +139,6 @@ lpr_events.13 = {
     type = country_event
     placement = root
 
-    mtth = {
-        months = 8  # ~12% monthly chance for balanced gameplay
-    }
-
     trigger = {
         var:actionables_lpr_revolution >= 20
     }
@@ -171,11 +161,10 @@ lpr_events.13 = {
     # Cost: Sets Revolution to 0, consuming all accumulated progress
     option = {
         name = lpr_events.13.a
+        is_default = yes
 
         random_scope_state = {
             create_pop = {
-                culture = root.capital.state_region.cultures:0
-                religion = root.capital.state_region.religions:0
                 size = 100000
             }
         }
@@ -202,14 +191,14 @@ lpr_events.13 = {
         random_scope_state = {
             limit = {
                 any_scope_pop = {
-                    population > 15000
+                    size > 15000
                 }
             }
             random_scope_pop = {
                 limit = {
-                    population > 15000
+                    size > 15000
                 }
-                change_pop_size = -10000
+                # Pop size reduction effect removed due to compatibility issues
             }
         }
         change_variable = {

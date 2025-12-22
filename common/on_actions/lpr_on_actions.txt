@@ -15,10 +15,27 @@
 
 # Fires every month for each country
 on_monthly_pulse_country = {
-	# Builder events now use MTTH system
+	# Random events for monthly builder and binary events
 
-	# Big Finisher Binary Events
-	# These provide major rewards for consuming accumulated points
+	random_events = {
+		# Builder event - 25% chance monthly
+		25 = lpr_events.1
+
+		# Binary events - 10% chance each when conditions met
+		10 = lpr_events.2
+		10 = lpr_events.3
+		10 = lpr_events.4
+
+		# Big finisher binary events - 8% chance each when conditions met
+		8 = lpr_events.11
+		8 = lpr_events.12
+		8 = lpr_events.13
+
+		# Spent threshold events - 7% chance each when conditions met
+		7 = lpr_events.21
+		7 = lpr_events.24
+		7 = lpr_events.27
+	}
 
 	# Check for finisher events every month (triggers if conditions met)
 	# This evaluates if any LPR variable (Liberty, Progress, or Revolution)

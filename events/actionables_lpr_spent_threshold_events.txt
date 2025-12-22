@@ -19,10 +19,6 @@ lpr_events.21 = {
     type = country_event
     placement = root
 
-    mtth = {
-        months = 7  # ~15% monthly chance for balanced gameplay
-    }
-
     trigger = {
         var:actionables_lpr_liberty_spent >= 100
         NOT = { has_country_flag = lpr_liberty_spent_100_triggered }
@@ -45,6 +41,7 @@ lpr_events.21 = {
     # Rewards: Treasury boost + stability improvement
     option = {
         name = lpr_events.21.a
+        is_default = yes
 
         set_country_flag = lpr_liberty_spent_100_triggered
         add_loyalists = {
@@ -73,10 +70,6 @@ lpr_events.24 = {
     type = country_event
     placement = root
 
-    mtth = {
-        months = 7  # ~15% monthly chance for balanced gameplay
-    }
-
     trigger = {
         var:actionables_lpr_progress_spent >= 100
         NOT = { has_country_flag = lpr_progress_spent_100_triggered }
@@ -99,6 +92,7 @@ lpr_events.24 = {
     # Rewards: Increased qualification growth + small treasury bonus
     option = {
         name = lpr_events.24.a
+        is_default = yes
 
         set_country_flag = lpr_progress_spent_100_triggered
         add_treasury = 22000
@@ -126,10 +120,6 @@ lpr_events.27 = {
     type = country_event
     placement = root
 
-    mtth = {
-        months = 7  # ~15% monthly chance for balanced gameplay
-    }
-
     trigger = {
         var:actionables_lpr_revolution_spent >= 100
         NOT = { has_country_flag = lpr_revolution_spent_100_triggered }
@@ -152,6 +142,7 @@ lpr_events.27 = {
     # Rewards: Population growth + tech spread boost
     option = {
         name = lpr_events.27.a
+        is_default = yes
 
         set_country_flag = lpr_revolution_spent_100_triggered
         add_modifier = { modifier = lpr_society_tech_spread_boost
@@ -167,8 +158,6 @@ lpr_events.27 = {
         set_country_flag = lpr_revolution_spent_100_triggered
         random_scope_state = {
             create_pop = {
-                culture = root.culture
-                religion = root.religion
                 size = 55000
             }
         }

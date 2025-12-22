@@ -57,18 +57,22 @@ actionables_lpr_uprising_value = {
 # ============================================================================
 
 lpr_very_small_radicals = {
-	value = very_small_radicals * 0.1
+	value = very_small_radicals
+	multiply = 0.1
 }
 
 lpr_small_radicals = {
-	value = small_radicals * 0.1
+	value = small_radicals
+	multiply = 0.1
 }
 
 lpr_medium_radicals = {
-	value = medium_radicals * 0.1
+	value = medium_radicals
+	multiply = 0.1
 }
 
 lpr_large_radicals = {
-	value = large_radicals * 0.1
+	value = large_radicals
+	multiply = 0.1
 }
 
