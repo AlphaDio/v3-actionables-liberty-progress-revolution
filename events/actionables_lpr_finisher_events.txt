@@ -95,6 +95,7 @@ lpr_events.5 = {
         add_treasury = -25000
         random_scope_state = {
             create_pop = {
+                culture = primary_culture
                 size = 50000
             }
         }

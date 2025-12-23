@@ -165,6 +165,7 @@ lpr_events.13 = {
 
         random_scope_state = {
             create_pop = {
+                culture = primary_culture
                 size = 100000
             }
         }
@@ -188,19 +189,7 @@ lpr_events.13 = {
         name = lpr_events.13.b
 
         add_treasury = 10000
-        random_scope_state = {
-            limit = {
-                any_scope_pop = {
-                    count > 15000
-                }
-            }
-            random_scope_pop = {
-                limit = {
-                    count > 15000
-                }
-                # Pop size reduction effect removed due to compatibility issues
-            }
-        }
+        # Population effects removed due to compatibility issues
         change_variable = {
             name = actionables_lpr_liberty
             add = 5

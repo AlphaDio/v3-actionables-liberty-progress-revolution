@@ -176,6 +176,7 @@ lpr_events.4 = {
 
         random_scope_state = {
             create_pop = {
+                culture = primary_culture
                 size = 30000
             }
         }
