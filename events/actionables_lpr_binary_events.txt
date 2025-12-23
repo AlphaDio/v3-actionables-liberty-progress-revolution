@@ -174,11 +174,10 @@ lpr_events.4 = {
     option = {
         name = lpr_events.4.b
 
-        random_scope_state = {
-            create_pop = {
-                culture = primary_culture
-                size = 30000
-            }
+        # Population growth boost - moderate migration increase
+        add_modifier = {
+            name = lpr_liberty_beacon
+            days = 90  # 3 months of enhanced migration
         }
         add_loyalists = {
             value = lpr_large_radicals

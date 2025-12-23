@@ -93,11 +93,10 @@ lpr_events.5 = {
             var:actionables_lpr_revolution >= 10
         }
         add_treasury = -25000
-        random_scope_state = {
-            create_pop = {
-                culture = primary_culture
-                size = 50000
-            }
+        # Population growth boost - significant migration increase
+        add_modifier = {
+            name = lpr_liberty_beacon
+            days = 120  # 4 months of enhanced migration
         }
         change_variable = {
             name = actionables_lpr_revolution

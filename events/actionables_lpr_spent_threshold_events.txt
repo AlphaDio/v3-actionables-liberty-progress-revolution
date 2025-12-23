@@ -156,11 +156,10 @@ lpr_events.27 = {
         name = lpr_events.27.b
 
         set_variable = lpr_revolution_spent_100_triggered
-        random_scope_state = {
-            create_pop = {
-                culture = primary_culture
-                size = 55000
-            }
+        # Population growth boost - enhanced migration attraction
+        add_modifier = {
+            name = lpr_liberty_beacon
+            days = 150  # 5 months of enhanced migration
         }
         add_modifier = { name = lpr_revolutionary_fervor
             days = 90

@@ -163,12 +163,12 @@ lpr_events.13 = {
         name = lpr_events.13.a
         default_option = yes
 
-        random_scope_state = {
-            create_pop = {
-                culture = primary_culture
-                size = 100000
-            }
+        # Population growth boost - increases migration attraction
+        add_modifier = {
+            name = lpr_liberty_beacon
+            days = 180  # 6 months of enhanced migration
         }
+        add_treasury = 25000  # Additional treasury boost
         add_modifier = { name = lpr_society_tech_spread_boost
             days = 90
         }

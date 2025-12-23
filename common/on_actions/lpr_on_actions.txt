@@ -26,20 +26,20 @@ lpr_on_monthly_pulse_country = {
 		# Builder event - 25% chance monthly
 		25 = lpr_events.1
 
-		# Binary events - 10% chance each when conditions met
-		10 = lpr_events.2
-		10 = lpr_events.3
-		10 = lpr_events.4
+		# Binary events - 15% chance each when conditions met
+		15 = lpr_events.2
+		15 = lpr_events.3
+		15 = lpr_events.4
 
-		# Big finisher binary events - 8% chance each when conditions met
-		8 = lpr_events.11
-		8 = lpr_events.12
-		8 = lpr_events.13
+		# Big finisher binary events - 12% chance each when conditions met
+		12 = lpr_events.11
+		12 = lpr_events.12
+		12 = lpr_events.13
 
-		# Spent threshold events - 7% chance each when conditions met
-		7 = lpr_events.21
-		7 = lpr_events.24
-		7 = lpr_events.27
+		# Spent threshold events - 10% chance each when conditions met
+		10 = lpr_events.21
+		10 = lpr_events.24
+		10 = lpr_events.27
 	}
 
 	# Check for finisher events every month (triggers if conditions met)
