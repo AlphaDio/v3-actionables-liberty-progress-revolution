@@ -19,7 +19,7 @@ lpr_events.2 = {
     placement = root
 
     trigger = {
-        var:actionables_lpr_liberty >= 5
+        check_variable = { actionables_lpr_liberty >= 5 }
     }
 
     title = lpr_events.2.t
@@ -77,7 +77,7 @@ lpr_events.3 = {
     placement = root
 
     trigger = {
-        var:actionables_lpr_progress >= 5
+        check_variable = { actionables_lpr_progress >= 5 }
     }
 
     title = lpr_events.3.t
@@ -136,7 +136,7 @@ lpr_events.4 = {
     placement = root
 
     trigger = {
-        var:actionables_lpr_revolution >= 5
+        check_variable = { actionables_lpr_revolution >= 5 }
     }
 
     title = lpr_events.4.t

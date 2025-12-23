@@ -20,7 +20,7 @@ lpr_events.21 = {
     placement = root
 
     trigger = {
-        var:actionables_lpr_liberty_spent >= 100
+        check_variable = { actionables_lpr_liberty_spent >= 100 }
         NOT = { has_variable = lpr_liberty_spent_100_triggered }
     }
 
@@ -71,7 +71,7 @@ lpr_events.24 = {
     placement = root
 
     trigger = {
-        var:actionables_lpr_progress_spent >= 100
+        check_variable = { actionables_lpr_progress_spent >= 100 }
         NOT = { has_variable = lpr_progress_spent_100_triggered }
     }
 
@@ -121,7 +121,7 @@ lpr_events.27 = {
     placement = root
 
     trigger = {
-        var:actionables_lpr_revolution_spent >= 100
+        check_variable = { actionables_lpr_revolution_spent >= 100 }
         NOT = { has_variable = lpr_revolution_spent_100_triggered }
     }
 

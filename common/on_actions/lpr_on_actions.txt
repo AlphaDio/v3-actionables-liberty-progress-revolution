@@ -52,6 +52,44 @@ lpr_on_monthly_pulse_country = {
 	# has reached the threshold of 12 points, triggering a finisher event
 
 	effect = {
+		# Ensure LPR variables are initialized (failsafe)
+		if = {
+			limit = {
+				NOT = { has_variable = actionables_lpr_liberty }
+			}
+			set_variable = { name = actionables_lpr_liberty value = 0 }
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = actionables_lpr_progress }
+			}
+			set_variable = { name = actionables_lpr_progress value = 0 }
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = actionables_lpr_revolution }
+			}
+			set_variable = { name = actionables_lpr_revolution value = 0 }
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = actionables_lpr_liberty_spent }
+			}
+			set_variable = { name = actionables_lpr_liberty_spent value = 0 }
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = actionables_lpr_progress_spent }
+			}
+			set_variable = { name = actionables_lpr_progress_spent value = 0 }
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = actionables_lpr_revolution_spent }
+			}
+			set_variable = { name = actionables_lpr_revolution_spent value = 0 }
+		}
+
 		lpr_check_finisher_events = yes
 	}
 }
