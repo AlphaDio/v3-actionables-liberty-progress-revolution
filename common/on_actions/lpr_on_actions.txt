@@ -14,7 +14,7 @@
 # ============================================================================
 
 # Fires every month for each country
-TRY_INJECT:on_monthly_pulse_country = {
+on_monthly_pulse_country = {
 	on_actions = {
 		lpr_on_monthly_pulse_country
 	}
@@ -24,7 +24,7 @@ lpr_on_monthly_pulse_country = {
 	# Random events for monthly builder and binary events
 	random_events = {
 		# Builder event - 25% chance monthly
-		25 = lpr_events.1
+		115 = lpr_events.1
 
 		# Binary events - 15% chance each when conditions met
 		15 = lpr_events.2
