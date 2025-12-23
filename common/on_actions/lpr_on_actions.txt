@@ -15,7 +15,7 @@
 
 # Fires every month for each country
 on_monthly_pulse_country = {
-	# Builder events - fires every month with 100% chance
+	# Builder events - fires every month with 30% chance
 	random_events = {
 		70 = 0
 		30 = lpr_events.1  # 100% chance of triggering event

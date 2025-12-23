@@ -98,12 +98,12 @@ lpr_events.1 = {
         random_scope_state = {
             limit = {
                 any_scope_pop = {
-                    population > 15000
+                    size > 15000
                 }
             }
-            random_scope_pop = {
+                random_scope_pop = {
                 limit = {
-                    population > 15000
+                    size > 15000
                 }
                 # Population reduction effect removed - not supported in Victoria 3
             }

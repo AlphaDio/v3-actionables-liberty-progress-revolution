@@ -185,19 +185,7 @@ lpr_events.13 = {
     option = {
         name = lpr_events.13.b
         add_treasury = 10000
-        random_scope_state = {
-            limit = {
-                any_scope_pop = {
-                    population > 15000
-                }
-            }
-            random_scope_pop = {
-                limit = {
-                    population > 15000
-                }
-                # Population reduction effect removed - not supported in Victoria 3
-            }
-        }
+        
         change_variable = {
             name = actionables_lpr_liberty
             add = 5
