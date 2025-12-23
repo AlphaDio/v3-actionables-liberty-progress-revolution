@@ -19,10 +19,6 @@ lpr_events.21 = {
     type = country_event
     placement = root
 
-    trigger = {
-        check_variable = { actionables_lpr_liberty_spent >= 100 }
-        NOT = { has_variable = lpr_liberty_spent_100_triggered }
-    }
 
     title = lpr_events.21.t
     desc = lpr_events.21.d
@@ -70,10 +66,6 @@ lpr_events.24 = {
     type = country_event
     placement = root
 
-    trigger = {
-        check_variable = { actionables_lpr_progress_spent >= 100 }
-        NOT = { has_variable = lpr_progress_spent_100_triggered }
-    }
 
     title = lpr_events.24.t
     desc = lpr_events.24.d
@@ -120,10 +112,6 @@ lpr_events.27 = {
     type = country_event
     placement = root
 
-    trigger = {
-        check_variable = { actionables_lpr_revolution_spent >= 100 }
-        NOT = { has_variable = lpr_revolution_spent_100_triggered }
-    }
 
     title = lpr_events.27.t
     desc = lpr_events.27.d

@@ -26,25 +26,76 @@ lpr_on_monthly_pulse_country = {
 		# Builder event - 25% chance monthly
 		115 = lpr_events.1
 
-		# Binary events - 15% chance each when conditions met
-		15 = lpr_events.2
-		15 = lpr_events.3
-		15 = lpr_events.4
+		# Binary events - only when conditions met
+		if = {
+			limit = { check_variable = { actionables_lpr_liberty >= 5 } }
+			15 = lpr_events.2
+		}
+		if = {
+			limit = { check_variable = { actionables_lpr_progress >= 5 } }
+			15 = lpr_events.3
+		}
+		if = {
+			limit = { check_variable = { actionables_lpr_revolution >= 5 } }
+			15 = lpr_events.4
+		}
 
-		# Big finisher binary events - 12% chance each when conditions met
-		12 = lpr_events.11
-		12 = lpr_events.12
-		12 = lpr_events.13
+		# Big finisher binary events - only when conditions met
+		if = {
+			limit = { check_variable = { actionables_lpr_liberty >= 20 } }
+			12 = lpr_events.11
+		}
+		if = {
+			limit = { check_variable = { actionables_lpr_progress >= 20 } }
+			12 = lpr_events.12
+		}
+		if = {
+			limit = { check_variable = { actionables_lpr_revolution >= 20 } }
+			12 = lpr_events.13
+		}
 
-		# Spent threshold events - 10% chance each when conditions met
-		10 = lpr_events.21
-		10 = lpr_events.24
-		10 = lpr_events.27
+		# Spent threshold events - only when conditions met
+		if = {
+			limit = {
+				check_variable = { actionables_lpr_liberty_spent >= 100 }
+				NOT = { has_variable = lpr_liberty_spent_100_triggered }
+			}
+			10 = lpr_events.21
+		}
+		if = {
+			limit = {
+				check_variable = { actionables_lpr_progress_spent >= 100 }
+				NOT = { has_variable = lpr_progress_spent_100_triggered }
+			}
+			10 = lpr_events.24
+		}
+		if = {
+			limit = {
+				check_variable = { actionables_lpr_revolution_spent >= 100 }
+				NOT = { has_variable = lpr_revolution_spent_100_triggered }
+			}
+			10 = lpr_events.27
+		}
 
 		# Climate events - 5% chance each when global variables reach 100
-		20 = lpr_events.33
-		20 = lpr_events.34
-		20 = lpr_events.35
+		if = {
+			limit = {
+				check_global_variable = { actionables_lpr_independence >= 100 }
+			}
+			20 = lpr_events.33
+		}
+		if = {
+			limit = {
+				check_global_variable = { actionables_lpr_innovation >= 100 }
+			}
+			20 = lpr_events.34
+		}
+		if = {
+			limit = {
+				check_global_variable = { actionables_lpr_uprising >= 100 }
+			}
+			20 = lpr_events.35
+		}
 	}
 
 	# Check for finisher events every month (triggers if conditions met)

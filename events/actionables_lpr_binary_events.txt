@@ -18,9 +18,6 @@ lpr_events.2 = {
     type = country_event
     placement = root
 
-    trigger = {
-        check_variable = { actionables_lpr_liberty >= 5 }
-    }
 
     title = lpr_events.2.t
     desc = lpr_events.2.d
@@ -76,9 +73,6 @@ lpr_events.3 = {
     type = country_event
     placement = root
 
-    trigger = {
-        check_variable = { actionables_lpr_progress >= 5 }
-    }
 
     title = lpr_events.3.t
     desc = lpr_events.3.d
@@ -135,9 +129,6 @@ lpr_events.4 = {
     type = country_event
     placement = root
 
-    trigger = {
-        check_variable = { actionables_lpr_revolution >= 5 }
-    }
 
     title = lpr_events.4.t
     desc = lpr_events.4.d

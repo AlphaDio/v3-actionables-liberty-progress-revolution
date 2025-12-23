@@ -15,9 +15,6 @@ lpr_events.30 = {
 
     category = enactment
 
-    trigger = {
-        check_variable = { actionables_lpr_liberty >= 5 }
-    }
 
     title = lpr_events.30.t
     desc = lpr_events.30.d
