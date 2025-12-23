@@ -24,13 +24,13 @@ lpr_on_monthly_pulse_country = {
 	# Random events for monthly builder events
 	random_events = {
 		# Builder event - 30% chance monthly
-		50 = 0
-		25 = lpr_events.1
+		66 = 0
+		330 = lpr_events.1
 	}
 
 	# Binary events - occasional reminders (15% chance total)
 	random_events = {
-		chance_of_no_event = 85  # 15% chance this block fires
+		chance_of_no_event = 5  # 15% chance this block fires
 		1 = {
 			if = {
 				limit = { var:actionables_lpr_liberty >= 5 }
@@ -53,7 +53,7 @@ lpr_on_monthly_pulse_country = {
 
 	# Rare milestone events - very infrequent (5% chance total)
 	random_events = {
-		chance_of_no_event = 95  # 5% chance this block fires
+		chance_of_no_event = 5  # 5% chance this block fires
 		1 = {
 			if = {
 				limit = { var:actionables_lpr_liberty >= 20 }
