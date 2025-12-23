@@ -24,7 +24,7 @@ lpr_on_monthly_pulse_country = {
 	# Random events for monthly builder and binary events
 	random_events = {
 		# Builder event - 25% chance monthly
-		115 = lpr_events.1
+		30 = lpr_events.1
 
 		# Binary events - only when conditions met
 		if = {
