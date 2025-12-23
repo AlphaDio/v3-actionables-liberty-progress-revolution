@@ -40,7 +40,7 @@ lpr_events.2 = {
     # Trade-off: Continue accumulating points but get smaller immediate reward
     option = {
         name = lpr_events.2.a
-        is_default = yes
+        default_option = yes
         add_loyalists = {
             value = lpr_small_radicals
         }
@@ -98,9 +98,9 @@ lpr_events.3 = {
     # Trade-off: Continue accumulating points but get smaller immediate reward
     option = {
         name = lpr_events.3.a
-        is_default = yes
+        default_option = yes
 
-        add_modifier = { modifier = lpr_construction_boost
+        add_modifier = { name = lpr_construction_boost
             days = 30
         }
         change_variable = {
@@ -116,7 +116,7 @@ lpr_events.3 = {
         name = lpr_events.3.b
 
         add_treasury = 20000
-        add_modifier = { modifier = lpr_construction_boost
+        add_modifier = { name = lpr_construction_boost
             days = 90
         }
         change_variable = {
@@ -157,9 +157,9 @@ lpr_events.4 = {
     # Trade-off: Continue accumulating points but get smaller immediate reward
     option = {
         name = lpr_events.4.a
-        is_default = yes
+        default_option = yes
 
-        add_modifier = { modifier = lpr_military_boost
+        add_modifier = { name = lpr_military_boost
             days = 15
         }
         change_variable = {

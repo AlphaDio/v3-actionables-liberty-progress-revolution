@@ -14,9 +14,14 @@
 # ============================================================================
 
 # Fires every month for each country
-on_monthly_pulse_country = {
-	# Random events for monthly builder and binary events
+TRY_INJECT:on_monthly_pulse_country = {
+	on_actions = {
+		lpr_on_monthly_pulse_country
+	}
+}
 
+lpr_on_monthly_pulse_country = {
+	# Random events for monthly builder and binary events
 	random_events = {
 		# Builder event - 25% chance monthly
 		25 = lpr_events.1
@@ -40,10 +45,6 @@ on_monthly_pulse_country = {
 	# Check for finisher events every month (triggers if conditions met)
 	# This evaluates if any LPR variable (Liberty, Progress, or Revolution)
 	# has reached the threshold of 12 points, triggering a finisher event
-
-	# Spent Threshold Events
-	# These events fire once per threshold (100) for each LPR path
-	# Flags prevent events from firing multiple times
 
 	effect = {
 		lpr_check_finisher_events = yes

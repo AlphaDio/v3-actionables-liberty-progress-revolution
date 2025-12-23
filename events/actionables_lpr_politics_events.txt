@@ -1,4 +1,4 @@
-namespace = lpr_events
+﻿namespace = lpr_events
 
 # ============================================================================
 # POLITICS LAW ENACTMENT EVENTS
@@ -37,8 +37,8 @@ lpr_events.30 = {
     # Costs: Liberty points, gold, radicalizes Trade Unions
     option = {
         name = lpr_events.30.a
-        is_default = yes
-        add_modifier = { modifier = lpr_enactment_advance_debate_boost
+        default_option = yes
+        add_modifier = { name = lpr_enactment_advance_debate_boost
             days = 30
         }
         change_variable = {
@@ -87,8 +87,8 @@ lpr_events.31 = {
     # Costs: Progress points, radicalizes Rural Folks and Religious groups
     option = {
         name = lpr_events.31.a
-        is_default = yes
-        add_modifier = { modifier = lpr_enactment_success_boost
+        default_option = yes
+        add_modifier = { name = lpr_enactment_success_boost
             days = 30
         }
         change_variable = {
@@ -139,8 +139,8 @@ lpr_events.32 = {
     # Costs: Revolution points
     option = {
         name = lpr_events.32.a
-        is_default = yes
-        add_modifier = { modifier = lpr_enactment_time_reduction
+        default_option = yes
+        add_modifier = { name = lpr_enactment_time_reduction
             days = 730  # 2 years
         }
         change_variable = {

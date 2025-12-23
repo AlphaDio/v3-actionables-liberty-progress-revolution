@@ -1,4 +1,4 @@
-namespace = lpr_events
+﻿namespace = lpr_events
 
 # ============================================================================
 # BIG FINISHER BINARY EVENTS
@@ -39,7 +39,7 @@ lpr_events.11 = {
     # Cost: Sets Liberty to 0, consuming all accumulated progress
     option = {
         name = lpr_events.11.a
-        is_default = yes
+        default_option = yes
 
         add_treasury = 50000
         add_loyalists = {
@@ -62,7 +62,7 @@ lpr_events.11 = {
         name = lpr_events.11.b
 
         add_treasury = -10000
-        add_modifier = { modifier = lpr_construction_boost
+        add_modifier = { name = lpr_construction_boost
             days = 60
         }
         change_variable = {
@@ -99,10 +99,10 @@ lpr_events.12 = {
     # Cost: Sets Progress to 0, consuming all accumulated progress
     option = {
         name = lpr_events.12.a
-        is_default = yes
+        default_option = yes
 
         add_treasury = 35000
-        add_modifier = { modifier = lpr_massive_construction_boost
+        add_modifier = { name = lpr_massive_construction_boost
             days = 90
         }
         change_variable = {
@@ -121,10 +121,10 @@ lpr_events.12 = {
     option = {
         name = lpr_events.12.b
 
-        add_modifier = { modifier = lpr_small_radical_increase
+        add_modifier = { name = lpr_small_radical_increase
             months = 3
         }
-        add_modifier = { modifier = lpr_society_tech_spread_boost
+        add_modifier = { name = lpr_society_tech_spread_boost
             days = 60
         }
         change_variable = {
@@ -161,14 +161,14 @@ lpr_events.13 = {
     # Cost: Sets Revolution to 0, consuming all accumulated progress
     option = {
         name = lpr_events.13.a
-        is_default = yes
+        default_option = yes
 
         random_scope_state = {
             create_pop = {
                 size = 100000
             }
         }
-        add_modifier = { modifier = lpr_society_tech_spread_boost
+        add_modifier = { name = lpr_society_tech_spread_boost
             days = 90
         }
         change_variable = {
@@ -191,12 +191,12 @@ lpr_events.13 = {
         random_scope_state = {
             limit = {
                 any_scope_pop = {
-                    size > 15000
+                    count > 15000
                 }
             }
             random_scope_pop = {
                 limit = {
-                    size > 15000
+                    count > 15000
                 }
                 # Pop size reduction effect removed due to compatibility issues
             }

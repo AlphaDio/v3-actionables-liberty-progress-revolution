@@ -47,9 +47,9 @@ lpr_large_radical_increase = {
 }
 
 # Military boost - increases building efficiency for military structures
-# This provides a boost to military building throughput
+# Does not reflect the theme
 lpr_military_boost = {
-	building_conscription_center_throughput_add = 1.0
+	building_throughput_add = 1.0
 }
 
 # Revolutionary fervor - increases training rate at all military buildings

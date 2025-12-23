@@ -1,4 +1,4 @@
-namespace = lpr_events
+﻿namespace = lpr_events
 
 # ============================================================================
 # FINISHER EVENTS
@@ -37,7 +37,7 @@ lpr_events.5 = {
     # This path favors economic stability over political change
     option = {
         name = lpr_events.5.a
-        is_default = yes
+        default_option = yes
         trigger = {
             var:actionables_lpr_liberty >= 10
         }
