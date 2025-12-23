@@ -136,3 +136,21 @@
   lpr_events.32.f: "Revolution challenges the status quo."
   lpr_events.32.a: "Employ Radical Tactics (Revolution points)"
   lpr_events.32.b: "Decline Disruptive Methods"
+
+  lpr_events.33.t: "Global Independence Climate"
+  lpr_events.33.d: "The worldwide wave of independence movements has reached a critical threshold. Nations across the globe are embracing freedom and self-determination, creating a climate where liberty-focused policies are more effective and appealing."
+  lpr_events.33.f: "The world embraces independence."
+  lpr_events.33.a: "Embrace the Independence Wave (Migration boost + stability)"
+  lpr_events.33.b: "Resist the Global Trend (Stability penalty)"
+
+  lpr_events.34.t: "Global Innovation Climate"
+  lpr_events.34.d: "Technological and social innovation has reached unprecedented global levels. The worldwide climate favors progressive development and modernization, making technological advancement more effective across all nations."
+  lpr_events.34.f: "Innovation sweeps the globe."
+  lpr_events.34.a: "Ride the Innovation Wave (Tech spread + construction boost)"
+  lpr_events.34.b: "Maintain Traditional Approaches (Tech penalty)"
+
+  lpr_events.35.t: "Global Uprising Climate"
+  lpr_events.35.d: "Revolutionary fervor has reached a boiling point worldwide. The global climate is charged with revolutionary energy, making radical change and military mobilization more effective, though potentially destabilizing."
+  lpr_events.35.f: "Revolution stirs worldwide."
+  lpr_events.35.a: "Channel Revolutionary Energy (Training + radical boost)"
+  lpr_events.35.b: "Suppress Revolutionary Fervor (Training penalty)"

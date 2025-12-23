@@ -40,6 +40,11 @@ lpr_on_monthly_pulse_country = {
 		10 = lpr_events.21
 		10 = lpr_events.24
 		10 = lpr_events.27
+
+		# Climate events - 5% chance each when global variables reach 100
+		20 = lpr_events.33
+		20 = lpr_events.34
+		20 = lpr_events.35
 	}
 
 	# Check for finisher events every month (triggers if conditions met)

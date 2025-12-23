@@ -1,0 +1,162 @@
+namespace = lpr_events
+
+# ============================================================================
+# CLIMATE EVENTS
+# ============================================================================
+# These events represent global "climate" changes that occur when worldwide
+# trends (Independence, Innovation, Uprising) reach critical thresholds of 100.
+# They affect all countries and represent major global shifts in political climate.
+# ============================================================================
+
+# Global Independence Climate - triggers when worldwide independence reaches 100
+lpr_events.33 = {
+    type = country_event
+    placement = root
+
+    title = lpr_events.33.t
+    desc = lpr_events.33.d
+    flavor = lpr_events.33.f
+
+    event_image = {
+        video = "unspecific_world_fair"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    duration = 5
+
+    trigger = {
+        check_global_variable = {
+            name = actionables_lpr_independence
+            value >= 100
+        }
+    }
+
+    # Option A: Embrace the independence wave
+    option = {
+        name = lpr_events.33.a
+        default_option = yes
+        add_modifier = { name = lpr_global_independence_climate
+            months = 12
+        }
+        change_variable = {
+            name = actionables_lpr_liberty
+            add = 2
+        }
+    }
+
+    # Option B: Resist the global trend
+    option = {
+        name = lpr_events.33.b
+        add_modifier = { name = lpr_resistance_penalty
+            months = 6
+        }
+        change_variable = {
+            name = actionables_lpr_revolution
+            add = 1
+        }
+    }
+}
+
+# Global Innovation Climate - triggers when worldwide innovation reaches 100
+lpr_events.34 = {
+    type = country_event
+    placement = root
+
+    title = lpr_events.34.t
+    desc = lpr_events.34.d
+    flavor = lpr_events.34.f
+
+    event_image = {
+        video = "unspecific_world_fair"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    duration = 5
+
+    trigger = {
+        check_global_variable = {
+            name = actionables_lpr_innovation
+            value >= 100
+        }
+    }
+
+    # Option A: Ride the innovation wave
+    option = {
+        name = lpr_events.34.a
+        default_option = yes
+        add_modifier = { name = lpr_global_innovation_climate
+            months = 12
+        }
+        change_variable = {
+            name = actionables_lpr_progress
+            add = 2
+        }
+    }
+
+    # Option B: Maintain traditional approaches
+    option = {
+        name = lpr_events.34.b
+        add_modifier = { name = lpr_traditional_penalty
+            months = 6
+        }
+        change_variable = {
+            name = actionables_lpr_liberty
+            add = 1
+        }
+    }
+}
+
+# Global Uprising Climate - triggers when worldwide uprising reaches 100
+lpr_events.35 = {
+    type = country_event
+    placement = root
+
+    title = lpr_events.35.t
+    desc = lpr_events.35.d
+    flavor = lpr_events.35.f
+
+    event_image = {
+        video = "unspecific_world_fair"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    duration = 5
+
+    trigger = {
+        check_global_variable = {
+            name = actionables_lpr_uprising
+            value >= 100
+        }
+    }
+
+    # Option A: Channel revolutionary energy
+    option = {
+        name = lpr_events.35.a
+        default_option = yes
+        add_modifier = { name = lpr_global_uprising_climate
+            months = 12
+        }
+        change_variable = {
+            name = actionables_lpr_revolution
+            add = 2
+        }
+    }
+
+    # Option B: Suppress revolutionary fervor
+    option = {
+        name = lpr_events.35.b
+        add_modifier = { name = lpr_suppression_penalty
+            months = 6
+        }
+        change_variable = {
+            name = actionables_lpr_progress
+            add = 1
+        }
+    }
+}

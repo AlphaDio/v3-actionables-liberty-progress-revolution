@@ -95,3 +95,44 @@ lpr_enactment_time_reduction = {
 	country_law_enactment_time_mult = -0.5  # Negative to reduce time
 }
 
+# ============================================================================
+# CLIMATE EVENT MODIFIERS
+# ============================================================================
+# These modifiers are applied during global climate events when worldwide
+# trends reach critical thresholds, affecting all countries.
+# ============================================================================
+
+# Global independence climate - boosts liberty-focused effects worldwide
+lpr_global_independence_climate = {
+	country_mass_migration_attraction_mult = 0.25
+	country_stability_modifier = 0.1
+}
+
+# Global innovation climate - boosts progress-focused effects worldwide
+lpr_global_innovation_climate = {
+	country_tech_spread_mult = 0.25
+	country_construction_add = 0.5
+}
+
+# Global uprising climate - boosts revolution-focused effects worldwide
+lpr_global_uprising_climate = {
+	building_training_rate_mult = 0.25
+	country_radicals_from_conquest_mult = 0.25
+}
+
+# Penalties for resisting global trends
+lpr_resistance_penalty = {
+	country_stability_modifier = -0.15
+	country_mass_migration_attraction_mult = -0.2
+}
+
+lpr_traditional_penalty = {
+	country_tech_spread_mult = -0.2
+	country_construction_add = -0.3
+}
+
+lpr_suppression_penalty = {
+	building_training_rate_mult = -0.3
+	country_radicals_from_conquest_mult = -0.4
+}
+
