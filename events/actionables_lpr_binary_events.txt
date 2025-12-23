@@ -19,6 +19,7 @@ lpr_events.2 = {
     placement = root
 
     trigger = {
+        has_variable = actionables_lpr_liberty
         var:actionables_lpr_liberty >= 5
     }
 
@@ -76,6 +77,7 @@ lpr_events.3 = {
     placement = root
 
     trigger = {
+        has_variable = actionables_lpr_progress
         var:actionables_lpr_progress >= 5
     }
 
@@ -135,6 +137,7 @@ lpr_events.4 = {
     placement = root
 
     trigger = {
+        has_variable = actionables_lpr_revolution
         var:actionables_lpr_revolution >= 5
     }
 
@@ -172,13 +175,6 @@ lpr_events.4 = {
     # Trade-off: Reduces Revolution by 5 points, giving up progress toward finisher
     option = {
         name = lpr_events.4.b
-        random_scope_state = {
-            create_pop = {
-                culture = root.capital.state_region.cultures:0
-                religion = root.capital.state_region.religions:0
-                population >= 30000
-            }
-        }
         add_loyalists = {
             value = lpr_large_radicals
         }

@@ -18,6 +18,7 @@ lpr_events.11 = {
     placement = root
 
     trigger = {
+        has_variable = actionables_lpr_liberty
         var:actionables_lpr_liberty >= 20
     }
 
@@ -77,6 +78,7 @@ lpr_events.12 = {
     placement = root
 
     trigger = {
+        has_variable = actionables_lpr_progress
         var:actionables_lpr_progress >= 20
     }
 
@@ -140,6 +142,7 @@ lpr_events.13 = {
     placement = root
 
     trigger = {
+        has_variable = actionables_lpr_revolution
         var:actionables_lpr_revolution >= 20
     }
 
@@ -161,13 +164,6 @@ lpr_events.13 = {
     # Cost: Sets Revolution to 0, consuming all accumulated progress
     option = {
         name = lpr_events.13.a
-        random_scope_state = {
-            create_pop = {
-                culture = root.capital.state_region.cultures:0
-                religion = root.capital.state_region.religions:0
-                population >= 100000
-            }
-        }
         add_modifier = {
             name = lpr_society_tech_spread_boost
             days = 90

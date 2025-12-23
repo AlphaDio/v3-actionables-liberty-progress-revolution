@@ -20,6 +20,7 @@ lpr_events.21 = {
     placement = root
 
     trigger = {
+        has_variable = actionables_lpr_liberty_spent
         var:actionables_lpr_liberty_spent >= 100
         NOT = { has_variable = lpr_liberty_spent_100_triggered }
     }
@@ -70,6 +71,7 @@ lpr_events.24 = {
     placement = root
 
     trigger = {
+        has_variable = actionables_lpr_progress_spent
         var:actionables_lpr_progress_spent >= 100
         NOT = { has_variable = lpr_progress_spent_100_triggered }
     }
@@ -119,6 +121,7 @@ lpr_events.27 = {
     placement = root
 
     trigger = {
+        has_variable = actionables_lpr_revolution_spent
         var:actionables_lpr_revolution_spent >= 100
         NOT = { has_variable = lpr_revolution_spent_100_triggered }
     }
@@ -140,6 +143,7 @@ lpr_events.27 = {
     # Rewards: Population growth + tech spread boost
     option = {
         name = lpr_events.27.a
+        default_option = yes
         set_variable = lpr_revolution_spent_100_triggered
         add_modifier = {
             name = lpr_society_tech_spread_boost
@@ -152,12 +156,6 @@ lpr_events.27 = {
     option = {
         name = lpr_events.27.b
         set_variable = lpr_revolution_spent_100_triggered
-        random_scope_state = {
-            create_pop = {
-                culture = root.capital.state_region.cultures:0
-                religion = root.capital.state_region.religions:0
-                population >= 55000
-        }
         add_modifier = {
             name = lpr_revolutionary_fervor
             days = 90

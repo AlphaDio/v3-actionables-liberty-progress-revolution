@@ -93,13 +93,6 @@ lpr_events.5 = {
             var:actionables_lpr_revolution >= 10
         }
         add_treasury = -25000
-        random_scope_state = {
-            create_pop = {
-                culture = root.capital.state_region.cultures:0
-                religion = root.capital.state_region.religions:0
-                population >= 50000
-            }
-        }
         change_variable = {
             name = actionables_lpr_revolution
             add = -10

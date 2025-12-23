@@ -22,9 +22,18 @@ lpr_check_finisher_events = {
 			# Check if any of the three LPR paths has reached 12 points
 			# This represents approximately 4 months of consistent choices
 			OR = {
-				var:actionables_lpr_liberty >= 12
-				var:actionables_lpr_progress >= 12
-				var:actionables_lpr_revolution >= 12
+				AND = {
+					has_variable = actionables_lpr_liberty
+					var:actionables_lpr_liberty >= 12
+				}
+				AND = {
+					has_variable = actionables_lpr_progress
+					var:actionables_lpr_progress >= 12
+				}
+				AND = {
+					has_variable = actionables_lpr_revolution
+					var:actionables_lpr_revolution >= 12
+				}
 			}
 		}
 		# Trigger the finisher event which provides significant rewards
