@@ -1,4 +1,4 @@
-namespace = lpr_events
+﻿namespace = lpr_events
 
 # ============================================================================
 # CLIMATE EVENTS
@@ -27,10 +27,7 @@ lpr_events.33 = {
     duration = 5
 
     trigger = {
-        check_global_variable = {
-            name = actionables_lpr_independence
-            value >= 100
-        }
+        global_var:actionables_lpr_independence >= 100
     }
 
     # Option A: Embrace the independence wave
@@ -78,10 +75,7 @@ lpr_events.34 = {
     duration = 5
 
     trigger = {
-        check_global_variable = {
-            name = actionables_lpr_innovation
-            value >= 100
-        }
+        global_var:actionables_lpr_innovation >= 100
     }
 
     # Option A: Ride the innovation wave
@@ -129,10 +123,7 @@ lpr_events.35 = {
     duration = 5
 
     trigger = {
-        check_global_variable = {
-            name = actionables_lpr_uprising
-            value >= 100
-        }
+        global_var:actionables_lpr_uprising >= 100
     }
 
     # Option A: Channel revolutionary energy

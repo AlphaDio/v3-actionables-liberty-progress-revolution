@@ -21,88 +21,110 @@ on_monthly_pulse_country = {
 }
 
 lpr_on_monthly_pulse_country = {
-	# Random events for monthly builder and binary events
+	# Random events for monthly builder events
 	random_events = {
-		# Builder event - 25% chance monthly
-		30 = lpr_events.1
-
-		# Binary events - only when conditions met
-		if = {
-			limit = { check_variable = { actionables_lpr_liberty >= 5 } }
-			15 = lpr_events.2
-		}
-		if = {
-			limit = { check_variable = { actionables_lpr_progress >= 5 } }
-			15 = lpr_events.3
-		}
-		if = {
-			limit = { check_variable = { actionables_lpr_revolution >= 5 } }
-			15 = lpr_events.4
-		}
-
-		# Big finisher binary events - only when conditions met
-		if = {
-			limit = { check_variable = { actionables_lpr_liberty >= 20 } }
-			12 = lpr_events.11
-		}
-		if = {
-			limit = { check_variable = { actionables_lpr_progress >= 20 } }
-			12 = lpr_events.12
-		}
-		if = {
-			limit = { check_variable = { actionables_lpr_revolution >= 20 } }
-			12 = lpr_events.13
-		}
-
-		# Spent threshold events - only when conditions met
-		if = {
-			limit = {
-				check_variable = { actionables_lpr_liberty_spent >= 100 }
-				NOT = { has_variable = lpr_liberty_spent_100_triggered }
-			}
-			10 = lpr_events.21
-		}
-		if = {
-			limit = {
-				check_variable = { actionables_lpr_progress_spent >= 100 }
-				NOT = { has_variable = lpr_progress_spent_100_triggered }
-			}
-			10 = lpr_events.24
-		}
-		if = {
-			limit = {
-				check_variable = { actionables_lpr_revolution_spent >= 100 }
-				NOT = { has_variable = lpr_revolution_spent_100_triggered }
-			}
-			10 = lpr_events.27
-		}
-
-		# Climate events - 5% chance each when global variables reach 100
-		if = {
-			limit = {
-				check_global_variable = { actionables_lpr_independence >= 100 }
-			}
-			20 = lpr_events.33
-		}
-		if = {
-			limit = {
-				check_global_variable = { actionables_lpr_innovation >= 100 }
-			}
-			20 = lpr_events.34
-		}
-		if = {
-			limit = {
-				check_global_variable = { actionables_lpr_uprising >= 100 }
-			}
-			20 = lpr_events.35
-		}
+		# Builder event - 30% chance monthly
+		50 = 0
+		25 = lpr_events.1
 	}
 
-	# Check for finisher events every month (triggers if conditions met)
-	# This evaluates if any LPR variable (Liberty, Progress, or Revolution)
-	# has reached the threshold of 12 points, triggering a finisher event
-
+	# Check for finisher events and rarely select conditional events
 	effect = {
+		# Random selection from eligible events with very low probability
+		random_list = {
+			# Big finisher binary events - 5% of random selections when eligible (rare milestones)
+			5 = {
+				if = {
+					limit = { var:actionables_lpr_liberty >= 20 }
+					trigger_event = { id = lpr_events.11 }
+				}
+			}
+			5 = {
+				if = {
+					limit = { var:actionables_lpr_progress >= 20 }
+					trigger_event = { id = lpr_events.12 }
+				}
+			}
+			5 = {
+				if = {
+					limit = { var:actionables_lpr_revolution >= 20 }
+					trigger_event = { id = lpr_events.13 }
+				}
+			}
+
+			# Binary events - 15% of random selections when eligible (occasional reminders)
+			15 = {
+				if = {
+					limit = { var:actionables_lpr_liberty >= 5 }
+					trigger_event = { id = lpr_events.2 }
+				}
+			}
+			15 = {
+				if = {
+					limit = { var:actionables_lpr_progress >= 5 }
+					trigger_event = { id = lpr_events.3 }
+				}
+			}
+			15 = {
+				if = {
+					limit = { var:actionables_lpr_revolution >= 5 }
+					trigger_event = { id = lpr_events.4 }
+				}
+			}
+
+			# Spent threshold events - 2% of random selections when eligible (very rare)
+			2 = {
+				if = {
+					limit = {
+						var:actionables_lpr_liberty_spent >= 100
+						NOT = { has_variable = lpr_liberty_spent_100_triggered }
+					}
+					trigger_event = { id = lpr_events.21 }
+				}
+			}
+			2 = {
+				if = {
+					limit = {
+						var:actionables_lpr_progress_spent >= 100
+						NOT = { has_variable = lpr_progress_spent_100_triggered }
+					}
+					trigger_event = { id = lpr_events.24 }
+				}
+			}
+			2 = {
+				if = {
+					limit = {
+						var:actionables_lpr_revolution_spent >= 100
+						NOT = { has_variable = lpr_revolution_spent_100_triggered }
+					}
+					trigger_event = { id = lpr_events.27 }
+				}
+			}
+
+			# Climate events - 1% of random selections when eligible (extremely rare global events)
+			1 = {
+				if = {
+					limit = { global_var:actionables_lpr_independence >= 100 }
+					trigger_event = { id = lpr_events.33 }
+				}
+			}
+			1 = {
+				if = {
+					limit = { global_var:actionables_lpr_innovation >= 100 }
+					trigger_event = { id = lpr_events.34 }
+				}
+			}
+			1 = {
+				if = {
+					limit = { global_var:actionables_lpr_uprising >= 100 }
+					trigger_event = { id = lpr_events.35 }
+				}
+			}
+
+			# No event - 77% chance of nothing happening (much quieter system)
+			77 = { }
+		}
+
 		# Ensure LPR variables are initialized (failsafe)
 		if = {
 			limit = {

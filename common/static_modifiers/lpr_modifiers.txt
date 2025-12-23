@@ -28,22 +28,22 @@ lpr_massive_construction_boost = {
 
 # Very small radical increase - minimal social unrest
 lpr_very_small_radical_increase = {
-	country_radicals_from_conquest_mult = 0.1
+	state_radicals_from_political_movements_mult = 0.1
 }
 
 # Small radical increase - minor social unrest
 lpr_small_radical_increase = {
-	country_radicals_from_conquest_mult = 0.25
+	state_radicals_from_political_movements_mult = 0.25
 }
 
 # Medium radical increase - moderate social unrest
 lpr_medium_radical_increase = {
-	country_radicals_from_conquest_mult = 0.5
+	state_radicals_from_political_movements_mult = 0.5
 }
 
 # Large radical increase - significant social unrest
 lpr_large_radical_increase = {
-	country_radicals_from_conquest_mult = 1.0
+	state_radicals_from_political_movements_mult = 1.0
 }
 
 # Military boost - increases building efficiency for military structures
@@ -67,7 +67,7 @@ lpr_educational_advancement = {
 # Liberty beacon - increases migration attraction, making the country more appealing to migrants
 # This provides a 50% boost to mass migration attraction, representing the appeal of liberty
 lpr_liberty_beacon = {
-	country_mass_migration_attraction_mult = 0.5
+	state_migration_pull_mult = 0.5
 }
 
 # ============================================================================
@@ -104,8 +104,8 @@ lpr_enactment_time_reduction = {
 
 # Global independence climate - boosts liberty-focused effects worldwide
 lpr_global_independence_climate = {
-	country_mass_migration_attraction_mult = 0.25
-	country_stability_modifier = 0.1
+	state_migration_pull_mult = 0.25
+	state_pop_pol_str_add = 1
 }
 
 # Global innovation climate - boosts progress-focused effects worldwide
@@ -117,13 +117,13 @@ lpr_global_innovation_climate = {
 # Global uprising climate - boosts revolution-focused effects worldwide
 lpr_global_uprising_climate = {
 	building_training_rate_mult = 0.25
-	country_radicals_from_conquest_mult = 0.25
+	state_radicals_from_political_movements_mult = 0.25
 }
 
 # Penalties for resisting global trends
 lpr_resistance_penalty = {
-	country_stability_modifier = -0.15
-	country_mass_migration_attraction_mult = -0.2
+	state_pop_pol_str_add = -1
+	state_migration_pull_mult = -0.2
 }
 
 lpr_traditional_penalty = {
@@ -133,6 +133,6 @@ lpr_traditional_penalty = {
 
 lpr_suppression_penalty = {
 	building_training_rate_mult = -0.3
-	country_radicals_from_conquest_mult = -0.4
+	state_radicals_from_political_movements_mult = -0.4
 }
 
