@@ -1,4 +1,4 @@
-namespace = lpr_events
+﻿namespace = lpr_events
 
 # ============================================================================
 # BINARY CHOICE BUILDER EVENTS (Monthly Events)
@@ -40,6 +40,7 @@ lpr_events.2 = {
     # Trade-off: Continue accumulating points but get smaller immediate reward
     option = {
         name = lpr_events.2.a
+        default_option = yes
         add_loyalists = {
             value = lpr_small_radicals
         }
@@ -96,6 +97,7 @@ lpr_events.3 = {
     # Trade-off: Continue accumulating points but get smaller immediate reward
     option = {
         name = lpr_events.3.a
+        default_option = yes
         add_modifier = {
             name = lpr_construction_boost
             days = 30
@@ -154,6 +156,7 @@ lpr_events.4 = {
     # Trade-off: Continue accumulating points but get smaller immediate reward
     option = {
         name = lpr_events.4.a
+        default_option = yes
         add_modifier = {
             name = lpr_military_boost
             days = 15
@@ -173,7 +176,7 @@ lpr_events.4 = {
             create_pop = {
                 culture = root.capital.state_region.cultures:0
                 religion = root.capital.state_region.religions:0
-                size = 30000
+                population >= 30000
             }
         }
         add_loyalists = {

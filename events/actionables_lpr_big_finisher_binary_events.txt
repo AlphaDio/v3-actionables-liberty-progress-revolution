@@ -1,4 +1,4 @@
-namespace = lpr_events
+﻿namespace = lpr_events
 
 # ============================================================================
 # BIG FINISHER BINARY EVENTS
@@ -51,6 +51,7 @@ lpr_events.11 = {
             name = actionables_lpr_liberty
             value = 0
         }
+        default_option = yes
     }
 
     # Option B: Redirect Liberty to Progress
@@ -110,6 +111,7 @@ lpr_events.12 = {
             name = actionables_lpr_progress
             value = 0
         }
+        default_option = yes
     }
 
     # Option B: Redirect Progress to Revolution
@@ -163,7 +165,7 @@ lpr_events.13 = {
             create_pop = {
                 culture = root.capital.state_region.cultures:0
                 religion = root.capital.state_region.religions:0
-                size = 100000
+                population >= 100000
             }
         }
         add_modifier = {
@@ -178,6 +180,7 @@ lpr_events.13 = {
             name = actionables_lpr_revolution
             value = 0
         }
+        default_option = yes
     }
 
     # Option B: Redirect Revolution to Liberty
@@ -189,14 +192,14 @@ lpr_events.13 = {
         random_scope_state = {
             limit = {
                 any_scope_pop = {
-                    size > 15000
+                    population > 15000
                 }
             }
             random_scope_pop = {
                 limit = {
-                    size > 15000
+                    population > 15000
                 }
-                change_pop_size = -10000
+                # Population reduction effect removed - not supported in Victoria 3
             }
         }
         change_variable = {

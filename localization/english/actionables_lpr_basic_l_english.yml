@@ -58,6 +58,7 @@
   lpr_events.13.b: "Redirect to Liberty (Gold + Liberty points, small population loss)"
 
   je_lpr_points: "Liberty, Progress, and Revolution"
+  je_lpr_points_reason: "Track your progress in Liberty, Progress, and Revolution paths. Points accumulate through monthly choices and trigger special events when reaching milestones."
   je_lpr_points_status: "Liberty: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_liberty_value')|v] (Spent: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_liberty_spent_value')|v])\nProgress: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_progress_value')|v] (Spent: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_progress_spent_value')|v])\nRevolution: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_revolution_value')|v] (Spent: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_revolution_spent_value')|v])\n\nGlobal Variables:\nIndependence: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_independence_value')|v]\nInnovation: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_innovation_value')|v]\nUprising: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_uprising_value')|v]"
 
   # Liberty Spent Threshold Events

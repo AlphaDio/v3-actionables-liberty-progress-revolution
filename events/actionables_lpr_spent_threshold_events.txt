@@ -1,4 +1,4 @@
-namespace = lpr_events
+﻿namespace = lpr_events
 
 # ============================================================================
 # SPENT THRESHOLD EVENTS
@@ -21,7 +21,7 @@ lpr_events.21 = {
 
     trigger = {
         var:actionables_lpr_liberty_spent >= 100
-        NOT = { has_country_flag = lpr_liberty_spent_100_triggered }
+        NOT = { has_variable = lpr_liberty_spent_100_triggered }
     }
 
     title = lpr_events.21.t
@@ -41,7 +41,7 @@ lpr_events.21 = {
     # Rewards: Treasury boost + stability improvement
     option = {
         name = lpr_events.21.a
-        set_country_flag = lpr_liberty_spent_100_triggered
+        set_variable = lpr_liberty_spent_100_triggered
         add_loyalists = {
             value = lpr_large_radicals
         }
@@ -51,11 +51,12 @@ lpr_events.21 = {
     # Rewards: Increased migration attraction, making the country more appealing to migrants
     option = {
         name = lpr_events.21.b
-        set_country_flag = lpr_liberty_spent_100_triggered
+        set_variable = lpr_liberty_spent_100_triggered
         add_modifier = {
             name = lpr_liberty_beacon
             days = 90
         }
+        default_option = yes
     }
 }
 
@@ -70,7 +71,7 @@ lpr_events.24 = {
 
     trigger = {
         var:actionables_lpr_progress_spent >= 100
-        NOT = { has_country_flag = lpr_progress_spent_100_triggered }
+        NOT = { has_variable = lpr_progress_spent_100_triggered }
     }
 
     title = lpr_events.24.t
@@ -90,7 +91,7 @@ lpr_events.24 = {
     # Rewards: Increased qualification growth + small treasury bonus
     option = {
         name = lpr_events.24.a
-        set_country_flag = lpr_progress_spent_100_triggered
+        set_variable = lpr_progress_spent_100_triggered
         add_treasury = 22000
         add_modifier = {
             name = lpr_educational_advancement
@@ -102,8 +103,9 @@ lpr_events.24 = {
     # Rewards: Tech spread boost + small treasury
     option = {
         name = lpr_events.24.b
-        set_country_flag = lpr_progress_spent_100_triggered
+        set_variable = lpr_progress_spent_100_triggered
         add_treasury = 50000
+        default_option = yes
     }
 }
 
@@ -118,7 +120,7 @@ lpr_events.27 = {
 
     trigger = {
         var:actionables_lpr_revolution_spent >= 100
-        NOT = { has_country_flag = lpr_revolution_spent_100_triggered }
+        NOT = { has_variable = lpr_revolution_spent_100_triggered }
     }
 
     title = lpr_events.27.t
@@ -138,7 +140,7 @@ lpr_events.27 = {
     # Rewards: Population growth + tech spread boost
     option = {
         name = lpr_events.27.a
-        set_country_flag = lpr_revolution_spent_100_triggered
+        set_variable = lpr_revolution_spent_100_triggered
         add_modifier = {
             name = lpr_society_tech_spread_boost
             days = 90
@@ -149,18 +151,18 @@ lpr_events.27 = {
     # Rewards: Increased training rate at all military buildings
     option = {
         name = lpr_events.27.b
-        set_country_flag = lpr_revolution_spent_100_triggered
+        set_variable = lpr_revolution_spent_100_triggered
         random_scope_state = {
             create_pop = {
                 culture = root.capital.state_region.cultures:0
                 religion = root.capital.state_region.religions:0
-                size = 55000
-            }
+                population >= 55000
         }
         add_modifier = {
             name = lpr_revolutionary_fervor
             days = 90
         }
+        default_option = yes
     }
 }
 

@@ -1,4 +1,4 @@
-namespace = lpr_events
+﻿namespace = lpr_events
 
 # ============================================================================
 # FINISHER EVENTS
@@ -37,6 +37,7 @@ lpr_events.5 = {
     # This path favors economic stability over political change
     option = {
         name = lpr_events.5.a
+        default_option = yes
         trigger = {
             var:actionables_lpr_liberty >= 10
         }
@@ -96,7 +97,7 @@ lpr_events.5 = {
             create_pop = {
                 culture = root.capital.state_region.cultures:0
                 religion = root.capital.state_region.religions:0
-                size = 50000
+                population >= 50000
             }
         }
         change_variable = {
