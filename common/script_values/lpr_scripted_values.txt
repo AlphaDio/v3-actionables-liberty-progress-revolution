@@ -8,45 +8,99 @@
 
 # Scripted value for displaying Liberty points in the journal entry
 actionables_lpr_liberty_value = {
-	value = var:actionables_lpr_liberty
+	if = {
+		limit = { has_variable = actionables_lpr_liberty }
+		value = var:actionables_lpr_liberty
+	}
+	else = {
+		value = 0
+	}
 }
 
 # Scripted value for displaying Progress points in the journal entry
 actionables_lpr_progress_value = {
-	value = var:actionables_lpr_progress
+	if = {
+		limit = { has_variable = actionables_lpr_progress }
+		value = var:actionables_lpr_progress
+	}
+	else = {
+		value = 0
+	}
 }
 
 # Scripted value for displaying Revolution points in the journal entry
 actionables_lpr_revolution_value = {
-	value = var:actionables_lpr_revolution
+	if = {
+		limit = { has_variable = actionables_lpr_revolution }
+		value = var:actionables_lpr_revolution
+	}
+	else = {
+		value = 0
+	}
 }
 
 # Scripted value for displaying cumulative Liberty spent
 actionables_lpr_liberty_spent_value = {
-	value = var:actionables_lpr_liberty_spent
+	if = {
+		limit = { has_variable = actionables_lpr_liberty_spent }
+		value = var:actionables_lpr_liberty_spent
+	}
+	else = {
+		value = 0
+	}
 }
 
 # Scripted value for displaying cumulative Progress spent
 actionables_lpr_progress_spent_value = {
-	value = var:actionables_lpr_progress_spent
+	if = {
+		limit = { has_variable = actionables_lpr_progress_spent }
+		value = var:actionables_lpr_progress_spent
+	}
+	else = {
+		value = 0
+	}
 }
 
 # Scripted value for displaying cumulative Revolution spent
 actionables_lpr_revolution_spent_value = {
-	value = var:actionables_lpr_revolution_spent
+	if = {
+		limit = { has_variable = actionables_lpr_revolution_spent }
+		value = var:actionables_lpr_revolution_spent
+	}
+	else = {
+		value = 0
+	}
 }
 
 # Scripted values for displaying global IIT variables
 actionables_lpr_independence_value = {
-	value = global_var:actionables_lpr_independence
+	if = {
+		limit = { has_global_variable = actionables_lpr_independence }
+		value = global_var:actionables_lpr_independence
+	}
+	else = {
+		value = 0
+	}
 }
 
 actionables_lpr_innovation_value = {
-	value = global_var:actionables_lpr_innovation
+	if = {
+		limit = { has_global_variable = actionables_lpr_innovation }
+		value = global_var:actionables_lpr_innovation
+	}
+	else = {
+		value = 0
+	}
 }
 
 actionables_lpr_uprising_value = {
-	value = global_var:actionables_lpr_uprising
+	if = {
+		limit = { has_global_variable = actionables_lpr_uprising }
+		value = global_var:actionables_lpr_uprising
+	}
+	else = {
+		value = 0
+	}
 }
 
 # ============================================================================

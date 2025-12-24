@@ -40,18 +40,7 @@ lpr_events.11 = {
     # Cost: Sets Liberty to 0, consuming all accumulated progress
     option = {
         name = lpr_events.11.a
-        add_treasury = 50000
-        add_loyalists = {
-            value = lpr_large_radicals
-        }
-        change_variable = {
-            name = actionables_lpr_liberty_spent
-            add = var:actionables_lpr_liberty
-        }
-        set_variable = {
-            name = actionables_lpr_liberty
-            value = 0
-        }
+        lpr_big_finisher_liberty_consume_effect = yes
         default_option = yes
     }
 
@@ -60,15 +49,7 @@ lpr_events.11 = {
     # Drawback: Small treasury cost (10,000 gold) + keeps Liberty at current level
     option = {
         name = lpr_events.11.b
-        add_treasury = -10000
-        add_modifier = {
-            name = lpr_construction_boost
-            days = 60
-        }
-        change_variable = {
-            name = actionables_lpr_progress
-            add = 5
-        }
+        lpr_big_finisher_liberty_redirect_effect = yes
     }
 }
 
@@ -100,19 +81,7 @@ lpr_events.12 = {
     # Cost: Sets Progress to 0, consuming all accumulated progress
     option = {
         name = lpr_events.12.a
-        add_treasury = 35000
-        add_modifier = {
-            name = lpr_massive_construction_boost
-            days = 90
-        }
-        change_variable = {
-            name = actionables_lpr_progress_spent
-            add = var:actionables_lpr_progress
-        }
-        set_variable = {
-            name = actionables_lpr_progress
-            value = 0
-        }
+        lpr_big_finisher_progress_consume_effect = yes
         default_option = yes
     }
 
@@ -121,18 +90,7 @@ lpr_events.12 = {
     # Drawback: 3-month radical increase + keeps Progress at current level
     option = {
         name = lpr_events.12.b
-        add_modifier = {
-            name = lpr_small_radical_increase
-            months = 3
-        }
-        add_modifier = {
-            name = lpr_society_tech_spread_boost
-            days = 60
-        }
-        change_variable = {
-            name = actionables_lpr_revolution
-            add = 5
-        }
+        lpr_big_finisher_progress_redirect_effect = yes
     }
 }
 
@@ -164,18 +122,7 @@ lpr_events.13 = {
     # Cost: Sets Revolution to 0, consuming all accumulated progress
     option = {
         name = lpr_events.13.a
-        add_modifier = {
-            name = lpr_society_tech_spread_boost
-            days = 90
-        }
-        change_variable = {
-            name = actionables_lpr_revolution_spent
-            add = var:actionables_lpr_revolution
-        }
-        set_variable = {
-            name = actionables_lpr_revolution
-            value = 0
-        }
+        lpr_big_finisher_revolution_consume_effect = yes
         default_option = yes
     }
 
@@ -184,11 +131,6 @@ lpr_events.13 = {
     # Drawback: Small population loss (10,000) + keeps Revolution at current level
     option = {
         name = lpr_events.13.b
-        add_treasury = 10000
-        
-        change_variable = {
-            name = actionables_lpr_liberty
-            add = 5
-        }
+        lpr_big_finisher_revolution_redirect_effect = yes
     }
 }

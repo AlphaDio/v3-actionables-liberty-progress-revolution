@@ -15,82 +15,43 @@
 
 # Fires every month for each country
 on_monthly_pulse_country = {
-	# Builder events - fires every month with 30% chance
-	random_events = {
-		70 = 0
-		30 = lpr_events.1  # 100% chance of triggering event
+	on_actions = {
+		delay = { days = { 1 30 } }
+		lpr_on_monthly_pulse_country
+		lpr_check_finisher_events_effect
 	}
-	
-	# Binary choice events - 10% chance when variables >= 5
-	# Note: Multiple binary events can trigger in the same month if multiple
-	# variables are >= 5, but with moderate probability for balanced gameplay.
+}
 
-	# Liberty binary event (triggers when Liberty >= 5)
+lpr_on_monthly_pulse_country = {
+	# Combined random events system
+	# Builder events (30%), binary events (20%), big finisher events (15%), spent threshold events (10%)
 	random_events = {
+		# Builder events - fires every month with 30% chance
+		70 = 0  # 70% no event
+		30 = lpr_events.1  # 30% chance of triggering builder event
+
+		# Binary choice events - 20% chance when variables >= 5
+		# Note: Multiple binary events can trigger in the same month if multiple
+		# variables are >= 5, but with moderate probability for balanced gameplay.
 		80 = 0  # 80% chance of no event
-		20 = lpr_events.2  # 20% chance of triggering event when conditions met
-	}
+		8 = lpr_events.2  # 20% chance of Liberty binary event when conditions met
+		8 = lpr_events.3  # 20% chance of Progress binary event when conditions met
+		8 = lpr_events.4  # 20% chance of Revolution binary event when conditions met
 
-	# Progress binary event (triggers when Progress >= 5)
-	random_events = {
-		80 = 0  # 80% chance of no event
-		20 = lpr_events.3  # 20% chance of triggering event when conditions met
-	}
-
-	# Revolution binary event (triggers when Revolution >= 5)
-	random_events = {
-		80 = 0  # 80% chance of no event
-		20 = lpr_events.4  # 20% chance of triggering event when conditions met
-	}
-	
-	# Big Finisher Binary Events - 12% chance when variables >= 20
-	# These provide major rewards for consuming accumulated points
-	
-	# Liberty big finisher binary event (triggers when Liberty >= 20)
-	random_events = {
+		# Big Finisher Binary Events - 15% chance when variables >= 20
+		# These provide major rewards for consuming accumulated points
 		85 = 0  # 85% chance of no event
-		15 = lpr_events.11  # 15% chance of triggering event when conditions met
-	}
+		15 = lpr_events.11  # 15% chance of Liberty big finisher when conditions met
+		15 = lpr_events.12  # 15% chance of Progress big finisher when conditions met
+		15 = lpr_events.13  # 15% chance of Revolution big finisher when conditions met
 
-	# Progress big finisher binary event (triggers when Progress >= 20)
-	random_events = {
-		85 = 0  # 85% chance of no event
-		15 = lpr_events.12  # 15% chance of triggering event when conditions met
-	}
-
-	# Revolution big finisher binary event (triggers when Revolution >= 20)
-	random_events = {
-		85 = 0  # 85% chance of no event
-		15 = lpr_events.13  # 15% chance of triggering event when conditions met
-	}
-	
-	# Check for finisher events every month (triggers if conditions met)
-	# This evaluates if any LPR variable (Liberty, Progress, or Revolution)
-	# has reached the threshold of 12 points, triggering a finisher event
-	effect = {
-		lpr_check_finisher_events = yes
-	}
-	
-	# Spent Threshold Events - 15% chance when cumulative spent variables reach milestones
-	# These events fire once per threshold (100) for each LPR path
-	# Flags prevent events from firing multiple times
-	
-	# Liberty spent threshold events
-	random_events = {
+		# Spent Threshold Events - 10% chance when cumulative spent variables reach milestones
+		# These events fire once per threshold (100) for each LPR path
+		# Flags prevent events from firing multiple times
 		90 = 0  # 90% chance of no event
-		10 = lpr_events.21  # 10% chance of triggering event when conditions met
-	}
-
-	# Progress spent threshold events
-	random_events = {
-		90 = 0  # 90% chance of no event
-		10 = lpr_events.24  # 10% chance of triggering event when conditions met
-	}
-
-	# Revolution spent threshold events
-	random_events = {
-		90 = 0  # 90% chance of no event
-		10 = lpr_events.27  # 10% chance of triggering event when conditions met
+		10 = lpr_events.21  # 10% chance of Liberty spent threshold when conditions met
+		10 = lpr_events.24  # 10% chance of Progress spent threshold when conditions met
+		10 = lpr_events.27  # 10% chance of Revolution spent threshold when conditions met
 	}
 
 }
@@ -111,9 +72,18 @@ on_law_checkpoint_debate = {
 
 lpr_on_law_checkpoint_debate = {
 	random_events = {
-		95 = 0  # 95% chance of no politics event
-		5 = lpr_events.30  # 5% chance of Liberty politics event
-		5 = lpr_events.31  # 5% chance of Progress politics event
-		5 = lpr_events.32  # 5% chance of Revolution politics event
+		10 = 0  # 
+		10 = lpr_events.30  # Liberty politics event
+		10 = lpr_events.31  # Progress politics event
+		10 = lpr_events.32  # Revolution politics event
+	}
+}
+
+lpr_check_finisher_events_effect = {
+	# Check for finisher events every month (triggers if conditions met)
+	# This evaluates if any LPR variable (Liberty, Progress, or Revolution)
+	# has reached the threshold of 12 points, triggering a finisher event
+	effect = {
+		lpr_check_finisher_events = yes
 	}
 }

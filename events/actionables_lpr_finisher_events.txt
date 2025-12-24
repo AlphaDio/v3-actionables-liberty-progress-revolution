@@ -39,21 +39,10 @@ lpr_events.5 = {
         name = lpr_events.5.a
         default_option = yes
         trigger = {
+            has_variable = actionables_lpr_liberty
             var:actionables_lpr_liberty >= 10
         }
-        add_treasury = 15000
-        change_variable = {
-            name = actionables_lpr_liberty
-            add = -10
-        }
-        change_variable = {
-            name = actionables_lpr_liberty_spent
-            add = 10
-        }
-        change_global_variable = {
-            name = actionables_lpr_independence
-            add = -10
-        }
+        lpr_finisher_liberty_effect = yes
     }
 
     # Option B: National Unity Path
@@ -63,24 +52,10 @@ lpr_events.5 = {
     option = {
         name = lpr_events.5.b
         trigger = {
+            has_variable = actionables_lpr_progress
             var:actionables_lpr_progress >= 10
         }
-        add_treasury = -20000
-        add_loyalists = {
-            value = lpr_medium_radicals
-        }
-        change_variable = {
-            name = actionables_lpr_progress
-            add = -10
-        }
-        change_variable = {
-            name = actionables_lpr_progress_spent
-            add = 10
-        }
-        change_global_variable = {
-            name = actionables_lpr_innovation
-            add = -10
-        }
+        lpr_finisher_progress_effect = yes
     }
 
     # Option C: Population Expansion Path
@@ -90,20 +65,9 @@ lpr_events.5 = {
     option = {
         name = lpr_events.5.c
         trigger = {
+            has_variable = actionables_lpr_revolution
             var:actionables_lpr_revolution >= 10
         }
-        add_treasury = -25000
-        change_variable = {
-            name = actionables_lpr_revolution
-            add = -10
-        }
-        change_variable = {
-            name = actionables_lpr_revolution_spent
-            add = 10
-        }
-        change_global_variable = {
-            name = actionables_lpr_uprising
-            add = -10
-        }
+        lpr_finisher_revolution_effect = yes
     }
 }

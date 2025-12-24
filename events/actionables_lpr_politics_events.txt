@@ -17,6 +17,7 @@ lpr_events.30 = {
 
     trigger = {
         # Law enactment check removed - not a standard Victoria 3 trigger
+        has_variable = actionables_lpr_liberty
         var:actionables_lpr_liberty >= 5
     }
 
@@ -38,19 +39,7 @@ lpr_events.30 = {
     # Costs: Liberty points, gold, radicalizes Trade Unions
     option = {
         name = lpr_events.30.a
-        add_modifier = {
-            name = lpr_enactment_advance_debate_boost
-            days = 30
-        }
-        change_variable = {
-            name = actionables_lpr_liberty
-            add = -5
-        }
-        add_treasury = -5000
-        add_loyalists = {
-            name = ig:ig_trade_unions
-            value = lpr_small_radicals
-        }
+        lpr_politics_liberty_effect = yes
     }
 
     # Option B: Decline the Political Maneuver
@@ -70,6 +59,7 @@ lpr_events.31 = {
 
     trigger = {
         # Law enactment check removed - not a standard Victoria 3 trigger
+        has_variable = actionables_lpr_progress
         var:actionables_lpr_progress >= 5
     }
 
@@ -91,22 +81,7 @@ lpr_events.31 = {
     # Costs: Progress points, radicalizes Rural Folks and Religious groups
     option = {
         name = lpr_events.31.a
-        add_modifier = {
-            name = lpr_enactment_success_boost
-            days = 30
-        }
-        change_variable = {
-            name = actionables_lpr_progress
-            add = -5
-        }
-        add_loyalists = {
-            name = ig:ig_rural_folk
-            value = lpr_small_radicals
-        }
-        add_loyalists = {
-            name = ig:ig_devout
-            value = lpr_small_radicals
-        }
+        lpr_politics_progress_effect = yes
     }
 
     # Option B: Decline the Legislative Support
@@ -126,6 +101,7 @@ lpr_events.32 = {
 
     trigger = {
         # Law enactment check removed - not a standard Victoria 3 trigger
+        has_variable = actionables_lpr_revolution
         var:actionables_lpr_revolution >= 5
     }
 
@@ -147,14 +123,7 @@ lpr_events.32 = {
     # Costs: Revolution points
     option = {
         name = lpr_events.32.a
-        add_modifier = {
-            name = lpr_enactment_time_reduction
-            days = 730  # 2 years
-        }
-        change_variable = {
-            name = actionables_lpr_revolution
-            add = -5
-        }
+        lpr_politics_revolution_effect = yes
     }
 
     # Option B: Decline the Radical Approach

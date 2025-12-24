@@ -42,21 +42,14 @@ lpr_events.21 = {
     # Rewards: Treasury boost + stability improvement
     option = {
         name = lpr_events.21.a
-        set_variable = lpr_liberty_spent_100_triggered
-        add_loyalists = {
-            value = lpr_large_radicals
-        }
+        lpr_threshold_liberty_economic_effect = yes
     }
 
     # Option B: Liberty Beacon Reward
     # Rewards: Increased migration attraction, making the country more appealing to migrants
     option = {
         name = lpr_events.21.b
-        set_variable = lpr_liberty_spent_100_triggered
-        add_modifier = {
-            name = lpr_liberty_beacon
-            days = 90
-        }
+        lpr_threshold_liberty_beacon_effect = yes
         default_option = yes
     }
 }
@@ -93,20 +86,14 @@ lpr_events.24 = {
     # Rewards: Increased qualification growth + small treasury bonus
     option = {
         name = lpr_events.24.a
-        set_variable = lpr_progress_spent_100_triggered
-        add_treasury = 22000
-        add_modifier = {
-            name = lpr_educational_advancement
-            days = 60
-        }
+        lpr_threshold_progress_educational_effect = yes
     }
 
     # Option B: Technological Advancement Reward
     # Rewards: Tech spread boost + small treasury
     option = {
         name = lpr_events.24.b
-        set_variable = lpr_progress_spent_100_triggered
-        add_treasury = 50000
+        lpr_threshold_progress_technological_effect = yes
         default_option = yes
     }
 }
@@ -143,23 +130,15 @@ lpr_events.27 = {
     # Rewards: Population growth + tech spread boost
     option = {
         name = lpr_events.27.a
+        lpr_threshold_revolution_change_effect = yes
         default_option = yes
-        set_variable = lpr_revolution_spent_100_triggered
-        add_modifier = {
-            name = lpr_society_tech_spread_boost
-            days = 90
-        }
     }
 
     # Option B: Revolutionary Fervor Reward
     # Rewards: Increased training rate at all military buildings
     option = {
         name = lpr_events.27.b
-        set_variable = lpr_revolution_spent_100_triggered
-        add_modifier = {
-            name = lpr_revolutionary_fervor
-            days = 90
-        }
+        lpr_threshold_revolution_fervor_effect = yes
         default_option = yes
     }
 }

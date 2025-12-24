@@ -16,24 +16,431 @@
 
 # Checks if any LPR variable has reached the finisher threshold (12 points)
 # If so, triggers the finisher event which provides major rewards
+# ============================================================================
+# BUILDER EVENT EFFECTS
+# ============================================================================
+# Effects for the monthly builder events that allow players to accumulate LPR points
+
+# Liberty path builder effect - economic freedom and independence
+lpr_builder_liberty_effect = {
+	add_treasury = 2000
+	add_modifier = {
+		name = lpr_small_radical_increase
+		months = 1
+	}
+	change_variable = {
+		name = actionables_lpr_liberty
+		add = 3
+	}
+	change_global_variable = {
+		name = actionables_lpr_independence
+		add = 1
+	}
+}
+
+# Progress path builder effect - technological advancement and innovation
+lpr_builder_progress_effect = {
+	add_treasury = -8000
+	add_modifier = {
+		name = lpr_very_small_radical_increase
+		months = 3
+	}
+	add_modifier = {
+		name = lpr_construction_boost
+		days = 30
+	}
+	change_variable = {
+		name = actionables_lpr_progress
+		add = 3
+	}
+	change_global_variable = {
+		name = actionables_lpr_innovation
+		add = 1
+	}
+}
+
+# Revolution path builder effect - social change and revolutionary ideas
+lpr_builder_revolution_effect = {
+	add_treasury = -3000
+	add_modifier = {
+		name = lpr_medium_radical_increase
+		months = 3
+	}
+	add_modifier = {
+		name = lpr_society_tech_spread_boost
+		days = 30
+	}
+	change_variable = {
+		name = actionables_lpr_revolution
+		add = 3
+	}
+	change_global_variable = {
+		name = actionables_lpr_uprising
+		add = 1
+	}
+}
+
+# ============================================================================
+# BINARY CHOICE EVENT EFFECTS
+# ============================================================================
+# Effects for binary choice events that trigger when variables reach 5+ points
+
+# Liberty binary commit effect - continue accumulating with small bonus
+lpr_binary_liberty_commit_effect = {
+	add_loyalists = {
+		value = lpr_small_radicals
+	}
+	change_variable = {
+		name = actionables_lpr_liberty
+		add = 3
+	}
+}
+
+# Liberty binary reject effect - cash out with big bonus
+lpr_binary_liberty_reject_effect = {
+	add_treasury = 15000
+	add_loyalists = {
+		value = lpr_medium_radicals
+	}
+	change_variable = {
+		name = actionables_lpr_liberty
+		add = -5
+	}
+	change_variable = {
+		name = actionables_lpr_liberty_spent
+		add = 5
+	}
+}
+
+# Progress binary commit effect - continue accumulating with construction boost
+lpr_binary_progress_commit_effect = {
+	add_modifier = {
+		name = lpr_construction_boost
+		days = 30
+	}
+	change_variable = {
+		name = actionables_lpr_progress
+		add = 3
+	}
+}
+
+# Progress binary reject effect - cash out with construction boost and gold
+lpr_binary_progress_reject_effect = {
+	add_treasury = 20000
+	add_modifier = {
+		name = lpr_construction_boost
+		days = 90
+	}
+	change_variable = {
+		name = actionables_lpr_progress
+		add = -5
+	}
+	change_variable = {
+		name = actionables_lpr_progress_spent
+		add = 5
+	}
+}
+
+# Revolution binary commit effect - continue accumulating with military boost
+lpr_binary_revolution_commit_effect = {
+	add_modifier = {
+		name = lpr_military_boost
+		days = 15
+	}
+	change_variable = {
+		name = actionables_lpr_revolution
+		add = 3
+	}
+}
+
+# Revolution binary reject effect - cash out with radical increase
+lpr_binary_revolution_reject_effect = {
+	add_loyalists = {
+		value = lpr_large_radicals
+	}
+	change_variable = {
+		name = actionables_lpr_revolution
+		add = -5
+	}
+	change_variable = {
+		name = actionables_lpr_revolution_spent
+		add = 5
+	}
+}
+
+# ============================================================================
+# POLITICS EVENT EFFECTS
+# ============================================================================
+# Effects for politics events that trigger during law enactment debates
+
+# Liberty politics effect - spend liberty for enactment advantage
+lpr_politics_liberty_effect = {
+	add_modifier = {
+		name = lpr_enactment_advance_debate_boost
+		days = 30
+	}
+	change_variable = {
+		name = actionables_lpr_liberty
+		add = -5
+	}
+	add_treasury = -5000
+	add_loyalists = {
+		name = ig:ig_trade_unions
+		value = lpr_small_radicals
+	}
+}
+
+# Progress politics effect - spend progress for legislative success
+lpr_politics_progress_effect = {
+	add_modifier = {
+		name = lpr_enactment_success_boost
+		days = 30
+	}
+	change_variable = {
+		name = actionables_lpr_progress
+		add = -5
+	}
+	add_loyalists = {
+		name = ig:ig_rural_folk
+		value = lpr_small_radicals
+	}
+	add_loyalists = {
+		name = ig:ig_devout
+		value = lpr_small_radicals
+	}
+}
+
+# Revolution politics effect - spend revolution for time reduction
+lpr_politics_revolution_effect = {
+	add_modifier = {
+		name = lpr_enactment_time_reduction
+		days = 730  # 2 years
+	}
+	change_variable = {
+		name = actionables_lpr_revolution
+		add = -5
+	}
+}
+
+# ============================================================================
+# FINISHER EVENT EFFECTS
+# ============================================================================
+# Effects for finisher events that trigger when variables reach 12+ points
+
+# Liberty finisher effect - financial stability path
+lpr_finisher_liberty_effect = {
+	add_treasury = 15000
+	change_variable = {
+		name = actionables_lpr_liberty
+		add = -10
+	}
+	change_variable = {
+		name = actionables_lpr_liberty_spent
+		add = 10
+	}
+	change_global_variable = {
+		name = actionables_lpr_independence
+		add = -10
+	}
+}
+
+# Progress finisher effect - national unity path
+lpr_finisher_progress_effect = {
+	add_treasury = -20000
+	add_loyalists = {
+		value = lpr_medium_radicals
+	}
+	change_variable = {
+		name = actionables_lpr_progress
+		add = -10
+	}
+	change_variable = {
+		name = actionables_lpr_progress_spent
+		add = 10
+	}
+	change_global_variable = {
+		name = actionables_lpr_innovation
+		add = -10
+	}
+}
+
+# Revolution finisher effect - population expansion path
+lpr_finisher_revolution_effect = {
+	add_treasury = -25000
+	change_variable = {
+		name = actionables_lpr_revolution
+		add = -10
+	}
+	change_variable = {
+		name = actionables_lpr_revolution_spent
+		add = 10
+	}
+	change_global_variable = {
+		name = actionables_lpr_uprising
+		add = -10
+	}
+}
+
+# ============================================================================
+# BIG FINISHER BINARY EFFECTS
+# ============================================================================
+# Effects for big finisher events that trigger when variables reach 20+ points
+
+# Liberty big finisher consume effect - cash out liberty for big boost
+lpr_big_finisher_liberty_consume_effect = {
+	add_treasury = 50000
+	add_loyalists = {
+		value = lpr_large_radicals
+	}
+	change_variable = {
+		name = actionables_lpr_liberty_spent
+		add = var:actionables_lpr_liberty
+	}
+	set_variable = {
+		name = actionables_lpr_liberty
+		value = 0
+	}
+}
+
+# Liberty big finisher redirect effect - redirect liberty to progress
+lpr_big_finisher_liberty_redirect_effect = {
+	add_treasury = -10000
+	add_modifier = {
+		name = lpr_construction_boost
+		days = 60
+	}
+	change_variable = {
+		name = actionables_lpr_progress
+		add = 5
+	}
+}
+
+# Progress big finisher consume effect - cash out progress for massive boost
+lpr_big_finisher_progress_consume_effect = {
+	add_treasury = 35000
+	add_modifier = {
+		name = lpr_massive_construction_boost
+		days = 90
+	}
+	change_variable = {
+		name = actionables_lpr_progress_spent
+		add = var:actionables_lpr_progress
+	}
+	set_variable = {
+		name = actionables_lpr_progress
+		value = 0
+	}
+}
+
+# Progress big finisher redirect effect - redirect progress to revolution
+lpr_big_finisher_progress_redirect_effect = {
+	add_modifier = {
+		name = lpr_small_radical_increase
+		months = 3
+	}
+	add_modifier = {
+		name = lpr_society_tech_spread_boost
+		days = 60
+	}
+	change_variable = {
+		name = actionables_lpr_revolution
+		add = 5
+	}
+}
+
+# Revolution big finisher consume effect - cash out revolution for population/tech boost
+lpr_big_finisher_revolution_consume_effect = {
+	add_modifier = {
+		name = lpr_society_tech_spread_boost
+		days = 90
+	}
+	change_variable = {
+		name = actionables_lpr_revolution_spent
+		add = var:actionables_lpr_revolution
+	}
+	set_variable = {
+		name = actionables_lpr_revolution
+		value = 0
+	}
+}
+
+# Revolution big finisher redirect effect - redirect revolution to liberty
+lpr_big_finisher_revolution_redirect_effect = {
+	add_treasury = 10000
+	change_variable = {
+		name = actionables_lpr_liberty
+		add = 5
+	}
+}
+
+# ============================================================================
+# SPENT THRESHOLD EFFECTS
+# ============================================================================
+# Effects for spent threshold events that trigger when cumulative spent variables reach milestones
+
+# Liberty spent threshold economic freedom effect
+lpr_threshold_liberty_economic_effect = {
+	set_variable = lpr_liberty_spent_100_triggered
+	add_loyalists = {
+		value = lpr_large_radicals
+	}
+}
+
+# Liberty spent threshold liberty beacon effect
+lpr_threshold_liberty_beacon_effect = {
+	set_variable = lpr_liberty_spent_100_triggered
+	add_modifier = {
+		name = lpr_liberty_beacon
+		days = 90
+	}
+}
+
+# Progress spent threshold educational advancement effect
+lpr_threshold_progress_educational_effect = {
+	set_variable = lpr_progress_spent_100_triggered
+	add_treasury = 22000
+	add_modifier = {
+		name = lpr_educational_advancement
+		days = 60
+	}
+}
+
+# Progress spent threshold technological advancement effect
+lpr_threshold_progress_technological_effect = {
+	set_variable = lpr_progress_spent_100_triggered
+	add_treasury = 50000
+}
+
+# Revolution spent threshold revolutionary change effect
+lpr_threshold_revolution_change_effect = {
+	set_variable = lpr_revolution_spent_100_triggered
+	add_modifier = {
+		name = lpr_society_tech_spread_boost
+		days = 90
+	}
+}
+
+# Revolution spent threshold revolutionary fervor effect
+lpr_threshold_revolution_fervor_effect = {
+	set_variable = lpr_revolution_spent_100_triggered
+	add_modifier = {
+		name = lpr_revolutionary_fervor
+		days = 90
+	}
+}
+
+# ============================================================================
+# FINISHER EVENT CHECK SCRIPTED EFFECT
+# ============================================================================
 lpr_check_finisher_events = {
 	if = {
 		limit = {
 			# Check if any of the three LPR paths has reached 12 points
 			# This represents approximately 4 months of consistent choices
 			OR = {
-				AND = {
-					has_variable = actionables_lpr_liberty
-					var:actionables_lpr_liberty >= 12
-				}
-				AND = {
-					has_variable = actionables_lpr_progress
-					var:actionables_lpr_progress >= 12
-				}
-				AND = {
-					has_variable = actionables_lpr_revolution
-					var:actionables_lpr_revolution >= 12
-				}
+				var:actionables_lpr_liberty >= 12
+				var:actionables_lpr_progress >= 12
+				var:actionables_lpr_revolution >= 12
 			}
 		}
 		# Trigger the finisher event which provides significant rewards

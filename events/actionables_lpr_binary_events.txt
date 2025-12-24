@@ -42,13 +42,7 @@ lpr_events.2 = {
     option = {
         name = lpr_events.2.a
         default_option = yes
-        add_loyalists = {
-            value = lpr_small_radicals
-        }
-        change_variable = {
-            name = actionables_lpr_liberty
-            add = 3
-        }
+        lpr_binary_liberty_commit_effect = yes
     }
 
     # Option B: Reject Liberty Path
@@ -56,18 +50,7 @@ lpr_events.2 = {
     # Trade-off: Reduces Liberty by 5 points, giving up progress toward finisher
     option = {
         name = lpr_events.2.b
-        add_treasury = 15000
-        add_loyalists = {
-            value = lpr_medium_radicals
-        }
-        change_variable = {
-            name = actionables_lpr_liberty
-            add = -5
-        }
-        change_variable = {
-            name = actionables_lpr_liberty_spent
-            add = 5
-        }
+        lpr_binary_liberty_reject_effect = yes
     }
 }
 
@@ -100,14 +83,7 @@ lpr_events.3 = {
     option = {
         name = lpr_events.3.a
         default_option = yes
-        add_modifier = {
-            name = lpr_construction_boost
-            days = 30
-        }
-        change_variable = {
-            name = actionables_lpr_progress
-            add = 3
-        }
+        lpr_binary_progress_commit_effect = yes
     }
 
     # Option B: Reject Progress Path
@@ -115,19 +91,7 @@ lpr_events.3 = {
     # Trade-off: Reduces Progress by 5 points, giving up progress toward finisher
     option = {
         name = lpr_events.3.b
-        add_treasury = 20000
-        add_modifier = {
-            name = lpr_construction_boost
-            days = 90
-        }
-        change_variable = {
-            name = actionables_lpr_progress
-            add = -5
-        }
-        change_variable = {
-            name = actionables_lpr_progress_spent
-            add = 5
-        }
+        lpr_binary_progress_reject_effect = yes
     }
 }
 
@@ -160,14 +124,7 @@ lpr_events.4 = {
     option = {
         name = lpr_events.4.a
         default_option = yes
-        add_modifier = {
-            name = lpr_military_boost
-            days = 15
-        }
-        change_variable = {
-            name = actionables_lpr_revolution
-            add = 3
-        }
+        lpr_binary_revolution_commit_effect = yes
     }
 
     # Option B: Reject Revolution Path
@@ -175,16 +132,6 @@ lpr_events.4 = {
     # Trade-off: Reduces Revolution by 5 points, giving up progress toward finisher
     option = {
         name = lpr_events.4.b
-        add_loyalists = {
-            value = lpr_large_radicals
-        }
-        change_variable = {
-            name = actionables_lpr_revolution
-            add = -5
-        }
-        change_variable = {
-            name = actionables_lpr_revolution_spent
-            add = 5
-        }
+        lpr_binary_revolution_reject_effect = yes
     }
 }
