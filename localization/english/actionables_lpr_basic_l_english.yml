@@ -19,47 +19,47 @@
   lpr_events.2.d: "Our commitment to liberty has reached a critical juncture. We must decide whether to continue on this path or cash in our progress for immediate gains."
   lpr_events.2.f: "The path of liberty presents a choice."
 
-  lpr_events.2.a: "Continue the Liberty Path (Small reward + Liberty points)"
-  lpr_events.2.b: "Cash Out Liberty (Big reward - Liberty points)"
+  lpr_events.2.a: "Continue the Liberty Path (Small reward +3 Liberty points)"
+  lpr_events.2.b: "Cash Out Liberty (Big reward -5 Liberty points)"
 
   lpr_events.3.t: "Progress Crossroads"
   lpr_events.3.d: "Our pursuit of progress has reached a critical juncture. We must decide whether to continue advancing or consolidate our gains with immediate benefits."
   lpr_events.3.f: "The path of progress presents a choice."
 
-  lpr_events.3.a: "Continue the Progress Path (Small reward + Progress points)"
-  lpr_events.3.b: "Cash Out Progress (Big reward - Progress points)"
+  lpr_events.3.a: "Continue the Progress Path (Small reward +3 Progress points)"
+  lpr_events.3.b: "Cash Out Progress (Big reward -5 Progress points)"
 
   lpr_events.4.t: "Revolution Crossroads"
   lpr_events.4.d: "Our revolutionary momentum has reached a critical juncture. We must decide whether to continue the revolutionary path or secure immediate gains by moderating our approach."
   lpr_events.4.f: "The path of revolution presents a choice."
 
-  lpr_events.4.a: "Continue the Revolution Path (Small reward + Revolution points)"
-  lpr_events.4.b: "Cash Out Revolution (Big reward - Revolution points)"
+  lpr_events.4.a: "Continue the Revolution Path (Small reward +3 Revolution points)"
+  lpr_events.4.b: "Cash Out Revolution (Big reward -5 Revolution points)"
 
   lpr_events.11.t: "Liberty's Ultimate Triumph"
   lpr_events.11.d: "Our dedication to liberty has reached unprecedented heights. We now face a momentous decision: cash out all our accumulated liberty for massive gains, or redirect this energy toward progress."
   lpr_events.11.f: "Twenty units of liberty demand resolution."
 
-  lpr_events.11.a: "Consume Liberty for Ultimate Reward (Gold + huge stability)"
-  lpr_events.11.b: "Redirect to Progress (Construction boost + Progress points, costs gold)"
+  lpr_events.11.a: "Consume Liberty for Ultimate Reward (Gold + huge stability, consume all Liberty points)"
+  lpr_events.11.b: "Redirect to Progress (Construction boost +5 Progress points, costs gold)"
 
   lpr_events.12.t: "Progress's Pinnacle"
   lpr_events.12.d: "Our commitment to progress has reached its zenith. We must choose: convert all our progress into unparalleled development, or channel this momentum toward revolutionary change."
   lpr_events.12.f: "Twenty units of progress await our decision."
 
-  lpr_events.12.a: "Consume Progress for Ultimate Reward (Gold + massive construction boost)"
-  lpr_events.12.b: "Redirect to Revolution (Tech spread + Revolution points, some unrest)"
+  lpr_events.12.a: "Consume Progress for Ultimate Reward (Gold + massive construction boost, consume all Progress points)"
+  lpr_events.12.b: "Redirect to Revolution (Tech spread +5 Revolution points, some unrest)"
 
   lpr_events.13.t: "Revolution's Apex"
   lpr_events.13.d: "Our revolutionary fervor has reached its absolute peak. The choice is ours: unleash all accumulated revolutionary energy for transformative change, or channel it into the cause of liberty."
   lpr_events.13.f: "Twenty units of revolution demand action."
 
-  lpr_events.13.a: "Consume Revolution for Ultimate Reward (New pops + long tech boost)"
-  lpr_events.13.b: "Redirect to Liberty (Gold + Liberty points, small population loss)"
+  lpr_events.13.a: "Consume Revolution for Ultimate Reward (New pops + long tech boost, consume all Revolution points)"
+  lpr_events.13.b: "Redirect to Liberty (Gold +5 Liberty points, small population loss)"
 
   je_lpr_points: "Liberty, Progress, and Revolution"
   je_lpr_points_reason: "Track your progress in Liberty, Progress, and Revolution paths. Points accumulate through monthly choices and trigger special events when reaching milestones."
-  je_lpr_points_status: "Liberty: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_liberty_value')|v] (Spent: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_liberty_spent_value')|v])\nProgress: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_progress_value')|v] (Spent: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_progress_spent_value')|v])\nRevolution: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_revolution_value')|v] (Spent: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_revolution_spent_value')|v])\n\nGlobal Variables:\nIndependence: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_independence_value')|v]\nInnovation: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_innovation_value')|v]\nUprising: [GetPlayer.MakeScope.ScriptValue('actionables_lpr_uprising_value')|v]"
+  je_lpr_points_status: "Liberty: [GetPlayer.MakeScope.Var('actionables_lpr_liberty_value').GetValue] (Spent: [GetPlayer.MakeScope.Var('actionables_lpr_liberty_spent_value').GetValue])\nProgress: [GetPlayer.MakeScope.Var('actionables_lpr_progress_value').GetValue] (Spent: [GetPlayer.MakeScope.Var('actionables_lpr_progress_spent_value').GetValue])\nRevolution: [GetPlayer.MakeScope.Var('actionables_lpr_revolution_value').GetValue] (Spent: [GetPlayer.MakeScope.Var('actionables_lpr_revolution_spent_value').GetValue])\n\nGlobal Variables:\nIndependence: [GetGlobalVariable('actionables_lpr_independence_value').GetValue]\nInnovation: [GetGlobalVariable('actionables_lpr_innovation_value').GetValue]\nUprising: [GetGlobalVariable('actionables_lpr_uprising_value').GetValue]"
 
   # Liberty Spent Threshold Events
   lpr_events.21.t: "Liberty Milestone: 100 Points Spent"
@@ -122,17 +122,17 @@
   lpr_events.30.t: "Liberty's Political Influence"
   lpr_events.30.d: "As our proposed law faces debate in the legislative chambers, we have an opportunity to leverage our commitment to liberty for political advantage. By investing in strategic alliances and public campaigns, we can influence the legislative process."
   lpr_events.30.f: "Liberty opens many doors in politics."
-  lpr_events.30.a: "Deploy Liberty Campaign (Gold + Liberty points, radicalizes Trade Unions)"
+  lpr_events.30.a: "Deploy Liberty Campaign (Gold -5 Liberty points, radicalizes Trade Unions)"
   lpr_events.30.b: "Decline Political Interference"
 
   lpr_events.31.t: "Progress's Legislative Expertise"
   lpr_events.31.d: "Our dedication to progress has given us valuable expertise in navigating complex legislative processes. We can apply this knowledge to improve our chances of successfully enacting the proposed law."
   lpr_events.31.f: "Progress brings efficiency to governance."
-  lpr_events.31.a: "Apply Progressive Tactics (Progress points, radicalizes Rural Folks + Religious)"
+  lpr_events.31.a: "Apply Progressive Tactics (-5 Progress points, radicalizes Rural Folks + Religious)"
   lpr_events.31.b: "Decline Legislative Support"
 
   lpr_events.32.t: "Revolution's Radical Tactics"
   lpr_events.32.d: "Our revolutionary spirit offers unconventional approaches to legislative challenges. By employing radical tactics, we can accelerate the entire enactment process, though this may disrupt normal political procedures."
   lpr_events.32.f: "Revolution challenges the status quo."
-  lpr_events.32.a: "Employ Radical Tactics (Revolution points)"
+  lpr_events.32.a: "Employ Radical Tactics (-5 Revolution points)"
   lpr_events.32.b: "Decline Disruptive Methods"
