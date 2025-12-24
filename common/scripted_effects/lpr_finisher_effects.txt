@@ -23,6 +23,45 @@
 
 # Liberty path builder effect - economic freedom and independence
 lpr_builder_liberty_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_variable = actionables_lpr_liberty
+			}
+
+			set_variable = {
+				name = actionables_lpr_liberty
+				value = 0
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_variable = actionables_lpr_progress
+			}
+
+			set_variable = {
+				name = actionables_lpr_progress
+				value = 0
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_variable = actionables_lpr_revolution
+			}
+
+			set_variable = {
+				name = actionables_lpr_revolution
+				value = 0
+			}
+		}
+	}
+
 	add_treasury = 2000
 	add_modifier = {
 		name = lpr_small_radical_increase
@@ -435,6 +474,49 @@ lpr_threshold_revolution_fervor_effect = {
 lpr_check_finisher_events = {
 	if = {
 		limit = {
+			NOT = {
+				has_variable = actionables_lpr_liberty
+			}
+
+			set_variable = {
+				name = actionables_lpr_liberty
+				value = 0
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_variable = actionables_lpr_progress
+			}
+
+			set_variable = {
+				name = actionables_lpr_progress
+				value = 0
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				has_variable = actionables_lpr_revolution
+			}
+
+			set_variable = {
+				name = actionables_lpr_revolution
+				value = 0
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			has_variable = actionables_lpr_liberty
+			has_variable = actionables_lpr_progress
+			has_variable = actionables_lpr_revolution
+
 			# Check if any of the three LPR paths has reached 12 points
 			# This represents approximately 4 months of consistent choices
 			OR = {

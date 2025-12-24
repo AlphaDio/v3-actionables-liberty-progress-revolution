@@ -17,8 +17,45 @@
 on_monthly_pulse_country = {
 	on_actions = {
 		delay = { days = { 1 30 } }
+		lpr_initialize_variables_effect  # Initialize LPR variables first
 		lpr_on_monthly_pulse_country
 		lpr_check_finisher_events_effect
+	}
+}
+
+lpr_initialize_variables_effect = {
+	# Initialize LPR variables if they don't exist
+	# This ensures the LPR system is ready for all countries
+	effect = {
+		if = {
+			limit = {
+				NOT = { has_variable = actionables_lpr_liberty }
+			}
+			set_variable = {
+				name = actionables_lpr_liberty
+				value = 0
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = { has_variable = actionables_lpr_progress }
+			}
+			set_variable = {
+				name = actionables_lpr_progress
+				value = 0
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = { has_variable = actionables_lpr_revolution }
+			}
+			set_variable = {
+				name = actionables_lpr_revolution
+				value = 0
+			}
+		}
 	}
 }
 
@@ -26,6 +63,7 @@ lpr_on_monthly_pulse_country = {
 	# Combined random events system
 	# Builder events (30%), binary events (20%), big finisher events (15%), spent threshold events (10%)
 	random_events = {
+
 		# Builder events - fires every month with 30% chance
 		70 = 0  # 70% no event
 		30 = lpr_events.1  # 30% chance of triggering builder event
