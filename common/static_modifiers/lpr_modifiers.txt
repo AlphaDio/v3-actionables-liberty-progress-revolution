@@ -15,14 +15,14 @@ lpr_society_tech_spread_boost = {
 # Triples construction speed (used in Progress path builder events)
 # This significantly accelerates all construction projects for 30 days
 lpr_construction_boost = {
-	icon = "gfx/interface/icons/timed_modifier_icons/modifier_building_positive.dds"
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
 	state_construction_mult = 3.0
 }
 
 # Massive construction speed boost (used in big finisher events)
 # This provides 5x construction speed for major rewards
 lpr_massive_construction_boost = {
-	icon = "gfx/interface/icons/timed_modifier_icons/modifier_building_positive.dds"
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
 	state_construction_mult = 5.0
 }
 
@@ -80,6 +80,14 @@ lpr_educational_advancement = {
 lpr_liberty_beacon = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
 	state_migration_pull_mult = 0.5
+}
+
+# Population expansion - increases birth rates and reduces mortality for population growth
+# This represents successful revolutionary policies that encourage population growth
+lpr_revolution_finisher_population_expansion = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+	state_birth_rate_mult = 0.05    # +5% birth rate increase
+	state_mortality_mult = -0.03    # -3% mortality reduction
 }
 
 # ============================================================================

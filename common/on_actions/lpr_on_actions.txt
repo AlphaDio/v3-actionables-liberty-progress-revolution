@@ -56,6 +56,37 @@ lpr_initialize_variables_effect = {
 				value = 0
 			}
 		}
+
+		# Initialize spent tracking variables
+		if = {
+			limit = {
+				NOT = { has_variable = actionables_lpr_liberty_spent }
+			}
+			set_variable = {
+				name = actionables_lpr_liberty_spent
+				value = 0
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = { has_variable = actionables_lpr_progress_spent }
+			}
+			set_variable = {
+				name = actionables_lpr_progress_spent
+				value = 0
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = { has_variable = actionables_lpr_revolution_spent }
+			}
+			set_variable = {
+				name = actionables_lpr_revolution_spent
+				value = 0
+			}
+		}
 	}
 }
 

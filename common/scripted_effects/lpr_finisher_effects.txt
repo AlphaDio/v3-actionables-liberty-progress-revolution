@@ -28,11 +28,11 @@ lpr_builder_liberty_effect = {
 			NOT = {
 				has_variable = actionables_lpr_liberty
 			}
+		}
 
-			set_variable = {
-				name = actionables_lpr_liberty
-				value = 0
-			}
+		set_variable = {
+			name = actionables_lpr_liberty
+			value = 0
 		}
 	}
 
@@ -41,11 +41,11 @@ lpr_builder_liberty_effect = {
 			NOT = {
 				has_variable = actionables_lpr_progress
 			}
-
-			set_variable = {
-				name = actionables_lpr_progress
-				value = 0
-			}
+		}
+	
+		set_variable = {
+			name = actionables_lpr_progress
+			value = 0
 		}
 	}
 
@@ -54,11 +54,11 @@ lpr_builder_liberty_effect = {
 			NOT = {
 				has_variable = actionables_lpr_revolution
 			}
+		}
 
-			set_variable = {
-				name = actionables_lpr_revolution
-				value = 0
-			}
+		set_variable = {
+			name = actionables_lpr_revolution
+			value = 0
 		}
 	}
 
@@ -224,7 +224,7 @@ lpr_politics_liberty_effect = {
 	}
 	add_treasury = -5000
 	add_loyalists = {
-		name = ig:ig_trade_unions
+		interest_group = ig:ig_trade_unions
 		value = lpr_small_radicals
 	}
 }
@@ -240,11 +240,11 @@ lpr_politics_progress_effect = {
 		add = -5
 	}
 	add_loyalists = {
-		name = ig:ig_rural_folk
+		interest_group = ig:ig_rural_folk
 		value = lpr_small_radicals
 	}
 	add_loyalists = {
-		name = ig:ig_devout
+		interest_group = ig:ig_devout
 		value = lpr_small_radicals
 	}
 }
@@ -306,6 +306,15 @@ lpr_finisher_progress_effect = {
 # Revolution finisher effect - population expansion path
 lpr_finisher_revolution_effect = {
 	add_treasury = -25000
+
+	# Apply population growth modifier to a random state for 2 years
+	random_scope_state = {
+		add_modifier = {
+			name = lpr_revolution_finisher_population_expansion
+			days = 720  # 2 years of population growth
+		}
+	}
+
 	change_variable = {
 		name = actionables_lpr_revolution
 		add = -10
@@ -472,45 +481,6 @@ lpr_threshold_revolution_fervor_effect = {
 # FINISHER EVENT CHECK SCRIPTED EFFECT
 # ============================================================================
 lpr_check_finisher_events = {
-	if = {
-		limit = {
-			NOT = {
-				has_variable = actionables_lpr_liberty
-			}
-
-			set_variable = {
-				name = actionables_lpr_liberty
-				value = 0
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			NOT = {
-				has_variable = actionables_lpr_progress
-			}
-
-			set_variable = {
-				name = actionables_lpr_progress
-				value = 0
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			NOT = {
-				has_variable = actionables_lpr_revolution
-			}
-
-			set_variable = {
-				name = actionables_lpr_revolution
-				value = 0
-			}
-		}
-	}
-
 	if = {
 		limit = {
 			has_variable = actionables_lpr_liberty

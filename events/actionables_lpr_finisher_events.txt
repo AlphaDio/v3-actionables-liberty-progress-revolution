@@ -29,7 +29,11 @@ lpr_events.5 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-    duration = 7
+    duration = 5
+
+    cooldown = {
+		years = 1
+	}
 
     # Option A: Financial Stability Path
     # Rewards: Moderate treasury boost (15,000 gold)
