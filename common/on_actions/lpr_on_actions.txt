@@ -17,7 +17,7 @@
 on_monthly_pulse_country = {
 	on_actions = {
 		delay = { days = { 1 30 } }
-		lpr_initialize_variables_effect  # Initialize LPR variables first
+		# lpr_initialize_variables_effect  # Initialize LPR variables first
 		lpr_on_monthly_pulse_country
 		lpr_check_finisher_events_effect
 	}
@@ -27,6 +27,37 @@ lpr_initialize_variables_effect = {
 	# Initialize LPR variables if they don't exist
 	# This ensures the LPR system is ready for all countries
 	effect = {
+		# Initialize IIU global variables if they don't exist
+		# These track worldwide trends and are shared across all countries
+		if = {
+			limit = {
+				NOT = { has_global_variable = actionables_lpr_independence }
+			}
+			set_global_variable = {
+				name = actionables_lpr_independence
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = actionables_lpr_innovation }
+			}
+			set_global_variable = {
+				name = actionables_lpr_innovation
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = actionables_lpr_uprising }
+			}
+			set_global_variable = {
+				name = actionables_lpr_uprising
+				value = 0
+			}
+		}
+
+		# Initialize local LPR variables if they don't exist
 		if = {
 			limit = {
 				NOT = { has_variable = actionables_lpr_liberty }

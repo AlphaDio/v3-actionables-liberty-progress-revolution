@@ -86,7 +86,7 @@ lpr_builder_progress_effect = {
 	}
 	add_modifier = {
 		name = lpr_construction_boost
-		days = 30
+		days = 60
 	}
 	change_variable = {
 		name = actionables_lpr_progress

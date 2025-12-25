@@ -9,6 +9,7 @@
 # This helps spread social technologies faster
 lpr_society_tech_spread_boost = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+
 	country_society_tech_spread_mult = 0.1
 }
 
@@ -16,14 +17,16 @@ lpr_society_tech_spread_boost = {
 # This significantly accelerates all construction projects for 30 days
 lpr_construction_boost = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
-	state_construction_mult = 3.0
+
+	state_construction_mult = 1.5
 }
 
 # Massive construction speed boost (used in big finisher events)
 # This provides 5x construction speed for major rewards
 lpr_massive_construction_boost = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
-	state_construction_mult = 5.0
+
+	state_construction_mult = 3.0
 }
 
 # Radical increase modifiers (temporary effects for 3 months)
@@ -32,24 +35,28 @@ lpr_massive_construction_boost = {
 # Very small radical increase - minimal social unrest
 lpr_very_small_radical_increase = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+
 	state_radicals_from_political_movements_mult = 0.1
 }
 
 # Small radical increase - minor social unrest
 lpr_small_radical_increase = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+
 	state_radicals_from_political_movements_mult = 0.25
 }
 
 # Medium radical increase - moderate social unrest
 lpr_medium_radical_increase = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+
 	state_radicals_from_political_movements_mult = 0.5
 }
 
 # Large radical increase - significant social unrest
 lpr_large_radical_increase = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+
 	state_radicals_from_political_movements_mult = 1.0
 }
 
@@ -57,6 +64,7 @@ lpr_large_radical_increase = {
 # This provides a 25% boost to both offensive and defensive capabilities
 lpr_military_boost = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+
 	unit_army_offense_mult = 0.25
 	unit_army_defense_mult = 0.25
 }
@@ -65,6 +73,7 @@ lpr_military_boost = {
 # This provides a 50% boost to training rate, representing revolutionary enthusiasm
 lpr_revolutionary_fervor = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+
 	building_training_rate_mult = 0.5
 }
 
@@ -72,6 +81,7 @@ lpr_revolutionary_fervor = {
 # This provides a 50% boost to qualification growth, helping pops gain skills faster
 lpr_educational_advancement = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+
 	state_pop_qualifications_mult = 0.5
 }
 
@@ -79,6 +89,7 @@ lpr_educational_advancement = {
 # This provides a 50% boost to mass migration attraction, representing the appeal of liberty
 lpr_liberty_beacon = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+
 	state_migration_pull_mult = 0.5
 }
 
@@ -86,6 +97,7 @@ lpr_liberty_beacon = {
 # This represents successful revolutionary policies that encourage population growth
 lpr_revolution_finisher_population_expansion = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds"
+
 	state_birth_rate_mult = 0.05    # +5% birth rate increase
 	state_mortality_mult = -0.03    # -3% mortality reduction
 }
@@ -101,6 +113,7 @@ lpr_revolution_finisher_population_expansion = {
 # This makes laws more likely to advance or enter debate phases
 lpr_enactment_advance_debate_boost = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+
 	country_law_enactment_success_add = 0.5
 }
 
@@ -108,6 +121,7 @@ lpr_enactment_advance_debate_boost = {
 # This makes laws more likely to succeed at checkpoints
 lpr_enactment_success_boost = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+
 	country_law_enactment_success_add = 0.5
 }
 
@@ -115,6 +129,7 @@ lpr_enactment_success_boost = {
 # This makes laws pass faster by reducing time between checkpoints
 lpr_enactment_time_reduction = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	
 	country_law_enactment_time_mult = -0.5
 }
 

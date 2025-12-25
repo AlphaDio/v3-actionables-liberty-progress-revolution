@@ -32,8 +32,8 @@ lpr_events.5 = {
     duration = 5
 
     cooldown = {
-		years = 1
-	}
+        years = 3
+    }
 
     # Option A: Financial Stability Path
     # Rewards: Moderate treasury boost (15,000 gold)
