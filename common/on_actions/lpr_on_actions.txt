@@ -128,19 +128,17 @@ lpr_on_monthly_pulse_country = {
 
 		# Builder events - fires every month with 30% chance
 		70 = 0  # 70% no event
-		30 = lpr_events.1  # 30% chance of triggering builder event
+		45 = lpr_events.1  #
 
 		# Binary choice events - 20% chance when variables >= 5
 		# Note: Multiple binary events can trigger in the same month if multiple
 		# variables are >= 5, but with moderate probability for balanced gameplay.
-		80 = 0  # 80% chance of no event
 		8 = lpr_events.2  # 20% chance of Liberty binary event when conditions met
 		8 = lpr_events.3  # 20% chance of Progress binary event when conditions met
 		8 = lpr_events.4  # 20% chance of Revolution binary event when conditions met
 
 		# Big Finisher Binary Events - 15% chance when variables >= 20
 		# These provide major rewards for consuming accumulated points
-		85 = 0  # 85% chance of no event
 		15 = lpr_events.11  # 15% chance of Liberty big finisher when conditions met
 		15 = lpr_events.12  # 15% chance of Progress big finisher when conditions met
 		15 = lpr_events.13  # 15% chance of Revolution big finisher when conditions met
@@ -148,7 +146,6 @@ lpr_on_monthly_pulse_country = {
 		# Spent Threshold Events - 10% chance when cumulative spent variables reach milestones
 		# These events fire once per threshold (100) for each LPR path
 		# Flags prevent events from firing multiple times
-		90 = 0  # 90% chance of no event
 		10 = lpr_events.21  # 10% chance of Liberty spent threshold when conditions met
 		10 = lpr_events.24  # 10% chance of Progress spent threshold when conditions met
 		10 = lpr_events.27  # 10% chance of Revolution spent threshold when conditions met
