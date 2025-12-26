@@ -98,7 +98,7 @@ lpr_binary_liberty_commit_effect = {
 
 # Liberty binary reject effect - cash out with big bonus
 lpr_binary_liberty_reject_effect = {
-	add_treasury = 15000
+	add_treasury = 150000
 	add_loyalists = {
 		value = lpr_medium_radicals
 	}
@@ -145,7 +145,7 @@ lpr_binary_progress_reject_effect = {
 lpr_binary_revolution_commit_effect = {
 	add_modifier = {
 		name = lpr_military_boost
-		days = 15
+		years = 3
 	}
 	change_variable = {
 		name = actionables_lpr_revolution
@@ -177,7 +177,7 @@ lpr_binary_revolution_reject_effect = {
 lpr_politics_liberty_effect = {
 	add_modifier = {
 		name = lpr_enactment_advance_debate_boost
-		days = 30
+		days = 90
 	}
 	change_variable = {
 		name = actionables_lpr_liberty
@@ -194,7 +194,7 @@ lpr_politics_liberty_effect = {
 lpr_politics_progress_effect = {
 	add_modifier = {
 		name = lpr_enactment_success_boost
-		days = 30
+		days = 90
 	}
 	change_variable = {
 		name = actionables_lpr_progress
@@ -214,7 +214,7 @@ lpr_politics_progress_effect = {
 lpr_politics_revolution_effect = {
 	add_modifier = {
 		name = lpr_enactment_time_reduction
-		days = 730  # 2 years
+		days = 90
 	}
 	change_variable = {
 		name = actionables_lpr_revolution
@@ -231,10 +231,6 @@ lpr_politics_revolution_effect = {
 lpr_finisher_liberty_effect = {
 	add_treasury = 15000
 	change_variable = {
-		name = actionables_lpr_liberty
-		add = -10
-	}
-	change_variable = {
 		name = actionables_lpr_liberty_spent
 		add = 10
 	}
@@ -249,10 +245,6 @@ lpr_finisher_progress_effect = {
 	add_treasury = -20000
 	add_loyalists = {
 		value = lpr_medium_radicals
-	}
-	change_variable = {
-		name = actionables_lpr_progress
-		add = -10
 	}
 	change_variable = {
 		name = actionables_lpr_progress_spent
@@ -272,13 +264,8 @@ lpr_finisher_revolution_effect = {
 	random_scope_state = {
 		add_modifier = {
 			name = lpr_revolution_finisher_population_expansion
-			days = 720  # 2 years of population growth
+			years = 2
 		}
-	}
-
-	change_variable = {
-		name = actionables_lpr_revolution
-		add = -10
 	}
 	change_variable = {
 		name = actionables_lpr_revolution_spent
@@ -297,7 +284,7 @@ lpr_finisher_revolution_effect = {
 
 # Liberty big finisher consume effect - cash out liberty for big boost
 lpr_big_finisher_liberty_consume_effect = {
-	add_treasury = 50000
+	add_treasury = 500000
 	add_loyalists = {
 		value = lpr_large_radicals
 	}
@@ -313,10 +300,10 @@ lpr_big_finisher_liberty_consume_effect = {
 
 # Liberty big finisher redirect effect - redirect liberty to progress
 lpr_big_finisher_liberty_redirect_effect = {
-	add_treasury = -10000
+	add_treasury = -100000
 	add_modifier = {
 		name = lpr_construction_boost
-		days = 60
+		years = 2
 	}
 	change_variable = {
 		name = actionables_lpr_progress
@@ -329,7 +316,7 @@ lpr_big_finisher_progress_consume_effect = {
 	add_treasury = 35000
 	add_modifier = {
 		name = lpr_massive_construction_boost
-		days = 90
+		years = 5
 	}
 	change_variable = {
 		name = actionables_lpr_progress_spent
@@ -345,11 +332,11 @@ lpr_big_finisher_progress_consume_effect = {
 lpr_big_finisher_progress_redirect_effect = {
 	add_modifier = {
 		name = lpr_small_radical_increase
-		months = 3
+		years = 1
 	}
 	add_modifier = {
 		name = lpr_society_tech_spread_boost
-		days = 60
+		years = 5
 	}
 	change_variable = {
 		name = actionables_lpr_revolution
@@ -361,7 +348,7 @@ lpr_big_finisher_progress_redirect_effect = {
 lpr_big_finisher_revolution_consume_effect = {
 	add_modifier = {
 		name = lpr_society_tech_spread_boost
-		days = 90
+		years = 5
 	}
 	change_variable = {
 		name = actionables_lpr_revolution_spent
@@ -375,7 +362,7 @@ lpr_big_finisher_revolution_consume_effect = {
 
 # Revolution big finisher redirect effect - redirect revolution to liberty
 lpr_big_finisher_revolution_redirect_effect = {
-	add_treasury = 10000
+	add_treasury = 1000000
 	change_variable = {
 		name = actionables_lpr_liberty
 		add = 5
