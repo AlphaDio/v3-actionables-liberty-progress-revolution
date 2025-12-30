@@ -136,3 +136,86 @@
   lpr_events.32.f: "Revolution challenges the status quo."
   lpr_events.32.a: "Employ Radical Tactics (-5 Revolution points)"
   lpr_events.32.b: "Decline Disruptive Methods"
+
+  # Revolution Support Event
+  lpr_events.33.t: "Revolutionary Opportunity"
+  lpr_events.33.d: "As revolutionary fervor sweeps across our nation, we face a critical choice that will shape the future of our society. The winds of change are blowing strongly - we can either harness this momentum to advance our revolutionary agenda, or attempt to moderate the movement to maintain stability."
+  lpr_events.33.f: "The revolution presents both opportunity and peril."
+  lpr_events.33.a: "Embrace the Revolution (+20 Revolution points)"
+  lpr_events.33.a_desc: "Fully commit to the revolutionary cause, gaining significant revolutionary momentum but risking increased radicalism."
+  lpr_events.33.b: "Moderate the Revolution (-10 Revolution points)"
+  lpr_events.33.b_desc: "Attempt to calm revolutionary fervor by sacrificing some of our accumulated revolutionary influence, reducing radical support in exchange for greater stability."
+
+  # War Mobilization Event
+  lpr_events.34.t: "War Mobilization"
+  lpr_events.34.d: "As war erupts across our borders, we must decide how to approach this conflict. The drums of war beat loudly - we can either unleash total mobilization to harness revolutionary fervor for the war effort, or maintain strategic discipline to fight a more controlled campaign."
+  lpr_events.34.f: "War demands sacrifice and commitment."
+  lpr_events.34.a: "Total War Mobilization (+20 Revolution points)"
+  lpr_events.34.a_desc: "Commit fully to the war effort, gaining revolutionary momentum but straining our military organization with rapid mobilization."
+  lpr_events.34.b: "Strategic Discipline (-10 Revolution points)"
+  lpr_events.34.b_desc: "Maintain military professionalism by moderating revolutionary influence, gaining disciplined troops and reduced war exhaustion in exchange for revolutionary momentum."
+
+  # ============================================================================
+  # MODIFIER LOCALIZATION
+  # ============================================================================
+  # Static modifiers used throughout the actionable events system
+  # ============================================================================
+
+  # Construction and Development Modifiers
+  lpr_society_tech_spread_boost: "Society Technology Spread Boost"
+  lpr_society_tech_spread_boost_desc: "Society technologies are spreading 25% faster throughout the nation"
+
+  lpr_construction_boost: "Construction Acceleration"
+  lpr_construction_boost_desc: "All construction projects are proceeding 150% faster"
+
+  lpr_massive_construction_boost: "Massive Construction Surge"
+  lpr_massive_construction_boost_desc: "All construction projects are proceeding 300% faster"
+
+  # Radical Increase Modifiers
+  lpr_very_small_radical_increase: "Minor Social Unrest"
+  lpr_very_small_radical_increase_desc: "Political movements are generating radicals 10% faster"
+
+  lpr_small_radical_increase: "Growing Social Unrest"
+  lpr_small_radical_increase_desc: "Political movements are generating radicals 25% faster"
+
+  lpr_medium_radical_increase: "Moderate Social Unrest"
+  lpr_medium_radical_increase_desc: "Political movements are generating radicals 50% faster"
+
+  lpr_large_radical_increase: "Major Social Unrest"
+  lpr_large_radical_increase_desc: "Political movements are generating radicals twice as fast"
+
+  # Military and Revolutionary Modifiers
+  lpr_military_boost: "Military Readiness"
+  lpr_military_boost_desc: "Army units have 25% higher offensive and defensive capabilities"
+
+  lpr_revolutionary_fervor: "Revolutionary Fervor"
+  lpr_revolutionary_fervor_desc: "Military training rates are increased by 50% due to revolutionary enthusiasm"
+
+  # Progress Path Modifiers
+  lpr_educational_advancement: "Educational Advancement"
+  lpr_educational_advancement_desc: "All social classes are gaining qualifications 50% faster"
+
+  # Liberty Path Modifiers
+  lpr_liberty_beacon: "Liberty Beacon"
+  lpr_liberty_beacon_desc: "Our nation is 50% more attractive to migrants seeking freedom and opportunity"
+
+  # Revolution Path Modifiers
+  lpr_revolution_finisher_population_expansion: "Population Expansion"
+  lpr_revolution_finisher_population_expansion_desc: "Birth rates are up 5% and mortality is down 3%, encouraging population growth"
+
+  # Law Enactment Politics Modifiers
+  lpr_enactment_advance_debate_boost: "Legislative Momentum"
+  lpr_enactment_advance_debate_boost_desc: "Laws are 50% more likely to advance to debate or pass checkpoints"
+
+  lpr_enactment_success_boost: "Legislative Success"
+  lpr_enactment_success_boost_desc: "Laws are 50% more likely to succeed at legislative checkpoints"
+
+  lpr_enactment_time_reduction: "Expedited Legislation"
+  lpr_enactment_time_reduction_desc: "The time between legislative checkpoints is reduced by 50%"
+
+  # Military Formation Modifiers
+  lpr_formation_mobilization_boost: "Total War Mobilization"
+  lpr_formation_mobilization_boost_desc: "Rapid mobilization increases deployment speed, movement, and organization recovery"
+
+  lpr_formation_discipline_boost: "Military Discipline"
+  lpr_formation_discipline_boost_desc: "Professional discipline reduces attrition risk and improves organization and movement"

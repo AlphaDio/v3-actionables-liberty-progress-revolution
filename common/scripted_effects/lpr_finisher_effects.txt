@@ -451,3 +451,17 @@ lpr_check_finisher_events = {
 	}
 }
 
+# ============================================================================
+# REVOLUTION EVENT EFFECTS
+# ============================================================================
+
+lpr_revolution_moderate_radicals_effect = {
+	# Reduce radical support for the revolution by removing radicals from states
+	# This represents moderating revolutionary fervor
+	effect = {
+		# Remove radicals from all states (small amount)
+		every_state = {
+			# TODO
+		}
+	}
+}

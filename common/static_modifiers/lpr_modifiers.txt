@@ -129,7 +129,31 @@ lpr_enactment_success_boost = {
 # This makes laws pass faster by reducing time between checkpoints
 lpr_enactment_time_reduction = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
-	
-	country_law_enactment_time_mult = -0.5
+
+	country_law_enactment_time_mult = -0.25
+}
+
+# ============================================================================
+# MILITARY FORMATION MODIFIERS
+# ============================================================================
+# Temporary modifiers applied to military formations during war events
+# ============================================================================
+
+# Total War Mobilization - boosts mobilization and movement for rapid deployment
+lpr_formation_mobilization_boost = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+
+	military_formation_mobilization_speed_mult = 0.25
+	military_formation_movement_speed_mult = 0.15
+	military_formation_organization_gain_mult = 0.2
+}
+
+# Strategic Discipline - reduces attrition and improves organization for sustained warfare
+lpr_formation_discipline_boost = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+
+	military_formation_attrition_risk_mult = -0.2
+	military_formation_organization_gain_add = 0.1
+	military_formation_movement_speed_add = 0.5
 }
 

@@ -176,6 +176,46 @@ lpr_on_law_checkpoint_debate = {
 	}
 }
 
+# ============================================================================
+# REVOLUTION EVENTS
+# ============================================================================
+# Events that trigger during revolutionary situations
+# ============================================================================
+
+# Trigger revolution support event when a revolution starts
+on_revolution_start = {
+	on_actions = {
+		delay = { days = { 3 5 } }
+		lpr_on_revolution_start
+	}
+}
+
+lpr_on_revolution_start = {
+	random_events = {
+		100 = lpr_events.33  # Always trigger revolution support event
+	}
+}
+
+# ============================================================================
+# WAR EVENTS
+# ============================================================================
+# Events that trigger during wartime situations
+# ============================================================================
+
+# Trigger war mobilization event when a war starts
+on_war_started = {
+	on_actions = {
+		delay = { days = { 1 3 } }
+		lpr_on_war_started
+	}
+}
+
+lpr_on_war_started = {
+	random_events = {
+		100 = lpr_events.34  # Always trigger war mobilization event
+	}
+}
+
 lpr_check_finisher_events_effect = {
 	# Check for finisher events every month (triggers if conditions met)
 	# This evaluates if any LPR variable (Liberty, Progress, or Revolution)
