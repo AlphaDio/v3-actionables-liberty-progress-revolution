@@ -23,7 +23,7 @@ lpr_events.33 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	icon = "gfx/interface/icons/event_icons/event_flag.dds"
 
-	duration = 30
+	duration = 5
 
 	trigger = {
 		# Additional conditions can be added here if needed
@@ -83,7 +83,7 @@ lpr_events.34 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	icon = "gfx/interface/icons/event_icons/event_war.dds"
 
-	duration = 30
+	duration = 5
 
 	trigger = {
 		# Additional conditions can be added here if needed
@@ -93,6 +93,7 @@ lpr_events.34 = {
 	option = {
 		name = lpr_events.34.a
 		desc = lpr_events.34.a_desc
+        default_option = yes
 
 		# Add 20 Revolution points
 		if = {
