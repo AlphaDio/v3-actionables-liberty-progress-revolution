@@ -11,6 +11,7 @@ lpr_society_tech_spread_boost = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
 
 	country_society_tech_spread_mult = 0.25
+	country_law_enactment_time_mult = -0.15
 }
 
 # Triples construction speed (used in Progress path builder events)

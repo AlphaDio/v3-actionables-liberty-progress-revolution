@@ -17,9 +17,18 @@
 on_monthly_pulse_country = {
 	on_actions = {
 		delay = { days = { 1 30 } }
+		
 		# lpr_initialize_variables_effect  # Initialize LPR variables first
 		lpr_on_monthly_pulse_country
 		lpr_check_finisher_events_effect
+	}
+}
+
+on_yearly_pulse_country = {
+	on_actions = {
+		delay = { days = { 1 365 } }
+		
+		lpr_diplomatic_on_yearly_pulse
 	}
 }
 
@@ -127,7 +136,7 @@ lpr_on_monthly_pulse_country = {
 	random_events = {
 
 		# Builder events - fires every month with 30% chance
-		70 = 0  # 70% no event
+		75 = 0  # 70% no event
 		45 = lpr_events.1  #
 
 		# Binary choice events - 20% chance when variables >= 5
@@ -222,5 +231,24 @@ lpr_check_finisher_events_effect = {
 	# has reached the threshold of 12 points, triggering a finisher event
 	effect = {
 		lpr_check_finisher_events = yes
+	}
+}
+
+# ============================================================================
+# DIPLOMACY EVENTS
+# ============================================================================
+# Events that are related to diplomatic statuses
+#
+# Those events are also an opportunity to know the LPR points levels of other countries
+# ============================================================================
+
+lpr_diplomatic_on_yearly_pulse = {
+	random_events = {
+		100 = 0 # No event
+		
+		# An event that targets a rival
+		# If you have enough LPR Revolution points you increase their radicalism
+		# Can be placated if you have enough LPR Revolution or Liberty points
+		# Triggers an event at that rival for a chance to counter
 	}
 }
