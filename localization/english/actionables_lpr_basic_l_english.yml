@@ -185,8 +185,11 @@
   lpr_large_radical_increase_desc: "Political movements are generating radicals twice as fast"
 
   # Military and Revolutionary Modifiers
-  lpr_military_boost: "Military Readiness"
-  lpr_military_boost_desc: "Army units have 25% higher offensive and defensive capabilities"
+ lpr_military_boost: "Military Readiness"
+ lpr_military_boost_desc: "Army units have 25% higher offensive and defensive capabilities"
+
+ lpr_large_military_boost: "Elite Military Readiness"
+ lpr_large_military_boost_desc: "Army units have 50% higher offensive and defensive capabilities, with enhanced organization recovery, movement speed, and 25% lower military goods costs"
 
   lpr_revolutionary_fervor: "Revolutionary Fervor"
   lpr_revolutionary_fervor_desc: "Military training rates are increased by 50% due to revolutionary enthusiasm"

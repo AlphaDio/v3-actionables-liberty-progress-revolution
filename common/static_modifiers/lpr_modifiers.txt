@@ -72,6 +72,18 @@ lpr_military_boost = {
 	unit_army_defense_mult = 0.25
 }
 
+# Large military boost - provides a significant enhancement to army capabilities
+# This provides a 50% boost to offense and defense, plus additional organizational benefits and reduced military goods costs
+lpr_large_military_boost = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+
+	unit_army_offense_mult = 0.5
+	unit_army_defense_mult = 0.5
+	military_formation_organization_gain_mult = 0.25
+	military_formation_movement_speed_mult = 0.15
+	country_military_goods_cost_mult = -0.25
+}
+
 # Revolutionary fervor - increases training rate at all military buildings
 # This provides a 50% boost to training rate, representing revolutionary enthusiasm
 lpr_revolutionary_fervor = {
