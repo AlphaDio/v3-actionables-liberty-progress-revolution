@@ -14,20 +14,22 @@ lpr_society_tech_spread_boost = {
 	country_law_enactment_time_mult = -0.15
 }
 
-# Triples construction speed (used in Progress path builder events)
-# This significantly accelerates all construction projects for 30 days
+# Doubles construction speed (used in Progress path builder events)
+# This significantly accelerates all construction projects
 lpr_construction_boost = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
 
-	state_construction_mult = 1.5
+	state_construction_mult = 1.25
+	country_construction_goods_cost_mult = 0.95
 }
 
 # Massive construction speed boost (used in big finisher events)
-# This provides 5x construction speed for major rewards
+# This provides 2.5x construction speed for major rewards
 lpr_massive_construction_boost = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
 
-	state_construction_mult = 3.0
+	state_construction_mult = 1.50
+	country_construction_goods_cost_mult = 0.90
 }
 
 # Radical increase modifiers (temporary effects for 3 months)

@@ -37,7 +37,7 @@ lpr_events.2 = {
     duration = 5
 
     # Option A: Commit to Liberty Path
-    # Rewards: Small bonus (construction boost) + 3 Liberty points
+    # Rewards: Small radical bonus + 3 Liberty points
     # Trade-off: Continue accumulating points but get smaller immediate reward
     option = {
         name = lpr_events.2.a
@@ -46,7 +46,7 @@ lpr_events.2 = {
     }
 
     # Option B: Reject Liberty Path
-    # Rewards: Big bonus (15,000 gold + reduces radicals)
+    # Rewards: Big bonus (150,000 gold + medium radicals)
     # Trade-off: Reduces Liberty by 5 points, giving up progress toward finisher
     option = {
         name = lpr_events.2.b
@@ -128,7 +128,7 @@ lpr_events.4 = {
     }
 
     # Option B: Reject Revolution Path
-    # Rewards: Big bonus (creates 30,000 pops + longer tech spread boost)
+    # Rewards: Medium loyalists bonus
     # Trade-off: Reduces Revolution by 5 points, giving up progress toward finisher
     option = {
         name = lpr_events.4.b

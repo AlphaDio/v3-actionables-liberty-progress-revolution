@@ -38,30 +38,148 @@ lpr_events.1 = {
     }
 
     # Option A: Liberty Path
-    # Rewards: 3 Liberty points (local) + 1 Independence point (global)
-    # Drawbacks: 1-month radical increase (economic freedom causes social unrest)
+    # Rewards: +2000 treasury + 3 Liberty points (local) + 1 Independence point (global)
+    # Drawbacks: 3-month radical increase (economic freedom causes social unrest)
     # Focus: Economic freedom and national independence
     option = {
         name = lpr_events.1.a
         lpr_builder_liberty_effect = yes
+
+        ai_chance = {
+            value = 100
+
+            # Values-related weights
+            modifier = {
+                trigger = {
+                    OR = {
+                        has_law_or_variant = law_type:law_protected_speech
+                        has_law_or_variant = law_type:law_freedom_of_conscience
+                    }
+                }
+                add = 25
+            }
+
+            modifier = {
+                trigger = {
+                    has_law_or_variant = law_type:law_slavery_banned
+                }
+                add = 25
+            }
+
+            modifier = {
+                trigger = {
+                    has_law_or_variant = law_type:law_closed_borders
+                    has_law_or_variant = law_type:law_isolationism
+                }
+                add = -50
+            }
+
+            # Political-related weights
+            modifier = {
+				trigger = {
+					ig:ig_industrialists = {
+						is_in_government = yes
+					}
+				}
+				add = 25
+			}
+        }
     }
 
     # Option B: Progress Path
-    # Rewards: 30-day construction speed boost (3x multiplier) + 3 Progress points (local) + 1 Innovation point (global)
-    # Drawbacks: Larger treasury cost for infrastructure investment + 3-month radical increase from rapid change
+    # Rewards: 60-day construction boost (2.5x speed) + 3 Progress points (local) + 1 Innovation point (global)
+    # Drawbacks: -8000 treasury cost + radicals in middle strata from rapid change
     # Focus: Technological advancement and innovation through rapid construction
     option = {
         name = lpr_events.1.b
         lpr_builder_progress_effect = yes
+
+        ai_chance = {
+            value = 100
+
+            # Military-related weights
+            modifier = {
+                trigger = {
+                    has_law_or_variant = law_type:law_professional_army
+                }
+                add = 25
+            }
+
+            # Values-related weights
+            modifier = {
+                trigger = {
+                    OR = {
+                        has_law_or_variant = law_type:law_womens_suffrage
+                        has_law_or_variant = law_type:law_women_in_the_workplace
+                        has_law_or_variant = law_type:law_multicultural
+                        has_law_or_variant = law_type:law_compulsory_primary_school
+                    }
+                }
+                add = 25
+            }
+
+            # Political-related weights
+            modifier = {
+				trigger = {
+					ig:ig_intelligentsia = {
+						OR = {
+							is_in_government = yes
+							is_powerful = yes
+						}
+					}
+				}
+				add = 25
+			}
+        }
     }
 
     # Option C: Revolution Path
-    # Rewards: 30-day society tech spread boost modifier + 3 Revolution points (local) + 1 Uprising point (global)
-    # Drawbacks: Treasury cost + 3-month radical increase (revolutionary ideas cause major unrest) + population loss from uprising
+    # Rewards: 30-day society tech spread boost + 3 Revolution points (local) + 1 Uprising point (global)
+    # Drawbacks: -3000 treasury cost + 3-month radical increase (revolutionary ideas cause unrest)
     # Focus: Social change and revolutionary ideas
     option = {
         name = lpr_events.1.c
         default_option = yes
         lpr_builder_revolution_effect = yes
+
+        ai_chance = {
+            value = 100
+
+            # Military-related weights
+            modifier = {
+                trigger = {
+                    OR = {
+                        has_law_or_variant = law_type:law_national_guard
+                        has_law_or_variant = law_type:law_mass_conscription
+                    }
+                }
+                add = 25
+            }
+
+            # Values-related weights
+            modifier = {
+                trigger = {
+                    OR = {
+                        has_law_or_variant = law_type:law_right_of_assembly
+                        has_law_or_variant = law_type:law_factory_councils
+                    }
+                }
+                add = 25
+            }
+
+            # Political-related weights
+            modifier = {
+				trigger = {
+					ig:ig_trade_unions = {
+						OR = {
+							is_in_government = yes
+							is_powerful = yes
+						}
+					}
+				}
+				add = 25
+			}
+
+        }
     }
 }

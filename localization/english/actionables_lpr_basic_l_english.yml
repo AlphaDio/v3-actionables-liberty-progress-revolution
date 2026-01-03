@@ -3,9 +3,9 @@
   lpr_events.1.d: "Choose which path to pursue this month."
   lpr_events.1.f: "Make your monthly decision."
 
-  lpr_events.1.a: "Liberty"
-  lpr_events.1.b: "Progress"
-  lpr_events.1.c: "Revolution"
+  lpr_events.1.a: "Liberty (Gold +3 Liberty points, some unrest)"
+  lpr_events.1.b: "Progress (Construction boost +3 Progress points, costs gold)"
+  lpr_events.1.c: "Revolution (Tech spread boost +3 Revolution points, costs gold)"
 
   lpr_events.5.t: "Quarterly Assessment"
   lpr_events.5.d: "The time has come to assess the progress made and make a significant decision that will shape the future of our nation."
@@ -166,10 +166,10 @@
   lpr_society_tech_spread_boost_desc: "Society technologies are spreading 25% faster throughout the nation"
 
   lpr_construction_boost: "Construction Acceleration"
-  lpr_construction_boost_desc: "All construction projects are proceeding 150% faster"
+  lpr_construction_boost_desc: "All construction projects are proceeding 125% faster"
 
   lpr_massive_construction_boost: "Massive Construction Surge"
-  lpr_massive_construction_boost_desc: "All construction projects are proceeding 300% faster"
+  lpr_massive_construction_boost_desc: "All construction projects are proceeding 150% faster"
 
   # Radical Increase Modifiers
   lpr_very_small_radical_increase: "Minor Social Unrest"
@@ -205,13 +205,13 @@
 
   # Law Enactment Politics Modifiers
   lpr_enactment_advance_debate_boost: "Legislative Momentum"
-  lpr_enactment_advance_debate_boost_desc: "Laws are 50% more likely to advance to debate or pass checkpoints"
+  lpr_enactment_advance_debate_boost_desc: "Laws are significantly more likely to advance to debate or pass checkpoints"
 
   lpr_enactment_success_boost: "Legislative Success"
-  lpr_enactment_success_boost_desc: "Laws are 50% more likely to succeed at legislative checkpoints"
+  lpr_enactment_success_boost_desc: "Laws are significantly more likely to succeed at legislative checkpoints"
 
   lpr_enactment_time_reduction: "Expedited Legislation"
-  lpr_enactment_time_reduction_desc: "The time between legislative checkpoints is reduced by 50%"
+  lpr_enactment_time_reduction_desc: "The time between legislative checkpoints is reduced by 25%"
 
   # Military Formation Modifiers
   lpr_formation_mobilization_boost: "Total War Mobilization"

@@ -153,7 +153,7 @@ lpr_binary_revolution_commit_effect = {
 	}
 }
 
-# Revolution binary reject effect - cash out with radical increase
+# Revolution binary reject effect - cash out with loyalists increase
 lpr_binary_revolution_reject_effect = {
 	add_loyalists = {
 		value = medium_radicals
